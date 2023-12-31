@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Arta\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Arta\Client\ApiException;
+use Arta\Client\Configuration;
+use Arta\Client\HeaderSelector;
+use Arta\Client\ObjectSerializer;
 
 /**
  * AttachmentsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -138,12 +138,12 @@ class AttachmentsApi
      * Create an Attachment
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\AttachmentsCreateRequest $attachments_create_request attachments_create_request (optional)
+     * @param  \Arta\Client\Model\AttachmentsCreateRequest $attachments_create_request attachments_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['attachmentsCreate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Attachment|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\Attachment|\Arta\Client\Model\BasicError
      */
     public function attachmentsCreate($authorization, $attachments_create_request = null, string $contentType = self::contentTypes['attachmentsCreate'][0])
     {
@@ -157,12 +157,12 @@ class AttachmentsApi
      * Create an Attachment
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\AttachmentsCreateRequest $attachments_create_request (optional)
+     * @param  \Arta\Client\Model\AttachmentsCreateRequest $attachments_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['attachmentsCreate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Attachment|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\Attachment|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function attachmentsCreateWithHttpInfo($authorization, $attachments_create_request = null, string $contentType = self::contentTypes['attachmentsCreate'][0])
     {
@@ -205,11 +205,11 @@ class AttachmentsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\Attachment' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\Attachment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Attachment' !== 'string') {
+                        if ('\Arta\Client\Model\Attachment' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -227,16 +227,16 @@ class AttachmentsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Attachment', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\Attachment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -254,13 +254,13 @@ class AttachmentsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Attachment';
+            $returnType = '\Arta\Client\Model\Attachment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -293,7 +293,7 @@ class AttachmentsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Attachment',
+                        '\Arta\Client\Model\Attachment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -301,7 +301,7 @@ class AttachmentsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -317,7 +317,7 @@ class AttachmentsApi
      * Create an Attachment
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\AttachmentsCreateRequest $attachments_create_request (optional)
+     * @param  \Arta\Client\Model\AttachmentsCreateRequest $attachments_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['attachmentsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -339,7 +339,7 @@ class AttachmentsApi
      * Create an Attachment
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\AttachmentsCreateRequest $attachments_create_request (optional)
+     * @param  \Arta\Client\Model\AttachmentsCreateRequest $attachments_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['attachmentsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -347,7 +347,7 @@ class AttachmentsApi
      */
     public function attachmentsCreateAsyncWithHttpInfo($authorization, $attachments_create_request = null, string $contentType = self::contentTypes['attachmentsCreate'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Attachment';
+        $returnType = '\Arta\Client\Model\Attachment';
         $request = $this->attachmentsCreateRequest($authorization, $attachments_create_request, $contentType);
 
         return $this->client
@@ -390,7 +390,7 @@ class AttachmentsApi
      * Create request for operation 'attachmentsCreate'
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\AttachmentsCreateRequest $attachments_create_request (optional)
+     * @param  \Arta\Client\Model\AttachmentsCreateRequest $attachments_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['attachmentsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -497,7 +497,7 @@ class AttachmentsApi
      * @param  int $attachment_id attachment_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['attachmentsDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -515,7 +515,7 @@ class AttachmentsApi
      * @param  int $attachment_id attachment_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['attachmentsDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -565,7 +565,7 @@ class AttachmentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -755,9 +755,9 @@ class AttachmentsApi
      * @param  int $attachment_id attachment_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['attachmentsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Attachment|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\Attachment|\Arta\Client\Model\BasicError
      */
     public function attachmentsGet($authorization, $attachment_id, string $contentType = self::contentTypes['attachmentsGet'][0])
     {
@@ -774,9 +774,9 @@ class AttachmentsApi
      * @param  int $attachment_id attachment_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['attachmentsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Attachment|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\Attachment|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function attachmentsGetWithHttpInfo($authorization, $attachment_id, string $contentType = self::contentTypes['attachmentsGet'][0])
     {
@@ -819,11 +819,11 @@ class AttachmentsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Attachment' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\Attachment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Attachment' !== 'string') {
+                        if ('\Arta\Client\Model\Attachment' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -841,16 +841,16 @@ class AttachmentsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Attachment', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\Attachment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -868,13 +868,13 @@ class AttachmentsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Attachment';
+            $returnType = '\Arta\Client\Model\Attachment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -907,7 +907,7 @@ class AttachmentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Attachment',
+                        '\Arta\Client\Model\Attachment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -915,7 +915,7 @@ class AttachmentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -961,7 +961,7 @@ class AttachmentsApi
      */
     public function attachmentsGetAsyncWithHttpInfo($authorization, $attachment_id, string $contentType = self::contentTypes['attachmentsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Attachment';
+        $returnType = '\Arta\Client\Model\Attachment';
         $request = $this->attachmentsGetRequest($authorization, $attachment_id, $contentType);
 
         return $this->client
@@ -1119,9 +1119,9 @@ class AttachmentsApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['attachmentsList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AttachmentList
+     * @return \Arta\Client\Model\AttachmentList
      */
     public function attachmentsList($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['attachmentsList'][0])
     {
@@ -1139,9 +1139,9 @@ class AttachmentsApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['attachmentsList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AttachmentList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\AttachmentList, HTTP status code, HTTP response headers (array of strings)
      */
     public function attachmentsListWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['attachmentsList'][0])
     {
@@ -1184,11 +1184,11 @@ class AttachmentsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AttachmentList' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\AttachmentList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AttachmentList' !== 'string') {
+                        if ('\Arta\Client\Model\AttachmentList' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1206,13 +1206,13 @@ class AttachmentsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AttachmentList', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\AttachmentList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AttachmentList';
+            $returnType = '\Arta\Client\Model\AttachmentList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1245,7 +1245,7 @@ class AttachmentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AttachmentList',
+                        '\Arta\Client\Model\AttachmentList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1293,7 +1293,7 @@ class AttachmentsApi
      */
     public function attachmentsListAsyncWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['attachmentsList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\AttachmentList';
+        $returnType = '\Arta\Client\Model\AttachmentList';
         $request = $this->attachmentsListRequest($authorization, $page_size, $page, $contentType);
 
         return $this->client

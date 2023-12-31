@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * WebhooksPatchRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class WebhooksPatchRequest implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'webhook' => '\OpenAPI\Client\Model\WebhooksPatchRequestWebhook'
+        'webhook' => '\Arta\Client\Model\WebhooksPatchRequestWebhook'
     ];
 
     /**
@@ -293,7 +293,7 @@ class WebhooksPatchRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets webhook
      *
-     * @return \OpenAPI\Client\Model\WebhooksPatchRequestWebhook|null
+     * @return \Arta\Client\Model\WebhooksPatchRequestWebhook|null
      */
     public function getWebhook()
     {
@@ -303,7 +303,7 @@ class WebhooksPatchRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets webhook
      *
-     * @param \OpenAPI\Client\Model\WebhooksPatchRequestWebhook|null $webhook webhook
+     * @param \Arta\Client\Model\WebhooksPatchRequestWebhook|null $webhook webhook
      *
      * @return self
      */

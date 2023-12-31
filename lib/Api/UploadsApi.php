@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Arta\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Arta\Client\ApiException;
+use Arta\Client\Configuration;
+use Arta\Client\HeaderSelector;
+use Arta\Client\ObjectSerializer;
 
 /**
  * UploadsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -138,12 +138,12 @@ class UploadsApi
      * Create an Upload
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\UploadsCreateRequest $uploads_create_request uploads_create_request (optional)
+     * @param  \Arta\Client\Model\UploadsCreateRequest $uploads_create_request uploads_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uploadsCreate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UploadWithPresignedUrl|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\UploadWithPresignedUrl|\Arta\Client\Model\BasicError
      */
     public function uploadsCreate($authorization, $uploads_create_request = null, string $contentType = self::contentTypes['uploadsCreate'][0])
     {
@@ -157,12 +157,12 @@ class UploadsApi
      * Create an Upload
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\UploadsCreateRequest $uploads_create_request (optional)
+     * @param  \Arta\Client\Model\UploadsCreateRequest $uploads_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uploadsCreate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UploadWithPresignedUrl|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\UploadWithPresignedUrl|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadsCreateWithHttpInfo($authorization, $uploads_create_request = null, string $contentType = self::contentTypes['uploadsCreate'][0])
     {
@@ -205,11 +205,11 @@ class UploadsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\UploadWithPresignedUrl' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\UploadWithPresignedUrl' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UploadWithPresignedUrl' !== 'string') {
+                        if ('\Arta\Client\Model\UploadWithPresignedUrl' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -227,16 +227,16 @@ class UploadsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UploadWithPresignedUrl', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\UploadWithPresignedUrl', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -254,13 +254,13 @@ class UploadsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UploadWithPresignedUrl';
+            $returnType = '\Arta\Client\Model\UploadWithPresignedUrl';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -293,7 +293,7 @@ class UploadsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UploadWithPresignedUrl',
+                        '\Arta\Client\Model\UploadWithPresignedUrl',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -301,7 +301,7 @@ class UploadsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -317,7 +317,7 @@ class UploadsApi
      * Create an Upload
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\UploadsCreateRequest $uploads_create_request (optional)
+     * @param  \Arta\Client\Model\UploadsCreateRequest $uploads_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uploadsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -339,7 +339,7 @@ class UploadsApi
      * Create an Upload
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\UploadsCreateRequest $uploads_create_request (optional)
+     * @param  \Arta\Client\Model\UploadsCreateRequest $uploads_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uploadsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -347,7 +347,7 @@ class UploadsApi
      */
     public function uploadsCreateAsyncWithHttpInfo($authorization, $uploads_create_request = null, string $contentType = self::contentTypes['uploadsCreate'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UploadWithPresignedUrl';
+        $returnType = '\Arta\Client\Model\UploadWithPresignedUrl';
         $request = $this->uploadsCreateRequest($authorization, $uploads_create_request, $contentType);
 
         return $this->client
@@ -390,7 +390,7 @@ class UploadsApi
      * Create request for operation 'uploadsCreate'
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\UploadsCreateRequest $uploads_create_request (optional)
+     * @param  \Arta\Client\Model\UploadsCreateRequest $uploads_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uploadsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -497,7 +497,7 @@ class UploadsApi
      * @param  int $upload_id upload_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uploadsDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -515,7 +515,7 @@ class UploadsApi
      * @param  int $upload_id upload_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uploadsDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -565,7 +565,7 @@ class UploadsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -755,9 +755,9 @@ class UploadsApi
      * @param  int $upload_id upload_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uploadsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Upload|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\Upload|\Arta\Client\Model\BasicError
      */
     public function uploadsGet($authorization, $upload_id, string $contentType = self::contentTypes['uploadsGet'][0])
     {
@@ -774,9 +774,9 @@ class UploadsApi
      * @param  int $upload_id upload_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uploadsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Upload|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\Upload|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadsGetWithHttpInfo($authorization, $upload_id, string $contentType = self::contentTypes['uploadsGet'][0])
     {
@@ -819,11 +819,11 @@ class UploadsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Upload' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\Upload' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Upload' !== 'string') {
+                        if ('\Arta\Client\Model\Upload' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -841,16 +841,16 @@ class UploadsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Upload', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\Upload', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -868,13 +868,13 @@ class UploadsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Upload';
+            $returnType = '\Arta\Client\Model\Upload';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -907,7 +907,7 @@ class UploadsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Upload',
+                        '\Arta\Client\Model\Upload',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -915,7 +915,7 @@ class UploadsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -961,7 +961,7 @@ class UploadsApi
      */
     public function uploadsGetAsyncWithHttpInfo($authorization, $upload_id, string $contentType = self::contentTypes['uploadsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Upload';
+        $returnType = '\Arta\Client\Model\Upload';
         $request = $this->uploadsGetRequest($authorization, $upload_id, $contentType);
 
         return $this->client
@@ -1119,9 +1119,9 @@ class UploadsApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uploadsList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UploadList
+     * @return \Arta\Client\Model\UploadList
      */
     public function uploadsList($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['uploadsList'][0])
     {
@@ -1139,9 +1139,9 @@ class UploadsApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uploadsList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UploadList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\UploadList, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadsListWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['uploadsList'][0])
     {
@@ -1184,11 +1184,11 @@ class UploadsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UploadList' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\UploadList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UploadList' !== 'string') {
+                        if ('\Arta\Client\Model\UploadList' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1206,13 +1206,13 @@ class UploadsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UploadList', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\UploadList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UploadList';
+            $returnType = '\Arta\Client\Model\UploadList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1245,7 +1245,7 @@ class UploadsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UploadList',
+                        '\Arta\Client\Model\UploadList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1293,7 +1293,7 @@ class UploadsApi
      */
     public function uploadsListAsyncWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['uploadsList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UploadList';
+        $returnType = '\Arta\Client\Model\UploadList';
         $request = $this->uploadsListRequest($authorization, $page_size, $page, $contentType);
 
         return $this->client

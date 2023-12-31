@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **amount** | **string** |  | [optional]
 **amount_currency** | **string** | ISO 4217 three-letter alphabetic currency code. Options are defined in the Currencies metadata endpoint | [optional] [default to 'USD']
-**included_services** | [**\OpenAPI\Client\Model\RequestQuotesInnerIncludedServicesInnerIncludedServicesInner[]**](RequestQuotesInnerIncludedServicesInnerIncludedServicesInner.md) |  | [optional]
+**included_services** | [**\Arta\Client\Model\RequestQuotesInnerIncludedServicesInnerIncludedServicesInner[]**](RequestQuotesInnerIncludedServicesInnerIncludedServicesInner.md) |  | [optional]
 **is_requested** | **bool** |  | [optional]
 **is_required** | **bool** |  | [optional]
 **name** | **string** |  | [optional]

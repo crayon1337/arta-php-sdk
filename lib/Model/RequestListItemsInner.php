@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * RequestListItemsInner Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,16 +58,16 @@ class RequestListItemsInner implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'bookable' => '\OpenAPI\Client\Model\RequestListItemsInnerBookable',
+        'bookable' => '\Arta\Client\Model\RequestListItemsInnerBookable',
         'created_at' => 'string',
-        'destination' => '\OpenAPI\Client\Model\RequestListItemsInnerDestination',
+        'destination' => '\Arta\Client\Model\RequestListItemsInnerDestination',
         'hosted_session_id' => 'int',
         'id' => 'string',
         'insurance' => 'string',
         'internal_reference' => 'string',
         'log_request_id' => 'string',
         'object_count' => 'int',
-        'origin' => '\OpenAPI\Client\Model\RequestListItemsInnerOrigin',
+        'origin' => '\Arta\Client\Model\RequestListItemsInnerOrigin',
         'public_reference' => 'string',
         'quote_types' => 'string[]',
         'shortcode' => 'string',
@@ -468,7 +468,7 @@ class RequestListItemsInner implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets bookable
      *
-     * @return \OpenAPI\Client\Model\RequestListItemsInnerBookable|null
+     * @return \Arta\Client\Model\RequestListItemsInnerBookable|null
      */
     public function getBookable()
     {
@@ -478,7 +478,7 @@ class RequestListItemsInner implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets bookable
      *
-     * @param \OpenAPI\Client\Model\RequestListItemsInnerBookable|null $bookable bookable
+     * @param \Arta\Client\Model\RequestListItemsInnerBookable|null $bookable bookable
      *
      * @return self
      */
@@ -522,7 +522,7 @@ class RequestListItemsInner implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets destination
      *
-     * @return \OpenAPI\Client\Model\RequestListItemsInnerDestination|null
+     * @return \Arta\Client\Model\RequestListItemsInnerDestination|null
      */
     public function getDestination()
     {
@@ -532,7 +532,7 @@ class RequestListItemsInner implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets destination
      *
-     * @param \OpenAPI\Client\Model\RequestListItemsInnerDestination|null $destination destination
+     * @param \Arta\Client\Model\RequestListItemsInnerDestination|null $destination destination
      *
      * @return self
      */
@@ -749,7 +749,7 @@ class RequestListItemsInner implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets origin
      *
-     * @return \OpenAPI\Client\Model\RequestListItemsInnerOrigin|null
+     * @return \Arta\Client\Model\RequestListItemsInnerOrigin|null
      */
     public function getOrigin()
     {
@@ -759,7 +759,7 @@ class RequestListItemsInner implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets origin
      *
-     * @param \OpenAPI\Client\Model\RequestListItemsInnerOrigin|null $origin origin
+     * @param \Arta\Client\Model\RequestListItemsInnerOrigin|null $origin origin
      *
      * @return self
      */

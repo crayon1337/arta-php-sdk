@@ -14,6 +14,6 @@ Name | Type | Description | Notes
 **country** | **string** | The ISO 3166-1 alpha-2 country code of the current or last known location if available | [optional]
 **title** | **string** | The title or name of the location | [optional]
 **access_restrictions** | **string[]** |  | [optional]
-**contacts** | [**\OpenAPI\Client\Model\NullableLocationContactsInner[]**](NullableLocationContactsInner.md) | An list of contacts at the location | [optional]
+**contacts** | [**\Arta\Client\Model\NullableLocationContactsInner[]**](NullableLocationContactsInner.md) | An list of contacts at the location | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

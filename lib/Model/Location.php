@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * Location Class Doc Comment
  *
  * @category Class
  * @description 
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -68,7 +68,7 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
         'postal_code' => 'string',
         'region' => 'string',
         'title' => 'string',
-        'contacts' => '\OpenAPI\Client\Model\LocationContactsInner[]'
+        'contacts' => '\Arta\Client\Model\LocationContactsInner[]'
     ];
 
     /**
@@ -634,7 +634,7 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets contacts
      *
-     * @return \OpenAPI\Client\Model\LocationContactsInner[]|null
+     * @return \Arta\Client\Model\LocationContactsInner[]|null
      */
     public function getContacts()
     {
@@ -644,7 +644,7 @@ class Location implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets contacts
      *
-     * @param \OpenAPI\Client\Model\LocationContactsInner[]|null $contacts A list of contacts at the location
+     * @param \Arta\Client\Model\LocationContactsInner[]|null $contacts A list of contacts at the location
      *
      * @return self
      */

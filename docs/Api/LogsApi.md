@@ -1,4 +1,4 @@
-# OpenAPI\Client\LogsApi
+# Arta\Client\LogsApi
 
 All URIs are relative to https://api.arta.io, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.arta.io, except if the operation defines an
 ## `logsGet()`
 
 ```php
-logsGet($authorization, $log_id): \OpenAPI\Client\Model\Log
+logsGet($authorization, $log_id): \Arta\Client\Model\Log
 ```
 
 Get a Log record
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LogsApi(
+$apiInstance = new Arta\Client\Api\LogsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -57,7 +57,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Log**](../Model/Log.md)
+[**\Arta\Client\Model\Log**](../Model/Log.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ try {
 ## `logsList()`
 
 ```php
-logsList($authorization, $page_size, $page): \OpenAPI\Client\Model\LogList
+logsList($authorization, $page_size, $page): \Arta\Client\Model\LogList
 ```
 
 List Log records
@@ -90,12 +90,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\LogsApi(
+$apiInstance = new Arta\Client\Api\LogsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -123,7 +123,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\LogList**](../Model/LogList.md)
+[**\Arta\Client\Model\LogList**](../Model/LogList.md)
 
 ### Authorization
 

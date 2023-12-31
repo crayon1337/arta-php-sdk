@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Arta\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Arta\Client\ApiException;
+use Arta\Client\Configuration;
+use Arta\Client\HeaderSelector;
+use Arta\Client\ObjectSerializer;
 
 /**
  * InvoicesApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -135,9 +135,9 @@ class InvoicesApi
      * @param  int $invoice_id invoice_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['invoicesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Invoice|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\Invoice|\Arta\Client\Model\BasicError
      */
     public function invoicesGet($authorization, $invoice_id, string $contentType = self::contentTypes['invoicesGet'][0])
     {
@@ -154,9 +154,9 @@ class InvoicesApi
      * @param  int $invoice_id invoice_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['invoicesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Invoice|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\Invoice|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function invoicesGetWithHttpInfo($authorization, $invoice_id, string $contentType = self::contentTypes['invoicesGet'][0])
     {
@@ -199,11 +199,11 @@ class InvoicesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Invoice' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\Invoice' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Invoice' !== 'string') {
+                        if ('\Arta\Client\Model\Invoice' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -221,16 +221,16 @@ class InvoicesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Invoice', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\Invoice', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -248,13 +248,13 @@ class InvoicesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Invoice';
+            $returnType = '\Arta\Client\Model\Invoice';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -287,7 +287,7 @@ class InvoicesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Invoice',
+                        '\Arta\Client\Model\Invoice',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -295,7 +295,7 @@ class InvoicesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -341,7 +341,7 @@ class InvoicesApi
      */
     public function invoicesGetAsyncWithHttpInfo($authorization, $invoice_id, string $contentType = self::contentTypes['invoicesGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Invoice';
+        $returnType = '\Arta\Client\Model\Invoice';
         $request = $this->invoicesGetRequest($authorization, $invoice_id, $contentType);
 
         return $this->client
@@ -499,9 +499,9 @@ class InvoicesApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['invoicesList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\InvoiceList
+     * @return \Arta\Client\Model\InvoiceList
      */
     public function invoicesList($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['invoicesList'][0])
     {
@@ -519,9 +519,9 @@ class InvoicesApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['invoicesList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\InvoiceList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\InvoiceList, HTTP status code, HTTP response headers (array of strings)
      */
     public function invoicesListWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['invoicesList'][0])
     {
@@ -564,11 +564,11 @@ class InvoicesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\InvoiceList' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\InvoiceList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\InvoiceList' !== 'string') {
+                        if ('\Arta\Client\Model\InvoiceList' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -586,13 +586,13 @@ class InvoicesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\InvoiceList', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\InvoiceList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\InvoiceList';
+            $returnType = '\Arta\Client\Model\InvoiceList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -625,7 +625,7 @@ class InvoicesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\InvoiceList',
+                        '\Arta\Client\Model\InvoiceList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -673,7 +673,7 @@ class InvoicesApi
      */
     public function invoicesListAsyncWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['invoicesList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\InvoiceList';
+        $returnType = '\Arta\Client\Model\InvoiceList';
         $request = $this->invoicesListRequest($authorization, $page_size, $page, $contentType);
 
         return $this->client

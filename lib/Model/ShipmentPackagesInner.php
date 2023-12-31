@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * ShipmentPackagesInner Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,7 +64,7 @@ class ShipmentPackagesInner implements ModelInterface, ArrayAccess, \JsonSeriali
         'height' => 'string',
         'id' => 'int',
         'is_sufficiently_packed' => 'bool',
-        'objects' => '\OpenAPI\Client\Model\ShipmentPackagesInnerObjectsInner[]',
+        'objects' => '\Arta\Client\Model\ShipmentPackagesInnerObjectsInner[]',
         'packing_materials' => 'string[]',
         'status' => 'string',
         'unit_of_measurement' => 'string',
@@ -584,7 +584,7 @@ class ShipmentPackagesInner implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets objects
      *
-     * @return \OpenAPI\Client\Model\ShipmentPackagesInnerObjectsInner[]|null
+     * @return \Arta\Client\Model\ShipmentPackagesInnerObjectsInner[]|null
      */
     public function getObjects()
     {
@@ -594,7 +594,7 @@ class ShipmentPackagesInner implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets objects
      *
-     * @param \OpenAPI\Client\Model\ShipmentPackagesInnerObjectsInner[]|null $objects objects
+     * @param \Arta\Client\Model\ShipmentPackagesInnerObjectsInner[]|null $objects objects
      *
      * @return self
      */

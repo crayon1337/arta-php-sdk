@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * ShipmentList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class ShipmentList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'metadata' => '\OpenAPI\Client\Model\PaginationMetadata',
-        'items' => '\OpenAPI\Client\Model\ShipmentListItemsInner[]'
+        'metadata' => '\Arta\Client\Model\PaginationMetadata',
+        'items' => '\Arta\Client\Model\ShipmentListItemsInner[]'
     ];
 
     /**
@@ -300,7 +300,7 @@ class ShipmentList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets metadata
      *
-     * @return \OpenAPI\Client\Model\PaginationMetadata|null
+     * @return \Arta\Client\Model\PaginationMetadata|null
      */
     public function getMetadata()
     {
@@ -310,7 +310,7 @@ class ShipmentList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets metadata
      *
-     * @param \OpenAPI\Client\Model\PaginationMetadata|null $metadata metadata
+     * @param \Arta\Client\Model\PaginationMetadata|null $metadata metadata
      *
      * @return self
      */
@@ -327,7 +327,7 @@ class ShipmentList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets items
      *
-     * @return \OpenAPI\Client\Model\ShipmentListItemsInner[]|null
+     * @return \Arta\Client\Model\ShipmentListItemsInner[]|null
      */
     public function getItems()
     {
@@ -337,7 +337,7 @@ class ShipmentList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets items
      *
-     * @param \OpenAPI\Client\Model\ShipmentListItemsInner[]|null $items items
+     * @param \Arta\Client\Model\ShipmentListItemsInner[]|null $items items
      *
      * @return self
      */

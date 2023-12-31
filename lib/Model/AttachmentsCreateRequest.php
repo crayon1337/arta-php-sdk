@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * AttachmentsCreateRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class AttachmentsCreateRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'attachment' => '\OpenAPI\Client\Model\AttachmentsCreateRequestAttachment'
+        'attachment' => '\Arta\Client\Model\AttachmentsCreateRequestAttachment'
     ];
 
     /**
@@ -296,7 +296,7 @@ class AttachmentsCreateRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets attachment
      *
-     * @return \OpenAPI\Client\Model\AttachmentsCreateRequestAttachment
+     * @return \Arta\Client\Model\AttachmentsCreateRequestAttachment
      */
     public function getAttachment()
     {
@@ -306,7 +306,7 @@ class AttachmentsCreateRequest implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets attachment
      *
-     * @param \OpenAPI\Client\Model\AttachmentsCreateRequestAttachment $attachment attachment
+     * @param \Arta\Client\Model\AttachmentsCreateRequestAttachment $attachment attachment
      *
      * @return self
      */

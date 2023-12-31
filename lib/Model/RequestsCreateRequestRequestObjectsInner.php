@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * RequestsCreateRequestRequestObjectsInner Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class RequestsCreateRequestRequestObjectsInner implements ModelInterface, ArrayA
         'internal_reference' => 'string',
         'current_packing' => 'string[]',
         'depth' => 'string',
-        'details' => '\OpenAPI\Client\Model\RequestsCreateRequestRequestObjectsInnerDetails',
+        'details' => '\Arta\Client\Model\RequestsCreateRequestRequestObjectsInnerDetails',
         'height' => 'string',
         'images' => 'string[]',
         'public_reference' => 'string',
@@ -569,7 +569,7 @@ class RequestsCreateRequestRequestObjectsInner implements ModelInterface, ArrayA
     /**
      * Gets details
      *
-     * @return \OpenAPI\Client\Model\RequestsCreateRequestRequestObjectsInnerDetails|null
+     * @return \Arta\Client\Model\RequestsCreateRequestRequestObjectsInnerDetails|null
      */
     public function getDetails()
     {
@@ -579,7 +579,7 @@ class RequestsCreateRequestRequestObjectsInner implements ModelInterface, ArrayA
     /**
      * Sets details
      *
-     * @param \OpenAPI\Client\Model\RequestsCreateRequestRequestObjectsInnerDetails|null $details details
+     * @param \Arta\Client\Model\RequestsCreateRequestRequestObjectsInnerDetails|null $details details
      *
      * @return self
      */

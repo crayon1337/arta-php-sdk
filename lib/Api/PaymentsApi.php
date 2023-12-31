@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Arta\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Arta\Client\ApiException;
+use Arta\Client\Configuration;
+use Arta\Client\HeaderSelector;
+use Arta\Client\ObjectSerializer;
 
 /**
  * PaymentsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -135,9 +135,9 @@ class PaymentsApi
      * @param  int $payment_id payment_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Payment|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\Payment|\Arta\Client\Model\BasicError
      */
     public function paymentsGet($authorization, $payment_id, string $contentType = self::contentTypes['paymentsGet'][0])
     {
@@ -154,9 +154,9 @@ class PaymentsApi
      * @param  int $payment_id payment_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Payment|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\Payment|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function paymentsGetWithHttpInfo($authorization, $payment_id, string $contentType = self::contentTypes['paymentsGet'][0])
     {
@@ -199,11 +199,11 @@ class PaymentsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Payment' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\Payment' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Payment' !== 'string') {
+                        if ('\Arta\Client\Model\Payment' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -221,16 +221,16 @@ class PaymentsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Payment', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\Payment', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -248,13 +248,13 @@ class PaymentsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Payment';
+            $returnType = '\Arta\Client\Model\Payment';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -287,7 +287,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Payment',
+                        '\Arta\Client\Model\Payment',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -295,7 +295,7 @@ class PaymentsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -341,7 +341,7 @@ class PaymentsApi
      */
     public function paymentsGetAsyncWithHttpInfo($authorization, $payment_id, string $contentType = self::contentTypes['paymentsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Payment';
+        $returnType = '\Arta\Client\Model\Payment';
         $request = $this->paymentsGetRequest($authorization, $payment_id, $contentType);
 
         return $this->client
@@ -499,9 +499,9 @@ class PaymentsApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentsList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PaymentList
+     * @return \Arta\Client\Model\PaymentList
      */
     public function paymentsList($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['paymentsList'][0])
     {
@@ -519,9 +519,9 @@ class PaymentsApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentsList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PaymentList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\PaymentList, HTTP status code, HTTP response headers (array of strings)
      */
     public function paymentsListWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['paymentsList'][0])
     {
@@ -564,11 +564,11 @@ class PaymentsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PaymentList' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\PaymentList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PaymentList' !== 'string') {
+                        if ('\Arta\Client\Model\PaymentList' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -586,13 +586,13 @@ class PaymentsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PaymentList', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\PaymentList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PaymentList';
+            $returnType = '\Arta\Client\Model\PaymentList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -625,7 +625,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PaymentList',
+                        '\Arta\Client\Model\PaymentList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -673,7 +673,7 @@ class PaymentsApi
      */
     public function paymentsListAsyncWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['paymentsList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\PaymentList';
+        $returnType = '\Arta\Client\Model\PaymentList';
         $request = $this->paymentsListRequest($authorization, $page_size, $page, $contentType);
 
         return $this->client

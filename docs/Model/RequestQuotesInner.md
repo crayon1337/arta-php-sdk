@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional]
-**included_insurance_policy** | [**\OpenAPI\Client\Model\RequestQuotesInnerIncludedInsurancePolicy**](RequestQuotesInnerIncludedInsurancePolicy.md) |  | [optional]
-**included_services** | [**\OpenAPI\Client\Model\RequestQuotesInnerIncludedServicesInner[]**](RequestQuotesInnerIncludedServicesInner.md) |  | [optional]
-**optional_services** | [**\OpenAPI\Client\Model\RequestQuotesInnerOptionalServicesInner[]**](RequestQuotesInnerOptionalServicesInner.md) |  | [optional]
+**included_insurance_policy** | [**\Arta\Client\Model\RequestQuotesInnerIncludedInsurancePolicy**](RequestQuotesInnerIncludedInsurancePolicy.md) |  | [optional]
+**included_services** | [**\Arta\Client\Model\RequestQuotesInnerIncludedServicesInner[]**](RequestQuotesInnerIncludedServicesInner.md) |  | [optional]
+**optional_services** | [**\Arta\Client\Model\RequestQuotesInnerOptionalServicesInner[]**](RequestQuotesInnerOptionalServicesInner.md) |  | [optional]
 **quote_type** | **string** |  | [optional]
 **status** | **string** |  | [optional]
 **total** | **string** |  | [optional]

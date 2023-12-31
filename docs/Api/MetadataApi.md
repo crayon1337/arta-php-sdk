@@ -1,4 +1,4 @@
-# OpenAPI\Client\MetadataApi
+# Arta\Client\MetadataApi
 
 All URIs are relative to https://api.arta.io, except if the operation defines another base path.
 
@@ -25,7 +25,7 @@ All URIs are relative to https://api.arta.io, except if the operation defines an
 ## `metadalocationAccessRestrictions()`
 
 ```php
-metadalocationAccessRestrictions($authorization): \OpenAPI\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]
+metadalocationAccessRestrictions($authorization): \Arta\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]
 ```
 
 Location Access Restrictions
@@ -40,12 +40,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
+$apiInstance = new Arta\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -69,7 +69,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]**](../Model/MetadalocationAccessRestrictions200ResponseInner.md)
+[**\Arta\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]**](../Model/MetadalocationAccessRestrictions200ResponseInner.md)
 
 ### Authorization
 
@@ -87,7 +87,7 @@ try {
 ## `metadataApiVersions()`
 
 ```php
-metadataApiVersions($authorization): \OpenAPI\Client\Model\MetadataApiVersions200ResponseInner[]
+metadataApiVersions($authorization): \Arta\Client\Model\MetadataApiVersions200ResponseInner[]
 ```
 
 API Versions
@@ -102,12 +102,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
+$apiInstance = new Arta\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -131,7 +131,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MetadataApiVersions200ResponseInner[]**](../Model/MetadataApiVersions200ResponseInner.md)
+[**\Arta\Client\Model\MetadataApiVersions200ResponseInner[]**](../Model/MetadataApiVersions200ResponseInner.md)
 
 ### Authorization
 
@@ -149,7 +149,7 @@ try {
 ## `metadataCurrencies()`
 
 ```php
-metadataCurrencies($authorization): \OpenAPI\Client\Model\MetadataCurrencies200ResponseInner[]
+metadataCurrencies($authorization): \Arta\Client\Model\MetadataCurrencies200ResponseInner[]
 ```
 
 Currencies
@@ -164,12 +164,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
+$apiInstance = new Arta\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -193,7 +193,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MetadataCurrencies200ResponseInner[]**](../Model/MetadataCurrencies200ResponseInner.md)
+[**\Arta\Client\Model\MetadataCurrencies200ResponseInner[]**](../Model/MetadataCurrencies200ResponseInner.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ try {
 ## `metadataEmailNotifications()`
 
 ```php
-metadataEmailNotifications($authorization): \OpenAPI\Client\Model\MetadataEmailNotifications200ResponseInner[]
+metadataEmailNotifications($authorization): \Arta\Client\Model\MetadataEmailNotifications200ResponseInner[]
 ```
 
 Email Notifications
@@ -226,12 +226,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
+$apiInstance = new Arta\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -255,7 +255,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MetadataEmailNotifications200ResponseInner[]**](../Model/MetadataEmailNotifications200ResponseInner.md)
+[**\Arta\Client\Model\MetadataEmailNotifications200ResponseInner[]**](../Model/MetadataEmailNotifications200ResponseInner.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ try {
 ## `metadataInsurances()`
 
 ```php
-metadataInsurances($authorization): \OpenAPI\Client\Model\MetadataInsurances200ResponseInner[]
+metadataInsurances($authorization): \Arta\Client\Model\MetadataInsurances200ResponseInner[]
 ```
 
 Insurance
@@ -288,12 +288,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
+$apiInstance = new Arta\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -317,7 +317,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MetadataInsurances200ResponseInner[]**](../Model/MetadataInsurances200ResponseInner.md)
+[**\Arta\Client\Model\MetadataInsurances200ResponseInner[]**](../Model/MetadataInsurances200ResponseInner.md)
 
 ### Authorization
 
@@ -335,7 +335,7 @@ try {
 ## `metadataObjectMaterials()`
 
 ```php
-metadataObjectMaterials($authorization): \OpenAPI\Client\Model\MetadataObjectMaterials200ResponseInner[]
+metadataObjectMaterials($authorization): \Arta\Client\Model\MetadataObjectMaterials200ResponseInner[]
 ```
 
 Object Materials
@@ -350,12 +350,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
+$apiInstance = new Arta\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -379,7 +379,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MetadataObjectMaterials200ResponseInner[]**](../Model/MetadataObjectMaterials200ResponseInner.md)
+[**\Arta\Client\Model\MetadataObjectMaterials200ResponseInner[]**](../Model/MetadataObjectMaterials200ResponseInner.md)
 
 ### Authorization
 
@@ -397,7 +397,7 @@ try {
 ## `metadataObjects()`
 
 ```php
-metadataObjects($authorization): \OpenAPI\Client\Model\MetadataObjects200ResponseInner[]
+metadataObjects($authorization): \Arta\Client\Model\MetadataObjects200ResponseInner[]
 ```
 
 Object Types
@@ -412,12 +412,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
+$apiInstance = new Arta\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -441,7 +441,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MetadataObjects200ResponseInner[]**](../Model/MetadataObjects200ResponseInner.md)
+[**\Arta\Client\Model\MetadataObjects200ResponseInner[]**](../Model/MetadataObjects200ResponseInner.md)
 
 ### Authorization
 
@@ -459,7 +459,7 @@ try {
 ## `metadataPackageStatuses()`
 
 ```php
-metadataPackageStatuses($authorization): \OpenAPI\Client\Model\MetadataPackageStatuses200ResponseInner[]
+metadataPackageStatuses($authorization): \Arta\Client\Model\MetadataPackageStatuses200ResponseInner[]
 ```
 
 Package Statuses
@@ -474,12 +474,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
+$apiInstance = new Arta\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -503,7 +503,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MetadataPackageStatuses200ResponseInner[]**](../Model/MetadataPackageStatuses200ResponseInner.md)
+[**\Arta\Client\Model\MetadataPackageStatuses200ResponseInner[]**](../Model/MetadataPackageStatuses200ResponseInner.md)
 
 ### Authorization
 
@@ -521,7 +521,7 @@ try {
 ## `metadataPackings()`
 
 ```php
-metadataPackings($authorization): \OpenAPI\Client\Model\MetadataPackings200ResponseInner[]
+metadataPackings($authorization): \Arta\Client\Model\MetadataPackings200ResponseInner[]
 ```
 
 Packing Types
@@ -536,12 +536,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
+$apiInstance = new Arta\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -565,7 +565,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MetadataPackings200ResponseInner[]**](../Model/MetadataPackings200ResponseInner.md)
+[**\Arta\Client\Model\MetadataPackings200ResponseInner[]**](../Model/MetadataPackings200ResponseInner.md)
 
 ### Authorization
 
@@ -583,7 +583,7 @@ try {
 ## `metadataParcelTransportServices()`
 
 ```php
-metadataParcelTransportServices($authorization): \OpenAPI\Client\Model\MetadataParcelTransportServices200ResponseInner[]
+metadataParcelTransportServices($authorization): \Arta\Client\Model\MetadataParcelTransportServices200ResponseInner[]
 ```
 
 Parcel Transport Services
@@ -598,12 +598,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
+$apiInstance = new Arta\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -627,7 +627,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MetadataParcelTransportServices200ResponseInner[]**](../Model/MetadataParcelTransportServices200ResponseInner.md)
+[**\Arta\Client\Model\MetadataParcelTransportServices200ResponseInner[]**](../Model/MetadataParcelTransportServices200ResponseInner.md)
 
 ### Authorization
 
@@ -645,7 +645,7 @@ try {
 ## `metadataPaymentProcessTypes()`
 
 ```php
-metadataPaymentProcessTypes($authorization): \OpenAPI\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]
+metadataPaymentProcessTypes($authorization): \Arta\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]
 ```
 
 Payment Process types
@@ -660,12 +660,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
+$apiInstance = new Arta\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -689,7 +689,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]**](../Model/MetadataPaymentProcessTypes200ResponseInner.md)
+[**\Arta\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]**](../Model/MetadataPaymentProcessTypes200ResponseInner.md)
 
 ### Authorization
 
@@ -707,7 +707,7 @@ try {
 ## `metadataQuotes()`
 
 ```php
-metadataQuotes($authorization): \OpenAPI\Client\Model\MetadataQuotes200ResponseInner[]
+metadataQuotes($authorization): \Arta\Client\Model\MetadataQuotes200ResponseInner[]
 ```
 
 Quote Types
@@ -722,12 +722,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
+$apiInstance = new Arta\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -751,7 +751,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MetadataQuotes200ResponseInner[]**](../Model/MetadataQuotes200ResponseInner.md)
+[**\Arta\Client\Model\MetadataQuotes200ResponseInner[]**](../Model/MetadataQuotes200ResponseInner.md)
 
 ### Authorization
 
@@ -769,7 +769,7 @@ try {
 ## `metadataRequestStatuses()`
 
 ```php
-metadataRequestStatuses($authorization): \OpenAPI\Client\Model\MetadataRequestStatuses200ResponseInner[]
+metadataRequestStatuses($authorization): \Arta\Client\Model\MetadataRequestStatuses200ResponseInner[]
 ```
 
 Quote Request Statuses
@@ -784,12 +784,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
+$apiInstance = new Arta\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -813,7 +813,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MetadataRequestStatuses200ResponseInner[]**](../Model/MetadataRequestStatuses200ResponseInner.md)
+[**\Arta\Client\Model\MetadataRequestStatuses200ResponseInner[]**](../Model/MetadataRequestStatuses200ResponseInner.md)
 
 ### Authorization
 
@@ -831,7 +831,7 @@ try {
 ## `metadataServices()`
 
 ```php
-metadataServices($authorization): \OpenAPI\Client\Model\MetadataServices200ResponseInner[]
+metadataServices($authorization): \Arta\Client\Model\MetadataServices200ResponseInner[]
 ```
 
 Services
@@ -846,12 +846,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
+$apiInstance = new Arta\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -875,7 +875,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MetadataServices200ResponseInner[]**](../Model/MetadataServices200ResponseInner.md)
+[**\Arta\Client\Model\MetadataServices200ResponseInner[]**](../Model/MetadataServices200ResponseInner.md)
 
 ### Authorization
 
@@ -893,7 +893,7 @@ try {
 ## `metadataShipmentExceptionTypes()`
 
 ```php
-metadataShipmentExceptionTypes($authorization): \OpenAPI\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]
+metadataShipmentExceptionTypes($authorization): \Arta\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]
 ```
 
 Shipment Exception Types
@@ -908,12 +908,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
+$apiInstance = new Arta\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -937,7 +937,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]**](../Model/MetadataShipmentExceptionTypes200ResponseInner.md)
+[**\Arta\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]**](../Model/MetadataShipmentExceptionTypes200ResponseInner.md)
 
 ### Authorization
 
@@ -955,7 +955,7 @@ try {
 ## `metadataShipmentStatuses()`
 
 ```php
-metadataShipmentStatuses($authorization): \OpenAPI\Client\Model\MetadataShipmentStatuses200ResponseInner[]
+metadataShipmentStatuses($authorization): \Arta\Client\Model\MetadataShipmentStatuses200ResponseInner[]
 ```
 
 Shipment Statuses
@@ -970,12 +970,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\MetadataApi(
+$apiInstance = new Arta\Client\Api\MetadataApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -999,7 +999,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MetadataShipmentStatuses200ResponseInner[]**](../Model/MetadataShipmentStatuses200ResponseInner.md)
+[**\Arta\Client\Model\MetadataShipmentStatuses200ResponseInner[]**](../Model/MetadataShipmentStatuses200ResponseInner.md)
 
 ### Authorization
 

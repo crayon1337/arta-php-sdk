@@ -1,4 +1,4 @@
-# OpenAPI\Client\WebhooksApi
+# Arta\Client\WebhooksApi
 
 All URIs are relative to https://api.arta.io, except if the operation defines another base path.
 
@@ -17,7 +17,7 @@ All URIs are relative to https://api.arta.io, except if the operation defines an
 ## `webhooksCreate()`
 
 ```php
-webhooksCreate($authorization, $webhooks_create_request): \OpenAPI\Client\Model\Webhook
+webhooksCreate($authorization, $webhooks_create_request): \Arta\Client\Model\Webhook
 ```
 
 Create a Webhook
@@ -32,19 +32,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebhooksApi(
+$apiInstance = new Arta\Client\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $authorization = ARTA_APIKey s0e1t2e3c4a5s6t7r8o9n10o11m12y; // string | Authorize your API calls with an Arta API token
-$webhooks_create_request = new \OpenAPI\Client\Model\WebhooksCreateRequest(); // \OpenAPI\Client\Model\WebhooksCreateRequest
+$webhooks_create_request = new \Arta\Client\Model\WebhooksCreateRequest(); // \Arta\Client\Model\WebhooksCreateRequest
 
 try {
     $result = $apiInstance->webhooksCreate($authorization, $webhooks_create_request);
@@ -59,11 +59,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Authorize your API calls with an Arta API token | |
-| **webhooks_create_request** | [**\OpenAPI\Client\Model\WebhooksCreateRequest**](../Model/WebhooksCreateRequest.md)|  | [optional] |
+| **webhooks_create_request** | [**\Arta\Client\Model\WebhooksCreateRequest**](../Model/WebhooksCreateRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Webhook**](../Model/Webhook.md)
+[**\Arta\Client\Model\Webhook**](../Model/Webhook.md)
 
 ### Authorization
 
@@ -96,12 +96,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebhooksApi(
+$apiInstance = new Arta\Client\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,7 +144,7 @@ void (empty response body)
 ## `webhooksGet()`
 
 ```php
-webhooksGet($authorization, $webhook_id): \OpenAPI\Client\Model\Webhook
+webhooksGet($authorization, $webhook_id): \Arta\Client\Model\Webhook
 ```
 
 Get a Webhook
@@ -159,12 +159,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebhooksApi(
+$apiInstance = new Arta\Client\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -190,7 +190,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Webhook**](../Model/Webhook.md)
+[**\Arta\Client\Model\Webhook**](../Model/Webhook.md)
 
 ### Authorization
 
@@ -208,7 +208,7 @@ try {
 ## `webhooksList()`
 
 ```php
-webhooksList($authorization, $page_size, $page): \OpenAPI\Client\Model\WebhookList
+webhooksList($authorization, $page_size, $page): \Arta\Client\Model\WebhookList
 ```
 
 List Webhooks
@@ -223,12 +223,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebhooksApi(
+$apiInstance = new Arta\Client\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -256,7 +256,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebhookList**](../Model/WebhookList.md)
+[**\Arta\Client\Model\WebhookList**](../Model/WebhookList.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ try {
 ## `webhooksPatch()`
 
 ```php
-webhooksPatch($authorization, $webhook_id, $webhooks_patch_request): \OpenAPI\Client\Model\Webhook
+webhooksPatch($authorization, $webhook_id, $webhooks_patch_request): \Arta\Client\Model\Webhook
 ```
 
 Update a Webhook
@@ -289,12 +289,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebhooksApi(
+$apiInstance = new Arta\Client\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -302,7 +302,7 @@ $apiInstance = new OpenAPI\Client\Api\WebhooksApi(
 );
 $authorization = ARTA_APIKey s0e1t2e3c4a5s6t7r8o9n10o11m12y; // string | Authorize your API calls with an Arta API token
 $webhook_id = 56; // int | webhook_id parameter
-$webhooks_patch_request = new \OpenAPI\Client\Model\WebhooksPatchRequest(); // \OpenAPI\Client\Model\WebhooksPatchRequest
+$webhooks_patch_request = new \Arta\Client\Model\WebhooksPatchRequest(); // \Arta\Client\Model\WebhooksPatchRequest
 
 try {
     $result = $apiInstance->webhooksPatch($authorization, $webhook_id, $webhooks_patch_request);
@@ -318,11 +318,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Authorize your API calls with an Arta API token | |
 | **webhook_id** | **int**| webhook_id parameter | |
-| **webhooks_patch_request** | [**\OpenAPI\Client\Model\WebhooksPatchRequest**](../Model/WebhooksPatchRequest.md)|  | [optional] |
+| **webhooks_patch_request** | [**\Arta\Client\Model\WebhooksPatchRequest**](../Model/WebhooksPatchRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Webhook**](../Model/Webhook.md)
+[**\Arta\Client\Model\Webhook**](../Model/Webhook.md)
 
 ### Authorization
 
@@ -340,7 +340,7 @@ try {
 ## `webhooksPost()`
 
 ```php
-webhooksPost($authorization, $webhook_id): \OpenAPI\Client\Model\Webhook
+webhooksPost($authorization, $webhook_id): \Arta\Client\Model\Webhook
 ```
 
 Ping a Webhook
@@ -355,12 +355,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebhooksApi(
+$apiInstance = new Arta\Client\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -386,7 +386,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Webhook**](../Model/Webhook.md)
+[**\Arta\Client\Model\Webhook**](../Model/Webhook.md)
 
 ### Authorization
 
@@ -404,7 +404,7 @@ try {
 ## `webhooksSecretTokenGet()`
 
 ```php
-webhooksSecretTokenGet($authorization, $webhook_id): \OpenAPI\Client\Model\WebhooksSecretTokenGet200Response
+webhooksSecretTokenGet($authorization, $webhook_id): \Arta\Client\Model\WebhooksSecretTokenGet200Response
 ```
 
 Get a Webhook Secret Token
@@ -419,12 +419,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebhooksApi(
+$apiInstance = new Arta\Client\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -450,7 +450,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebhooksSecretTokenGet200Response**](../Model/WebhooksSecretTokenGet200Response.md)
+[**\Arta\Client\Model\WebhooksSecretTokenGet200Response**](../Model/WebhooksSecretTokenGet200Response.md)
 
 ### Authorization
 
@@ -468,7 +468,7 @@ try {
 ## `webhooksSecretTokenResetPatch()`
 
 ```php
-webhooksSecretTokenResetPatch($authorization, $webhook_id): \OpenAPI\Client\Model\WebhooksSecretTokenResetPatch200Response
+webhooksSecretTokenResetPatch($authorization, $webhook_id): \Arta\Client\Model\WebhooksSecretTokenResetPatch200Response
 ```
 
 Reset a Webhook Secret Token
@@ -483,12 +483,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebhooksApi(
+$apiInstance = new Arta\Client\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -514,7 +514,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebhooksSecretTokenResetPatch200Response**](../Model/WebhooksSecretTokenResetPatch200Response.md)
+[**\Arta\Client\Model\WebhooksSecretTokenResetPatch200Response**](../Model/WebhooksSecretTokenResetPatch200Response.md)
 
 ### Authorization
 

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **height** | **string** |  | [optional] [readonly]
 **id** | **int** | The ID of the package | [optional] [readonly]
 **is_sufficiently_packed** | **bool** |  | [optional] [readonly]
-**objects** | [**\OpenAPI\Client\Model\ShipmentPackagesInnerObjectsInner[]**](ShipmentPackagesInnerObjectsInner.md) |  | [optional]
+**objects** | [**\Arta\Client\Model\ShipmentPackagesInnerObjectsInner[]**](ShipmentPackagesInnerObjectsInner.md) |  | [optional]
 **packing_materials** | **string[]** | The list of materials used in this package&#39;s constuction | [optional] [readonly]
 **status** | **string** | The current delivery status for this package | [optional] [readonly]
 **unit_of_measurement** | **string** |  | [optional] [readonly]

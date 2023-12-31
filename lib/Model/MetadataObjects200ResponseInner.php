@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * MetadataObjects200ResponseInner Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class MetadataObjects200ResponseInner implements ModelInterface, ArrayAccess, \J
         'description' => 'string',
         'id' => 'string',
         'name' => 'string',
-        'subtypes' => '\OpenAPI\Client\Model\MetadataObjects200ResponseInnerSubtypesInner[]'
+        'subtypes' => '\Arta\Client\Model\MetadataObjects200ResponseInnerSubtypesInner[]'
     ];
 
     /**
@@ -395,7 +395,7 @@ class MetadataObjects200ResponseInner implements ModelInterface, ArrayAccess, \J
     /**
      * Gets subtypes
      *
-     * @return \OpenAPI\Client\Model\MetadataObjects200ResponseInnerSubtypesInner[]|null
+     * @return \Arta\Client\Model\MetadataObjects200ResponseInnerSubtypesInner[]|null
      */
     public function getSubtypes()
     {
@@ -405,7 +405,7 @@ class MetadataObjects200ResponseInner implements ModelInterface, ArrayAccess, \J
     /**
      * Sets subtypes
      *
-     * @param \OpenAPI\Client\Model\MetadataObjects200ResponseInnerSubtypesInner[]|null $subtypes The subtypes for this resource
+     * @param \Arta\Client\Model\MetadataObjects200ResponseInnerSubtypesInner[]|null $subtypes The subtypes for this resource
      *
      * @return self
      */

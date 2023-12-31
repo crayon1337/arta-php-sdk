@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Arta\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Arta\Client\ApiException;
+use Arta\Client\Configuration;
+use Arta\Client\HeaderSelector;
+use Arta\Client\ObjectSerializer;
 
 /**
  * RequestsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -147,9 +147,9 @@ class RequestsApi
      * @param  string $request_id request_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsCancel'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Request|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\Request|\Arta\Client\Model\BasicError
      */
     public function requestsCancel($authorization, $request_id, string $contentType = self::contentTypes['requestsCancel'][0])
     {
@@ -166,9 +166,9 @@ class RequestsApi
      * @param  string $request_id request_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsCancel'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Request|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\Request|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function requestsCancelWithHttpInfo($authorization, $request_id, string $contentType = self::contentTypes['requestsCancel'][0])
     {
@@ -211,11 +211,11 @@ class RequestsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Request' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\Request' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Request' !== 'string') {
+                        if ('\Arta\Client\Model\Request' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -233,16 +233,16 @@ class RequestsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Request', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\Request', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -260,13 +260,13 @@ class RequestsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Request';
+            $returnType = '\Arta\Client\Model\Request';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -299,7 +299,7 @@ class RequestsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Request',
+                        '\Arta\Client\Model\Request',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -307,7 +307,7 @@ class RequestsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -353,7 +353,7 @@ class RequestsApi
      */
     public function requestsCancelAsyncWithHttpInfo($authorization, $request_id, string $contentType = self::contentTypes['requestsCancel'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Request';
+        $returnType = '\Arta\Client\Model\Request';
         $request = $this->requestsCancelRequest($authorization, $request_id, $contentType);
 
         return $this->client
@@ -508,12 +508,12 @@ class RequestsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  int $arta_quote_timeout Optionally set a timeout boundary in milliseconds for creating quote requests.  While Arta takes great care to return quotes quickly, several external services consumed during the process of creating quotes have varying response times. The &#x60;Arta-Quote-Timeout&#x60; header is particularly useful if your integration requires requests to return within a given time frame. When the timeout is reached, the Arta API will stop any tasks in progress and return the quotes that have already been completed. If building quotes for a particular quote type is incomplete at timeout, the API will return a disqualification message for that quote type with a &#x60;client_timeout_reached&#x60; &#x60;reason_code&#x60;. (optional)
-     * @param  \OpenAPI\Client\Model\RequestsCreateRequest $requests_create_request requests_create_request (optional)
+     * @param  \Arta\Client\Model\RequestsCreateRequest $requests_create_request requests_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsCreate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Request|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\Request|\Arta\Client\Model\BasicError
      */
     public function requestsCreate($authorization, $arta_quote_timeout = null, $requests_create_request = null, string $contentType = self::contentTypes['requestsCreate'][0])
     {
@@ -528,12 +528,12 @@ class RequestsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  int $arta_quote_timeout Optionally set a timeout boundary in milliseconds for creating quote requests.  While Arta takes great care to return quotes quickly, several external services consumed during the process of creating quotes have varying response times. The &#x60;Arta-Quote-Timeout&#x60; header is particularly useful if your integration requires requests to return within a given time frame. When the timeout is reached, the Arta API will stop any tasks in progress and return the quotes that have already been completed. If building quotes for a particular quote type is incomplete at timeout, the API will return a disqualification message for that quote type with a &#x60;client_timeout_reached&#x60; &#x60;reason_code&#x60;. (optional)
-     * @param  \OpenAPI\Client\Model\RequestsCreateRequest $requests_create_request (optional)
+     * @param  \Arta\Client\Model\RequestsCreateRequest $requests_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsCreate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Request|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\Request|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function requestsCreateWithHttpInfo($authorization, $arta_quote_timeout = null, $requests_create_request = null, string $contentType = self::contentTypes['requestsCreate'][0])
     {
@@ -576,11 +576,11 @@ class RequestsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\Request' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\Request' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Request' !== 'string') {
+                        if ('\Arta\Client\Model\Request' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -598,16 +598,16 @@ class RequestsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Request', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\Request', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -625,13 +625,13 @@ class RequestsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Request';
+            $returnType = '\Arta\Client\Model\Request';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -664,7 +664,7 @@ class RequestsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Request',
+                        '\Arta\Client\Model\Request',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -672,7 +672,7 @@ class RequestsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -689,7 +689,7 @@ class RequestsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  int $arta_quote_timeout Optionally set a timeout boundary in milliseconds for creating quote requests.  While Arta takes great care to return quotes quickly, several external services consumed during the process of creating quotes have varying response times. The &#x60;Arta-Quote-Timeout&#x60; header is particularly useful if your integration requires requests to return within a given time frame. When the timeout is reached, the Arta API will stop any tasks in progress and return the quotes that have already been completed. If building quotes for a particular quote type is incomplete at timeout, the API will return a disqualification message for that quote type with a &#x60;client_timeout_reached&#x60; &#x60;reason_code&#x60;. (optional)
-     * @param  \OpenAPI\Client\Model\RequestsCreateRequest $requests_create_request (optional)
+     * @param  \Arta\Client\Model\RequestsCreateRequest $requests_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -712,7 +712,7 @@ class RequestsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  int $arta_quote_timeout Optionally set a timeout boundary in milliseconds for creating quote requests.  While Arta takes great care to return quotes quickly, several external services consumed during the process of creating quotes have varying response times. The &#x60;Arta-Quote-Timeout&#x60; header is particularly useful if your integration requires requests to return within a given time frame. When the timeout is reached, the Arta API will stop any tasks in progress and return the quotes that have already been completed. If building quotes for a particular quote type is incomplete at timeout, the API will return a disqualification message for that quote type with a &#x60;client_timeout_reached&#x60; &#x60;reason_code&#x60;. (optional)
-     * @param  \OpenAPI\Client\Model\RequestsCreateRequest $requests_create_request (optional)
+     * @param  \Arta\Client\Model\RequestsCreateRequest $requests_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -720,7 +720,7 @@ class RequestsApi
      */
     public function requestsCreateAsyncWithHttpInfo($authorization, $arta_quote_timeout = null, $requests_create_request = null, string $contentType = self::contentTypes['requestsCreate'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Request';
+        $returnType = '\Arta\Client\Model\Request';
         $request = $this->requestsCreateRequest($authorization, $arta_quote_timeout, $requests_create_request, $contentType);
 
         return $this->client
@@ -764,7 +764,7 @@ class RequestsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  int $arta_quote_timeout Optionally set a timeout boundary in milliseconds for creating quote requests.  While Arta takes great care to return quotes quickly, several external services consumed during the process of creating quotes have varying response times. The &#x60;Arta-Quote-Timeout&#x60; header is particularly useful if your integration requires requests to return within a given time frame. When the timeout is reached, the Arta API will stop any tasks in progress and return the quotes that have already been completed. If building quotes for a particular quote type is incomplete at timeout, the API will return a disqualification message for that quote type with a &#x60;client_timeout_reached&#x60; &#x60;reason_code&#x60;. (optional)
-     * @param  \OpenAPI\Client\Model\RequestsCreateRequest $requests_create_request (optional)
+     * @param  \Arta\Client\Model\RequestsCreateRequest $requests_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -874,12 +874,12 @@ class RequestsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $request_id request_id parameter (required)
-     * @param  \OpenAPI\Client\Model\RequestsCustomRequest $requests_custom_request requests_custom_request (optional)
+     * @param  \Arta\Client\Model\RequestsCustomRequest $requests_custom_request requests_custom_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsCustom'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Request|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\Request|\Arta\Client\Model\BasicError
      */
     public function requestsCustom($authorization, $request_id, $requests_custom_request = null, string $contentType = self::contentTypes['requestsCustom'][0])
     {
@@ -894,12 +894,12 @@ class RequestsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $request_id request_id parameter (required)
-     * @param  \OpenAPI\Client\Model\RequestsCustomRequest $requests_custom_request (optional)
+     * @param  \Arta\Client\Model\RequestsCustomRequest $requests_custom_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsCustom'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Request|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\Request|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function requestsCustomWithHttpInfo($authorization, $request_id, $requests_custom_request = null, string $contentType = self::contentTypes['requestsCustom'][0])
     {
@@ -942,11 +942,11 @@ class RequestsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Request' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\Request' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Request' !== 'string') {
+                        if ('\Arta\Client\Model\Request' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -964,16 +964,16 @@ class RequestsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Request', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\Request', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -991,13 +991,13 @@ class RequestsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Request';
+            $returnType = '\Arta\Client\Model\Request';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1030,7 +1030,7 @@ class RequestsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Request',
+                        '\Arta\Client\Model\Request',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1038,7 +1038,7 @@ class RequestsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1055,7 +1055,7 @@ class RequestsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $request_id request_id parameter (required)
-     * @param  \OpenAPI\Client\Model\RequestsCustomRequest $requests_custom_request (optional)
+     * @param  \Arta\Client\Model\RequestsCustomRequest $requests_custom_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsCustom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1078,7 +1078,7 @@ class RequestsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $request_id request_id parameter (required)
-     * @param  \OpenAPI\Client\Model\RequestsCustomRequest $requests_custom_request (optional)
+     * @param  \Arta\Client\Model\RequestsCustomRequest $requests_custom_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsCustom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1086,7 +1086,7 @@ class RequestsApi
      */
     public function requestsCustomAsyncWithHttpInfo($authorization, $request_id, $requests_custom_request = null, string $contentType = self::contentTypes['requestsCustom'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Request';
+        $returnType = '\Arta\Client\Model\Request';
         $request = $this->requestsCustomRequest($authorization, $request_id, $requests_custom_request, $contentType);
 
         return $this->client
@@ -1130,7 +1130,7 @@ class RequestsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $request_id request_id parameter (required)
-     * @param  \OpenAPI\Client\Model\RequestsCustomRequest $requests_custom_request (optional)
+     * @param  \Arta\Client\Model\RequestsCustomRequest $requests_custom_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsCustom'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1252,9 +1252,9 @@ class RequestsApi
      * @param  string $request_id request_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Request|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\Request|\Arta\Client\Model\BasicError
      */
     public function requestsGet($authorization, $request_id, string $contentType = self::contentTypes['requestsGet'][0])
     {
@@ -1271,9 +1271,9 @@ class RequestsApi
      * @param  string $request_id request_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Request|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\Request|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function requestsGetWithHttpInfo($authorization, $request_id, string $contentType = self::contentTypes['requestsGet'][0])
     {
@@ -1316,11 +1316,11 @@ class RequestsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Request' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\Request' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Request' !== 'string') {
+                        if ('\Arta\Client\Model\Request' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1338,16 +1338,16 @@ class RequestsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Request', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\Request', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1365,13 +1365,13 @@ class RequestsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Request';
+            $returnType = '\Arta\Client\Model\Request';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1404,7 +1404,7 @@ class RequestsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Request',
+                        '\Arta\Client\Model\Request',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1412,7 +1412,7 @@ class RequestsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1458,7 +1458,7 @@ class RequestsApi
      */
     public function requestsGetAsyncWithHttpInfo($authorization, $request_id, string $contentType = self::contentTypes['requestsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Request';
+        $returnType = '\Arta\Client\Model\Request';
         $request = $this->requestsGetRequest($authorization, $request_id, $contentType);
 
         return $this->client
@@ -1617,9 +1617,9 @@ class RequestsApi
      * @param  string $search An optional structured search query (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\RequestList
+     * @return \Arta\Client\Model\RequestList
      */
     public function requestsList($authorization, $page_size = 20, $page = 1, $search = null, string $contentType = self::contentTypes['requestsList'][0])
     {
@@ -1638,9 +1638,9 @@ class RequestsApi
      * @param  string $search An optional structured search query (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\RequestList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\RequestList, HTTP status code, HTTP response headers (array of strings)
      */
     public function requestsListWithHttpInfo($authorization, $page_size = 20, $page = 1, $search = null, string $contentType = self::contentTypes['requestsList'][0])
     {
@@ -1683,11 +1683,11 @@ class RequestsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\RequestList' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\RequestList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\RequestList' !== 'string') {
+                        if ('\Arta\Client\Model\RequestList' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1705,13 +1705,13 @@ class RequestsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\RequestList', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\RequestList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\RequestList';
+            $returnType = '\Arta\Client\Model\RequestList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1744,7 +1744,7 @@ class RequestsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\RequestList',
+                        '\Arta\Client\Model\RequestList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1794,7 +1794,7 @@ class RequestsApi
      */
     public function requestsListAsyncWithHttpInfo($authorization, $page_size = 20, $page = 1, $search = null, string $contentType = self::contentTypes['requestsList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\RequestList';
+        $returnType = '\Arta\Client\Model\RequestList';
         $request = $this->requestsListRequest($authorization, $page_size, $page, $search, $contentType);
 
         return $this->client
@@ -1966,12 +1966,12 @@ class RequestsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $request_id request_id parameter (required)
-     * @param  \OpenAPI\Client\Model\RequestsUpdateContactsRequest $requests_update_contacts_request requests_update_contacts_request (optional)
+     * @param  \Arta\Client\Model\RequestsUpdateContactsRequest $requests_update_contacts_request requests_update_contacts_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsUpdateContacts'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Request|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\Request|\Arta\Client\Model\BasicError
      */
     public function requestsUpdateContacts($authorization, $request_id, $requests_update_contacts_request = null, string $contentType = self::contentTypes['requestsUpdateContacts'][0])
     {
@@ -1986,12 +1986,12 @@ class RequestsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $request_id request_id parameter (required)
-     * @param  \OpenAPI\Client\Model\RequestsUpdateContactsRequest $requests_update_contacts_request (optional)
+     * @param  \Arta\Client\Model\RequestsUpdateContactsRequest $requests_update_contacts_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsUpdateContacts'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Request|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\Request|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function requestsUpdateContactsWithHttpInfo($authorization, $request_id, $requests_update_contacts_request = null, string $contentType = self::contentTypes['requestsUpdateContacts'][0])
     {
@@ -2034,11 +2034,11 @@ class RequestsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Request' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\Request' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Request' !== 'string') {
+                        if ('\Arta\Client\Model\Request' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2056,16 +2056,16 @@ class RequestsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Request', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\Request', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2083,13 +2083,13 @@ class RequestsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Request';
+            $returnType = '\Arta\Client\Model\Request';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2122,7 +2122,7 @@ class RequestsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Request',
+                        '\Arta\Client\Model\Request',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2130,7 +2130,7 @@ class RequestsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2147,7 +2147,7 @@ class RequestsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $request_id request_id parameter (required)
-     * @param  \OpenAPI\Client\Model\RequestsUpdateContactsRequest $requests_update_contacts_request (optional)
+     * @param  \Arta\Client\Model\RequestsUpdateContactsRequest $requests_update_contacts_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsUpdateContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2170,7 +2170,7 @@ class RequestsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $request_id request_id parameter (required)
-     * @param  \OpenAPI\Client\Model\RequestsUpdateContactsRequest $requests_update_contacts_request (optional)
+     * @param  \Arta\Client\Model\RequestsUpdateContactsRequest $requests_update_contacts_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsUpdateContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2178,7 +2178,7 @@ class RequestsApi
      */
     public function requestsUpdateContactsAsyncWithHttpInfo($authorization, $request_id, $requests_update_contacts_request = null, string $contentType = self::contentTypes['requestsUpdateContacts'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Request';
+        $returnType = '\Arta\Client\Model\Request';
         $request = $this->requestsUpdateContactsRequest($authorization, $request_id, $requests_update_contacts_request, $contentType);
 
         return $this->client
@@ -2222,7 +2222,7 @@ class RequestsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $request_id request_id parameter (required)
-     * @param  \OpenAPI\Client\Model\RequestsUpdateContactsRequest $requests_update_contacts_request (optional)
+     * @param  \Arta\Client\Model\RequestsUpdateContactsRequest $requests_update_contacts_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['requestsUpdateContacts'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

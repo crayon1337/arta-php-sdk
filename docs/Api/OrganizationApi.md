@@ -1,4 +1,4 @@
-# OpenAPI\Client\OrganizationApi
+# Arta\Client\OrganizationApi
 
 All URIs are relative to https://api.arta.io, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.arta.io, except if the operation defines an
 ## `organizationGet()`
 
 ```php
-organizationGet($authorization): \OpenAPI\Client\Model\Organization
+organizationGet($authorization): \Arta\Client\Model\Organization
 ```
 
 Get an Organization
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrganizationApi(
+$apiInstance = new Arta\Client\Api\OrganizationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Organization**](../Model/Organization.md)
+[**\Arta\Client\Model\Organization**](../Model/Organization.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ try {
 ## `organizationPatch()`
 
 ```php
-organizationPatch($authorization, $organization_patch_request): \OpenAPI\Client\Model\Organization
+organizationPatch($authorization, $organization_patch_request): \Arta\Client\Model\Organization
 ```
 
 Update an Organization
@@ -88,19 +88,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\OrganizationApi(
+$apiInstance = new Arta\Client\Api\OrganizationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $authorization = ARTA_APIKey s0e1t2e3c4a5s6t7r8o9n10o11m12y; // string | Authorize your API calls with an Arta API token
-$organization_patch_request = {"organization":{"api_version":"2021-01-01","company_name":"Hudson Street Collective LLC","display_name":"Hudson Street","name":"Hudson Street Gallery"}}; // \OpenAPI\Client\Model\OrganizationPatchRequest
+$organization_patch_request = {"organization":{"api_version":"2021-01-01","company_name":"Hudson Street Collective LLC","display_name":"Hudson Street","name":"Hudson Street Gallery"}}; // \Arta\Client\Model\OrganizationPatchRequest
 
 try {
     $result = $apiInstance->organizationPatch($authorization, $organization_patch_request);
@@ -115,11 +115,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Authorize your API calls with an Arta API token | |
-| **organization_patch_request** | [**\OpenAPI\Client\Model\OrganizationPatchRequest**](../Model/OrganizationPatchRequest.md)|  | [optional] |
+| **organization_patch_request** | [**\Arta\Client\Model\OrganizationPatchRequest**](../Model/OrganizationPatchRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Organization**](../Model/Organization.md)
+[**\Arta\Client\Model\Organization**](../Model/Organization.md)
 
 ### Authorization
 

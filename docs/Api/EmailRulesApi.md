@@ -1,4 +1,4 @@
-# OpenAPI\Client\EmailRulesApi
+# Arta\Client\EmailRulesApi
 
 All URIs are relative to https://api.arta.io, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.arta.io, except if the operation defines an
 ## `emailRulesCreate()`
 
 ```php
-emailRulesCreate($authorization, $email_rules_create_request): \OpenAPI\Client\Model\EmailRule
+emailRulesCreate($authorization, $email_rules_create_request): \Arta\Client\Model\EmailRule
 ```
 
 Create an Email Rule
@@ -29,19 +29,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailRulesApi(
+$apiInstance = new Arta\Client\Api\EmailRulesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $authorization = ARTA_APIKey s0e1t2e3c4a5s6t7r8o9n10o11m12y; // string | Authorize your API calls with an Arta API token
-$email_rules_create_request = new \OpenAPI\Client\Model\EmailRulesCreateRequest(); // \OpenAPI\Client\Model\EmailRulesCreateRequest
+$email_rules_create_request = new \Arta\Client\Model\EmailRulesCreateRequest(); // \Arta\Client\Model\EmailRulesCreateRequest
 
 try {
     $result = $apiInstance->emailRulesCreate($authorization, $email_rules_create_request);
@@ -56,11 +56,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Authorize your API calls with an Arta API token | |
-| **email_rules_create_request** | [**\OpenAPI\Client\Model\EmailRulesCreateRequest**](../Model/EmailRulesCreateRequest.md)|  | [optional] |
+| **email_rules_create_request** | [**\Arta\Client\Model\EmailRulesCreateRequest**](../Model/EmailRulesCreateRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailRule**](../Model/EmailRule.md)
+[**\Arta\Client\Model\EmailRule**](../Model/EmailRule.md)
 
 ### Authorization
 
@@ -93,12 +93,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailRulesApi(
+$apiInstance = new Arta\Client\Api\EmailRulesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -141,7 +141,7 @@ void (empty response body)
 ## `emailRulesGet()`
 
 ```php
-emailRulesGet($authorization, $email_rule_id): \OpenAPI\Client\Model\EmailRule
+emailRulesGet($authorization, $email_rule_id): \Arta\Client\Model\EmailRule
 ```
 
 Get an Email Rule
@@ -156,12 +156,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailRulesApi(
+$apiInstance = new Arta\Client\Api\EmailRulesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -187,7 +187,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailRule**](../Model/EmailRule.md)
+[**\Arta\Client\Model\EmailRule**](../Model/EmailRule.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ try {
 ## `emailRulesList()`
 
 ```php
-emailRulesList($authorization, $page_size, $page): \OpenAPI\Client\Model\EmailRuleList
+emailRulesList($authorization, $page_size, $page): \Arta\Client\Model\EmailRuleList
 ```
 
 List Email Rules
@@ -220,12 +220,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailRulesApi(
+$apiInstance = new Arta\Client\Api\EmailRulesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -253,7 +253,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailRuleList**](../Model/EmailRuleList.md)
+[**\Arta\Client\Model\EmailRuleList**](../Model/EmailRuleList.md)
 
 ### Authorization
 
@@ -271,7 +271,7 @@ try {
 ## `emailRulesUpdate()`
 
 ```php
-emailRulesUpdate($authorization, $email_rule_id, $email_rules_update_request): \OpenAPI\Client\Model\EmailRule
+emailRulesUpdate($authorization, $email_rule_id, $email_rules_update_request): \Arta\Client\Model\EmailRule
 ```
 
 Update an Email Rule
@@ -286,12 +286,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailRulesApi(
+$apiInstance = new Arta\Client\Api\EmailRulesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -299,7 +299,7 @@ $apiInstance = new OpenAPI\Client\Api\EmailRulesApi(
 );
 $authorization = ARTA_APIKey s0e1t2e3c4a5s6t7r8o9n10o11m12y; // string | Authorize your API calls with an Arta API token
 $email_rule_id = 56; // int | email_rule_id parameter
-$email_rules_update_request = new \OpenAPI\Client\Model\EmailRulesUpdateRequest(); // \OpenAPI\Client\Model\EmailRulesUpdateRequest
+$email_rules_update_request = new \Arta\Client\Model\EmailRulesUpdateRequest(); // \Arta\Client\Model\EmailRulesUpdateRequest
 
 try {
     $result = $apiInstance->emailRulesUpdate($authorization, $email_rule_id, $email_rules_update_request);
@@ -315,11 +315,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Authorize your API calls with an Arta API token | |
 | **email_rule_id** | **int**| email_rule_id parameter | |
-| **email_rules_update_request** | [**\OpenAPI\Client\Model\EmailRulesUpdateRequest**](../Model/EmailRulesUpdateRequest.md)|  | [optional] |
+| **email_rules_update_request** | [**\Arta\Client\Model\EmailRulesUpdateRequest**](../Model/EmailRulesUpdateRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailRule**](../Model/EmailRule.md)
+[**\Arta\Client\Model\EmailRule**](../Model/EmailRule.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * RequestsCreateRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class RequestsCreateRequest implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'request' => '\OpenAPI\Client\Model\RequestsCreateRequestRequest'
+        'request' => '\Arta\Client\Model\RequestsCreateRequestRequest'
     ];
 
     /**
@@ -296,7 +296,7 @@ class RequestsCreateRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets request
      *
-     * @return \OpenAPI\Client\Model\RequestsCreateRequestRequest
+     * @return \Arta\Client\Model\RequestsCreateRequestRequest
      */
     public function getRequest()
     {
@@ -306,7 +306,7 @@ class RequestsCreateRequest implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets request
      *
-     * @param \OpenAPI\Client\Model\RequestsCreateRequestRequest $request request
+     * @param \Arta\Client\Model\RequestsCreateRequestRequest $request request
      *
      * @return self
      */

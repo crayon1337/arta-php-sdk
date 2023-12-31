@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * ShipmentExceptionsCreateRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ShipmentExceptionsCreateRequest implements ModelInterface, ArrayAccess, \J
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipment_exception' => '\OpenAPI\Client\Model\ShipmentExceptionsCreateRequestShipmentException'
+        'shipment_exception' => '\Arta\Client\Model\ShipmentExceptionsCreateRequestShipmentException'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ShipmentExceptionsCreateRequest implements ModelInterface, ArrayAccess, \J
     /**
      * Gets shipment_exception
      *
-     * @return \OpenAPI\Client\Model\ShipmentExceptionsCreateRequestShipmentException|null
+     * @return \Arta\Client\Model\ShipmentExceptionsCreateRequestShipmentException|null
      */
     public function getShipmentException()
     {
@@ -303,7 +303,7 @@ class ShipmentExceptionsCreateRequest implements ModelInterface, ArrayAccess, \J
     /**
      * Sets shipment_exception
      *
-     * @param \OpenAPI\Client\Model\ShipmentExceptionsCreateRequestShipmentException|null $shipment_exception shipment_exception
+     * @param \Arta\Client\Model\ShipmentExceptionsCreateRequestShipmentException|null $shipment_exception shipment_exception
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * RequestQuotesInner Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,9 +59,9 @@ class RequestQuotesInner implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'included_insurance_policy' => '\OpenAPI\Client\Model\RequestQuotesInnerIncludedInsurancePolicy',
-        'included_services' => '\OpenAPI\Client\Model\RequestQuotesInnerIncludedServicesInner[]',
-        'optional_services' => '\OpenAPI\Client\Model\RequestQuotesInnerOptionalServicesInner[]',
+        'included_insurance_policy' => '\Arta\Client\Model\RequestQuotesInnerIncludedInsurancePolicy',
+        'included_services' => '\Arta\Client\Model\RequestQuotesInnerIncludedServicesInner[]',
+        'optional_services' => '\Arta\Client\Model\RequestQuotesInnerOptionalServicesInner[]',
         'quote_type' => 'string',
         'status' => 'string',
         'total' => 'string',
@@ -385,7 +385,7 @@ class RequestQuotesInner implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets included_insurance_policy
      *
-     * @return \OpenAPI\Client\Model\RequestQuotesInnerIncludedInsurancePolicy|null
+     * @return \Arta\Client\Model\RequestQuotesInnerIncludedInsurancePolicy|null
      */
     public function getIncludedInsurancePolicy()
     {
@@ -395,7 +395,7 @@ class RequestQuotesInner implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets included_insurance_policy
      *
-     * @param \OpenAPI\Client\Model\RequestQuotesInnerIncludedInsurancePolicy|null $included_insurance_policy included_insurance_policy
+     * @param \Arta\Client\Model\RequestQuotesInnerIncludedInsurancePolicy|null $included_insurance_policy included_insurance_policy
      *
      * @return self
      */
@@ -419,7 +419,7 @@ class RequestQuotesInner implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets included_services
      *
-     * @return \OpenAPI\Client\Model\RequestQuotesInnerIncludedServicesInner[]|null
+     * @return \Arta\Client\Model\RequestQuotesInnerIncludedServicesInner[]|null
      */
     public function getIncludedServices()
     {
@@ -429,7 +429,7 @@ class RequestQuotesInner implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets included_services
      *
-     * @param \OpenAPI\Client\Model\RequestQuotesInnerIncludedServicesInner[]|null $included_services included_services
+     * @param \Arta\Client\Model\RequestQuotesInnerIncludedServicesInner[]|null $included_services included_services
      *
      * @return self
      */
@@ -446,7 +446,7 @@ class RequestQuotesInner implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets optional_services
      *
-     * @return \OpenAPI\Client\Model\RequestQuotesInnerOptionalServicesInner[]|null
+     * @return \Arta\Client\Model\RequestQuotesInnerOptionalServicesInner[]|null
      */
     public function getOptionalServices()
     {
@@ -456,7 +456,7 @@ class RequestQuotesInner implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets optional_services
      *
-     * @param \OpenAPI\Client\Model\RequestQuotesInnerOptionalServicesInner[]|null $optional_services optional_services
+     * @param \Arta\Client\Model\RequestQuotesInnerOptionalServicesInner[]|null $optional_services optional_services
      *
      * @return self
      */

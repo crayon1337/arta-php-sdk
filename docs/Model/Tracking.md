@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**carrier** | [**\OpenAPI\Client\Model\TrackingCarrier**](TrackingCarrier.md) |  | [optional]
-**events** | [**\OpenAPI\Client\Model\TrackingCarrier[]**](TrackingCarrier.md) |  | [optional]
+**carrier** | [**\Arta\Client\Model\TrackingCarrier**](TrackingCarrier.md) |  | [optional]
+**events** | [**\Arta\Client\Model\TrackingCarrier[]**](TrackingCarrier.md) |  | [optional]
 **status** | **string** |  | [optional]
 **tracking_number** | **string** |  | [optional]
 

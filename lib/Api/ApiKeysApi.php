@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Arta\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Arta\Client\ApiException;
+use Arta\Client\Configuration;
+use Arta\Client\HeaderSelector;
+use Arta\Client\ObjectSerializer;
 
 /**
  * ApiKeysApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -138,12 +138,12 @@ class ApiKeysApi
      * Create an API Key
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\ApiKeysCreateRequest $api_keys_create_request api_keys_create_request (optional)
+     * @param  \Arta\Client\Model\ApiKeysCreateRequest $api_keys_create_request api_keys_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiKeysCreate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ApiKey|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\ApiKey|\Arta\Client\Model\BasicError
      */
     public function apiKeysCreate($authorization, $api_keys_create_request = null, string $contentType = self::contentTypes['apiKeysCreate'][0])
     {
@@ -157,12 +157,12 @@ class ApiKeysApi
      * Create an API Key
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\ApiKeysCreateRequest $api_keys_create_request (optional)
+     * @param  \Arta\Client\Model\ApiKeysCreateRequest $api_keys_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiKeysCreate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ApiKey|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\ApiKey|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiKeysCreateWithHttpInfo($authorization, $api_keys_create_request = null, string $contentType = self::contentTypes['apiKeysCreate'][0])
     {
@@ -205,11 +205,11 @@ class ApiKeysApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\ApiKey' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\ApiKey' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiKey' !== 'string') {
+                        if ('\Arta\Client\Model\ApiKey' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -227,16 +227,16 @@ class ApiKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiKey', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\ApiKey', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -254,13 +254,13 @@ class ApiKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ApiKey';
+            $returnType = '\Arta\Client\Model\ApiKey';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -293,7 +293,7 @@ class ApiKeysApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiKey',
+                        '\Arta\Client\Model\ApiKey',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -301,7 +301,7 @@ class ApiKeysApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -317,7 +317,7 @@ class ApiKeysApi
      * Create an API Key
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\ApiKeysCreateRequest $api_keys_create_request (optional)
+     * @param  \Arta\Client\Model\ApiKeysCreateRequest $api_keys_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiKeysCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -339,7 +339,7 @@ class ApiKeysApi
      * Create an API Key
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\ApiKeysCreateRequest $api_keys_create_request (optional)
+     * @param  \Arta\Client\Model\ApiKeysCreateRequest $api_keys_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiKeysCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -347,7 +347,7 @@ class ApiKeysApi
      */
     public function apiKeysCreateAsyncWithHttpInfo($authorization, $api_keys_create_request = null, string $contentType = self::contentTypes['apiKeysCreate'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ApiKey';
+        $returnType = '\Arta\Client\Model\ApiKey';
         $request = $this->apiKeysCreateRequest($authorization, $api_keys_create_request, $contentType);
 
         return $this->client
@@ -390,7 +390,7 @@ class ApiKeysApi
      * Create request for operation 'apiKeysCreate'
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\ApiKeysCreateRequest $api_keys_create_request (optional)
+     * @param  \Arta\Client\Model\ApiKeysCreateRequest $api_keys_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiKeysCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -497,7 +497,7 @@ class ApiKeysApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiKeysDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -515,7 +515,7 @@ class ApiKeysApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiKeysDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -565,7 +565,7 @@ class ApiKeysApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -755,9 +755,9 @@ class ApiKeysApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiKeysGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ApiKey|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\ApiKey|\Arta\Client\Model\BasicError
      */
     public function apiKeysGet($api_key_id, $authorization, string $contentType = self::contentTypes['apiKeysGet'][0])
     {
@@ -774,9 +774,9 @@ class ApiKeysApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiKeysGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ApiKey|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\ApiKey|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiKeysGetWithHttpInfo($api_key_id, $authorization, string $contentType = self::contentTypes['apiKeysGet'][0])
     {
@@ -819,11 +819,11 @@ class ApiKeysApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ApiKey' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\ApiKey' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiKey' !== 'string') {
+                        if ('\Arta\Client\Model\ApiKey' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -841,16 +841,16 @@ class ApiKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiKey', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\ApiKey', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -868,13 +868,13 @@ class ApiKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ApiKey';
+            $returnType = '\Arta\Client\Model\ApiKey';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -907,7 +907,7 @@ class ApiKeysApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiKey',
+                        '\Arta\Client\Model\ApiKey',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -915,7 +915,7 @@ class ApiKeysApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -961,7 +961,7 @@ class ApiKeysApi
      */
     public function apiKeysGetAsyncWithHttpInfo($api_key_id, $authorization, string $contentType = self::contentTypes['apiKeysGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ApiKey';
+        $returnType = '\Arta\Client\Model\ApiKey';
         $request = $this->apiKeysGetRequest($api_key_id, $authorization, $contentType);
 
         return $this->client
@@ -1119,9 +1119,9 @@ class ApiKeysApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiKeysList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ApiKeyList
+     * @return \Arta\Client\Model\ApiKeyList
      */
     public function apiKeysList($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['apiKeysList'][0])
     {
@@ -1139,9 +1139,9 @@ class ApiKeysApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiKeysList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ApiKeyList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\ApiKeyList, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiKeysListWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['apiKeysList'][0])
     {
@@ -1184,11 +1184,11 @@ class ApiKeysApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ApiKeyList' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\ApiKeyList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ApiKeyList' !== 'string') {
+                        if ('\Arta\Client\Model\ApiKeyList' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1206,13 +1206,13 @@ class ApiKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ApiKeyList', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\ApiKeyList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ApiKeyList';
+            $returnType = '\Arta\Client\Model\ApiKeyList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1245,7 +1245,7 @@ class ApiKeysApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ApiKeyList',
+                        '\Arta\Client\Model\ApiKeyList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1293,7 +1293,7 @@ class ApiKeysApi
      */
     public function apiKeysListAsyncWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['apiKeysList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ApiKeyList';
+        $returnType = '\Arta\Client\Model\ApiKeyList';
         $request = $this->apiKeysListRequest($authorization, $page_size, $page, $contentType);
 
         return $this->client

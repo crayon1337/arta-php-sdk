@@ -5,12 +5,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_at** | **string** | A NaiveDatetime-formatted timestamp describing when the resource was created with microsecond precision | [optional]
-**destination** | [**\OpenAPI\Client\Model\ShipmentListItemsInnerDestination**](ShipmentListItemsInnerDestination.md) |  | [optional]
+**destination** | [**\Arta\Client\Model\ShipmentListItemsInnerDestination**](ShipmentListItemsInnerDestination.md) |  | [optional]
 **hosted_session_id** | **int** | The ID of the HostedSession through which this shipment was created | [optional]
 **id** | **string** | The ID for this shipment | [optional]
 **internal_reference** | **string** | This field can be used to pass through any character data that you may want returned unaltered for your own later usage | [optional]
 **object_count** | **int** | The count of objects in this shipment | [optional]
-**origin** | [**\OpenAPI\Client\Model\ShipmentListItemsInnerOrigin**](ShipmentListItemsInnerOrigin.md) |  | [optional]
+**origin** | [**\Arta\Client\Model\ShipmentListItemsInnerOrigin**](ShipmentListItemsInnerOrigin.md) |  | [optional]
 **package_count** | **int** | The number of packages in this shipment | [optional]
 **public_reference** | **string** | A client defined name for the resource. The value provided for the public_reference field may appear in notification emails and public web pages | [optional]
 **quote_type** | **string** | The ID of the quote type associated with this shipment | [optional]

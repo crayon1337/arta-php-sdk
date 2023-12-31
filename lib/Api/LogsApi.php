@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Arta\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Arta\Client\ApiException;
+use Arta\Client\Configuration;
+use Arta\Client\HeaderSelector;
+use Arta\Client\ObjectSerializer;
 
 /**
  * LogsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -135,9 +135,9 @@ class LogsApi
      * @param  int $log_id log_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['logsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Log|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\Log|\Arta\Client\Model\BasicError
      */
     public function logsGet($authorization, $log_id, string $contentType = self::contentTypes['logsGet'][0])
     {
@@ -154,9 +154,9 @@ class LogsApi
      * @param  int $log_id log_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['logsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Log|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\Log|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function logsGetWithHttpInfo($authorization, $log_id, string $contentType = self::contentTypes['logsGet'][0])
     {
@@ -199,11 +199,11 @@ class LogsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Log' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\Log' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Log' !== 'string') {
+                        if ('\Arta\Client\Model\Log' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -221,16 +221,16 @@ class LogsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Log', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\Log', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -248,13 +248,13 @@ class LogsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Log';
+            $returnType = '\Arta\Client\Model\Log';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -287,7 +287,7 @@ class LogsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Log',
+                        '\Arta\Client\Model\Log',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -295,7 +295,7 @@ class LogsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -341,7 +341,7 @@ class LogsApi
      */
     public function logsGetAsyncWithHttpInfo($authorization, $log_id, string $contentType = self::contentTypes['logsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Log';
+        $returnType = '\Arta\Client\Model\Log';
         $request = $this->logsGetRequest($authorization, $log_id, $contentType);
 
         return $this->client
@@ -499,9 +499,9 @@ class LogsApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['logsList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\LogList
+     * @return \Arta\Client\Model\LogList
      */
     public function logsList($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['logsList'][0])
     {
@@ -519,9 +519,9 @@ class LogsApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['logsList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\LogList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\LogList, HTTP status code, HTTP response headers (array of strings)
      */
     public function logsListWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['logsList'][0])
     {
@@ -564,11 +564,11 @@ class LogsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\LogList' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\LogList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\LogList' !== 'string') {
+                        if ('\Arta\Client\Model\LogList' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -586,13 +586,13 @@ class LogsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\LogList', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\LogList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\LogList';
+            $returnType = '\Arta\Client\Model\LogList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -625,7 +625,7 @@ class LogsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\LogList',
+                        '\Arta\Client\Model\LogList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -673,7 +673,7 @@ class LogsApi
      */
     public function logsListAsyncWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['logsList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\LogList';
+        $returnType = '\Arta\Client\Model\LogList';
         $request = $this->logsListRequest($authorization, $page_size, $page, $contentType);
 
         return $this->client

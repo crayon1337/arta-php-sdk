@@ -1,4 +1,4 @@
-# OpenAPI\Client\ShipmentExceptionsApi
+# Arta\Client\ShipmentExceptionsApi
 
 All URIs are relative to https://api.arta.io, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.arta.io, except if the operation defines an
 ## `shipmentExceptionsCreate()`
 
 ```php
-shipmentExceptionsCreate($authorization, $shipment_exceptions_create_request): \OpenAPI\Client\Model\ShipmentExceptionsCreate201Response
+shipmentExceptionsCreate($authorization, $shipment_exceptions_create_request): \Arta\Client\Model\ShipmentExceptionsCreate201Response
 ```
 
 Create Shipment Exception
@@ -28,19 +28,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentExceptionsApi(
+$apiInstance = new Arta\Client\Api\ShipmentExceptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $authorization = ARTA_APIKey s0e1t2e3c4a5s6t7r8o9n10o11m12y; // string | Authorize your API calls with an Arta API token
-$shipment_exceptions_create_request = {"shipment_exception":{"type":"requested_hold_to_collect","shipment_id":"5baff45a-281d-416e-9310-a4a7c637952e","hold_until":"2023-08-15"}}; // \OpenAPI\Client\Model\ShipmentExceptionsCreateRequest
+$shipment_exceptions_create_request = {"shipment_exception":{"type":"requested_hold_to_collect","shipment_id":"5baff45a-281d-416e-9310-a4a7c637952e","hold_until":"2023-08-15"}}; // \Arta\Client\Model\ShipmentExceptionsCreateRequest
 
 try {
     $result = $apiInstance->shipmentExceptionsCreate($authorization, $shipment_exceptions_create_request);
@@ -55,11 +55,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Authorize your API calls with an Arta API token | |
-| **shipment_exceptions_create_request** | [**\OpenAPI\Client\Model\ShipmentExceptionsCreateRequest**](../Model/ShipmentExceptionsCreateRequest.md)|  | [optional] |
+| **shipment_exceptions_create_request** | [**\Arta\Client\Model\ShipmentExceptionsCreateRequest**](../Model/ShipmentExceptionsCreateRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShipmentExceptionsCreate201Response**](../Model/ShipmentExceptionsCreate201Response.md)
+[**\Arta\Client\Model\ShipmentExceptionsCreate201Response**](../Model/ShipmentExceptionsCreate201Response.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ try {
 ## `shipmentExceptionsGet()`
 
 ```php
-shipmentExceptionsGet($authorization, $shipment_exception_id): \OpenAPI\Client\Model\ShipmentExceptionsGet200Response
+shipmentExceptionsGet($authorization, $shipment_exception_id): \Arta\Client\Model\ShipmentExceptionsGet200Response
 ```
 
 Get a Shipment Exception
@@ -92,12 +92,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentExceptionsApi(
+$apiInstance = new Arta\Client\Api\ShipmentExceptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -123,7 +123,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShipmentExceptionsGet200Response**](../Model/ShipmentExceptionsGet200Response.md)
+[**\Arta\Client\Model\ShipmentExceptionsGet200Response**](../Model/ShipmentExceptionsGet200Response.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ try {
 ## `shipmentExceptionsList()`
 
 ```php
-shipmentExceptionsList($authorization, $page_size, $page): \OpenAPI\Client\Model\ShipmentExceptionsList200Response
+shipmentExceptionsList($authorization, $page_size, $page): \Arta\Client\Model\ShipmentExceptionsList200Response
 ```
 
 List Shipment Exceptions
@@ -156,12 +156,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentExceptionsApi(
+$apiInstance = new Arta\Client\Api\ShipmentExceptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -189,7 +189,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShipmentExceptionsList200Response**](../Model/ShipmentExceptionsList200Response.md)
+[**\Arta\Client\Model\ShipmentExceptionsList200Response**](../Model/ShipmentExceptionsList200Response.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ try {
 ## `shipmentExceptionsUpdate()`
 
 ```php
-shipmentExceptionsUpdate($authorization, $shipment_exception_id, $shipment_exceptions_update_request): \OpenAPI\Client\Model\ShipmentExceptionsUpdate200Response
+shipmentExceptionsUpdate($authorization, $shipment_exception_id, $shipment_exceptions_update_request): \Arta\Client\Model\ShipmentExceptionsUpdate200Response
 ```
 
 Update a Shipment Exception
@@ -222,12 +222,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentExceptionsApi(
+$apiInstance = new Arta\Client\Api\ShipmentExceptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -235,7 +235,7 @@ $apiInstance = new OpenAPI\Client\Api\ShipmentExceptionsApi(
 );
 $authorization = ARTA_APIKey s0e1t2e3c4a5s6t7r8o9n10o11m12y; // string | Authorize your API calls with an Arta API token
 $shipment_exception_id = 'shipment_exception_id_example'; // string | shipment_exception_id parameter
-$shipment_exceptions_update_request = {"shipment_exception":{"hold_until":"2023-08-15"}}; // \OpenAPI\Client\Model\ShipmentExceptionsUpdateRequest
+$shipment_exceptions_update_request = {"shipment_exception":{"hold_until":"2023-08-15"}}; // \Arta\Client\Model\ShipmentExceptionsUpdateRequest
 
 try {
     $result = $apiInstance->shipmentExceptionsUpdate($authorization, $shipment_exception_id, $shipment_exceptions_update_request);
@@ -251,11 +251,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Authorize your API calls with an Arta API token | |
 | **shipment_exception_id** | **string**| shipment_exception_id parameter | |
-| **shipment_exceptions_update_request** | [**\OpenAPI\Client\Model\ShipmentExceptionsUpdateRequest**](../Model/ShipmentExceptionsUpdateRequest.md)|  | [optional] |
+| **shipment_exceptions_update_request** | [**\Arta\Client\Model\ShipmentExceptionsUpdateRequest**](../Model/ShipmentExceptionsUpdateRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShipmentExceptionsUpdate200Response**](../Model/ShipmentExceptionsUpdate200Response.md)
+[**\Arta\Client\Model\ShipmentExceptionsUpdate200Response**](../Model/ShipmentExceptionsUpdate200Response.md)
 
 ### Authorization
 

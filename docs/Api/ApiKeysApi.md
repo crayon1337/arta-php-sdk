@@ -1,4 +1,4 @@
-# OpenAPI\Client\ApiKeysApi
+# Arta\Client\ApiKeysApi
 
 All URIs are relative to https://api.arta.io, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.arta.io, except if the operation defines an
 ## `apiKeysCreate()`
 
 ```php
-apiKeysCreate($authorization, $api_keys_create_request): \OpenAPI\Client\Model\ApiKey
+apiKeysCreate($authorization, $api_keys_create_request): \Arta\Client\Model\ApiKey
 ```
 
 Create an API Key
@@ -28,19 +28,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ApiKeysApi(
+$apiInstance = new Arta\Client\Api\ApiKeysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $authorization = ARTA_APIKey s0e1t2e3c4a5s6t7r8o9n10o11m12y; // string | Authorize your API calls with an Arta API token
-$api_keys_create_request = new \OpenAPI\Client\Model\ApiKeysCreateRequest(); // \OpenAPI\Client\Model\ApiKeysCreateRequest
+$api_keys_create_request = new \Arta\Client\Model\ApiKeysCreateRequest(); // \Arta\Client\Model\ApiKeysCreateRequest
 
 try {
     $result = $apiInstance->apiKeysCreate($authorization, $api_keys_create_request);
@@ -55,11 +55,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Authorize your API calls with an Arta API token | |
-| **api_keys_create_request** | [**\OpenAPI\Client\Model\ApiKeysCreateRequest**](../Model/ApiKeysCreateRequest.md)|  | [optional] |
+| **api_keys_create_request** | [**\Arta\Client\Model\ApiKeysCreateRequest**](../Model/ApiKeysCreateRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiKey**](../Model/ApiKey.md)
+[**\Arta\Client\Model\ApiKey**](../Model/ApiKey.md)
 
 ### Authorization
 
@@ -92,12 +92,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ApiKeysApi(
+$apiInstance = new Arta\Client\Api\ApiKeysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -140,7 +140,7 @@ void (empty response body)
 ## `apiKeysGet()`
 
 ```php
-apiKeysGet($api_key_id, $authorization): \OpenAPI\Client\Model\ApiKey
+apiKeysGet($api_key_id, $authorization): \Arta\Client\Model\ApiKey
 ```
 
 Get an API Key
@@ -155,12 +155,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ApiKeysApi(
+$apiInstance = new Arta\Client\Api\ApiKeysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -186,7 +186,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiKey**](../Model/ApiKey.md)
+[**\Arta\Client\Model\ApiKey**](../Model/ApiKey.md)
 
 ### Authorization
 
@@ -204,7 +204,7 @@ try {
 ## `apiKeysList()`
 
 ```php
-apiKeysList($authorization, $page_size, $page): \OpenAPI\Client\Model\ApiKeyList
+apiKeysList($authorization, $page_size, $page): \Arta\Client\Model\ApiKeyList
 ```
 
 List API Keys
@@ -219,12 +219,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ApiKeysApi(
+$apiInstance = new Arta\Client\Api\ApiKeysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -252,7 +252,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiKeyList**](../Model/ApiKeyList.md)
+[**\Arta\Client\Model\ApiKeyList**](../Model/ApiKeyList.md)
 
 ### Authorization
 

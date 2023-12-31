@@ -1,4 +1,4 @@
-# OpenAPI\Client\EmailSubscriptionsApi
+# Arta\Client\EmailSubscriptionsApi
 
 All URIs are relative to https://api.arta.io, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.arta.io, except if the operation defines an
 ## `emailSubscriptionsCreate()`
 
 ```php
-emailSubscriptionsCreate($authorization, $email_subscriptions_create_request): \OpenAPI\Client\Model\EmailSubscription
+emailSubscriptionsCreate($authorization, $email_subscriptions_create_request): \Arta\Client\Model\EmailSubscription
 ```
 
 Create an Email Subscription
@@ -29,19 +29,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSubscriptionsApi(
+$apiInstance = new Arta\Client\Api\EmailSubscriptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $authorization = ARTA_APIKey s0e1t2e3c4a5s6t7r8o9n10o11m12y; // string | Authorize your API calls with an Arta API token
-$email_subscriptions_create_request = new \OpenAPI\Client\Model\EmailSubscriptionsCreateRequest(); // \OpenAPI\Client\Model\EmailSubscriptionsCreateRequest
+$email_subscriptions_create_request = new \Arta\Client\Model\EmailSubscriptionsCreateRequest(); // \Arta\Client\Model\EmailSubscriptionsCreateRequest
 
 try {
     $result = $apiInstance->emailSubscriptionsCreate($authorization, $email_subscriptions_create_request);
@@ -56,11 +56,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Authorize your API calls with an Arta API token | |
-| **email_subscriptions_create_request** | [**\OpenAPI\Client\Model\EmailSubscriptionsCreateRequest**](../Model/EmailSubscriptionsCreateRequest.md)|  | [optional] |
+| **email_subscriptions_create_request** | [**\Arta\Client\Model\EmailSubscriptionsCreateRequest**](../Model/EmailSubscriptionsCreateRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailSubscription**](../Model/EmailSubscription.md)
+[**\Arta\Client\Model\EmailSubscription**](../Model/EmailSubscription.md)
 
 ### Authorization
 
@@ -93,12 +93,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSubscriptionsApi(
+$apiInstance = new Arta\Client\Api\EmailSubscriptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -141,7 +141,7 @@ void (empty response body)
 ## `emailSubscriptionsGet()`
 
 ```php
-emailSubscriptionsGet($authorization, $email_subscription_id): \OpenAPI\Client\Model\EmailSubscription
+emailSubscriptionsGet($authorization, $email_subscription_id): \Arta\Client\Model\EmailSubscription
 ```
 
 Get an Email Subscription
@@ -156,12 +156,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSubscriptionsApi(
+$apiInstance = new Arta\Client\Api\EmailSubscriptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -187,7 +187,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailSubscription**](../Model/EmailSubscription.md)
+[**\Arta\Client\Model\EmailSubscription**](../Model/EmailSubscription.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ try {
 ## `emailSubscriptionsList()`
 
 ```php
-emailSubscriptionsList($authorization, $page_size, $page): \OpenAPI\Client\Model\EmailSubscriptionList
+emailSubscriptionsList($authorization, $page_size, $page): \Arta\Client\Model\EmailSubscriptionList
 ```
 
 List Email Subscriptions
@@ -220,12 +220,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSubscriptionsApi(
+$apiInstance = new Arta\Client\Api\EmailSubscriptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -253,7 +253,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailSubscriptionList**](../Model/EmailSubscriptionList.md)
+[**\Arta\Client\Model\EmailSubscriptionList**](../Model/EmailSubscriptionList.md)
 
 ### Authorization
 
@@ -271,7 +271,7 @@ try {
 ## `emailSubscriptionsUpdate()`
 
 ```php
-emailSubscriptionsUpdate($authorization, $email_subscription_id, $email_subscriptions_update_request): \OpenAPI\Client\Model\EmailSubscription
+emailSubscriptionsUpdate($authorization, $email_subscription_id, $email_subscriptions_update_request): \Arta\Client\Model\EmailSubscription
 ```
 
 Update an Email Subscription
@@ -286,12 +286,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\EmailSubscriptionsApi(
+$apiInstance = new Arta\Client\Api\EmailSubscriptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -299,7 +299,7 @@ $apiInstance = new OpenAPI\Client\Api\EmailSubscriptionsApi(
 );
 $authorization = ARTA_APIKey s0e1t2e3c4a5s6t7r8o9n10o11m12y; // string | Authorize your API calls with an Arta API token
 $email_subscription_id = 56; // int | email_subscription_id parameter
-$email_subscriptions_update_request = new \OpenAPI\Client\Model\EmailSubscriptionsUpdateRequest(); // \OpenAPI\Client\Model\EmailSubscriptionsUpdateRequest
+$email_subscriptions_update_request = new \Arta\Client\Model\EmailSubscriptionsUpdateRequest(); // \Arta\Client\Model\EmailSubscriptionsUpdateRequest
 
 try {
     $result = $apiInstance->emailSubscriptionsUpdate($authorization, $email_subscription_id, $email_subscriptions_update_request);
@@ -315,11 +315,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Authorize your API calls with an Arta API token | |
 | **email_subscription_id** | **int**| email_subscription_id parameter | |
-| **email_subscriptions_update_request** | [**\OpenAPI\Client\Model\EmailSubscriptionsUpdateRequest**](../Model/EmailSubscriptionsUpdateRequest.md)|  | [optional] |
+| **email_subscriptions_update_request** | [**\Arta\Client\Model\EmailSubscriptionsUpdateRequest**](../Model/EmailSubscriptionsUpdateRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\EmailSubscription**](../Model/EmailSubscription.md)
+[**\Arta\Client\Model\EmailSubscription**](../Model/EmailSubscription.md)
 
 ### Authorization
 

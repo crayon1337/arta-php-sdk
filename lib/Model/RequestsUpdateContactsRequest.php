@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * RequestsUpdateContactsRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class RequestsUpdateContactsRequest implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'destination' => '\OpenAPI\Client\Model\RequestsUpdateContactsRequestDestination',
-        'origin' => '\OpenAPI\Client\Model\RequestsUpdateContactsRequestOrigin'
+        'destination' => '\Arta\Client\Model\RequestsUpdateContactsRequestDestination',
+        'origin' => '\Arta\Client\Model\RequestsUpdateContactsRequestOrigin'
     ];
 
     /**
@@ -300,7 +300,7 @@ class RequestsUpdateContactsRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets destination
      *
-     * @return \OpenAPI\Client\Model\RequestsUpdateContactsRequestDestination|null
+     * @return \Arta\Client\Model\RequestsUpdateContactsRequestDestination|null
      */
     public function getDestination()
     {
@@ -310,7 +310,7 @@ class RequestsUpdateContactsRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets destination
      *
-     * @param \OpenAPI\Client\Model\RequestsUpdateContactsRequestDestination|null $destination destination
+     * @param \Arta\Client\Model\RequestsUpdateContactsRequestDestination|null $destination destination
      *
      * @return self
      */
@@ -327,7 +327,7 @@ class RequestsUpdateContactsRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets origin
      *
-     * @return \OpenAPI\Client\Model\RequestsUpdateContactsRequestOrigin|null
+     * @return \Arta\Client\Model\RequestsUpdateContactsRequestOrigin|null
      */
     public function getOrigin()
     {
@@ -337,7 +337,7 @@ class RequestsUpdateContactsRequest implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets origin
      *
-     * @param \OpenAPI\Client\Model\RequestsUpdateContactsRequestOrigin|null $origin origin
+     * @param \Arta\Client\Model\RequestsUpdateContactsRequestOrigin|null $origin origin
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Arta\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Arta\Client\ApiException;
+use Arta\Client\Configuration;
+use Arta\Client\HeaderSelector;
+use Arta\Client\ObjectSerializer;
 
 /**
  * ShipmentExceptionsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -138,12 +138,12 @@ class ShipmentExceptionsApi
      * Create Shipment Exception
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\ShipmentExceptionsCreateRequest $shipment_exceptions_create_request shipment_exceptions_create_request (optional)
+     * @param  \Arta\Client\Model\ShipmentExceptionsCreateRequest $shipment_exceptions_create_request shipment_exceptions_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentExceptionsCreate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ShipmentExceptionsCreate201Response
+     * @return \Arta\Client\Model\ShipmentExceptionsCreate201Response
      */
     public function shipmentExceptionsCreate($authorization, $shipment_exceptions_create_request = null, string $contentType = self::contentTypes['shipmentExceptionsCreate'][0])
     {
@@ -157,12 +157,12 @@ class ShipmentExceptionsApi
      * Create Shipment Exception
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\ShipmentExceptionsCreateRequest $shipment_exceptions_create_request (optional)
+     * @param  \Arta\Client\Model\ShipmentExceptionsCreateRequest $shipment_exceptions_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentExceptionsCreate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ShipmentExceptionsCreate201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\ShipmentExceptionsCreate201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentExceptionsCreateWithHttpInfo($authorization, $shipment_exceptions_create_request = null, string $contentType = self::contentTypes['shipmentExceptionsCreate'][0])
     {
@@ -205,11 +205,11 @@ class ShipmentExceptionsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\ShipmentExceptionsCreate201Response' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\ShipmentExceptionsCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ShipmentExceptionsCreate201Response' !== 'string') {
+                        if ('\Arta\Client\Model\ShipmentExceptionsCreate201Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -227,13 +227,13 @@ class ShipmentExceptionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ShipmentExceptionsCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\ShipmentExceptionsCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ShipmentExceptionsCreate201Response';
+            $returnType = '\Arta\Client\Model\ShipmentExceptionsCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -266,7 +266,7 @@ class ShipmentExceptionsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ShipmentExceptionsCreate201Response',
+                        '\Arta\Client\Model\ShipmentExceptionsCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -282,7 +282,7 @@ class ShipmentExceptionsApi
      * Create Shipment Exception
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\ShipmentExceptionsCreateRequest $shipment_exceptions_create_request (optional)
+     * @param  \Arta\Client\Model\ShipmentExceptionsCreateRequest $shipment_exceptions_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentExceptionsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -304,7 +304,7 @@ class ShipmentExceptionsApi
      * Create Shipment Exception
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\ShipmentExceptionsCreateRequest $shipment_exceptions_create_request (optional)
+     * @param  \Arta\Client\Model\ShipmentExceptionsCreateRequest $shipment_exceptions_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentExceptionsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -312,7 +312,7 @@ class ShipmentExceptionsApi
      */
     public function shipmentExceptionsCreateAsyncWithHttpInfo($authorization, $shipment_exceptions_create_request = null, string $contentType = self::contentTypes['shipmentExceptionsCreate'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ShipmentExceptionsCreate201Response';
+        $returnType = '\Arta\Client\Model\ShipmentExceptionsCreate201Response';
         $request = $this->shipmentExceptionsCreateRequest($authorization, $shipment_exceptions_create_request, $contentType);
 
         return $this->client
@@ -355,7 +355,7 @@ class ShipmentExceptionsApi
      * Create request for operation 'shipmentExceptionsCreate'
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\ShipmentExceptionsCreateRequest $shipment_exceptions_create_request (optional)
+     * @param  \Arta\Client\Model\ShipmentExceptionsCreateRequest $shipment_exceptions_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentExceptionsCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -462,9 +462,9 @@ class ShipmentExceptionsApi
      * @param  string $shipment_exception_id shipment_exception_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentExceptionsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ShipmentExceptionsGet200Response|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\ShipmentExceptionsGet200Response|\Arta\Client\Model\BasicError
      */
     public function shipmentExceptionsGet($authorization, $shipment_exception_id, string $contentType = self::contentTypes['shipmentExceptionsGet'][0])
     {
@@ -481,9 +481,9 @@ class ShipmentExceptionsApi
      * @param  string $shipment_exception_id shipment_exception_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentExceptionsGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ShipmentExceptionsGet200Response|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\ShipmentExceptionsGet200Response|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentExceptionsGetWithHttpInfo($authorization, $shipment_exception_id, string $contentType = self::contentTypes['shipmentExceptionsGet'][0])
     {
@@ -526,11 +526,11 @@ class ShipmentExceptionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ShipmentExceptionsGet200Response' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\ShipmentExceptionsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ShipmentExceptionsGet200Response' !== 'string') {
+                        if ('\Arta\Client\Model\ShipmentExceptionsGet200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -548,16 +548,16 @@ class ShipmentExceptionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ShipmentExceptionsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\ShipmentExceptionsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -575,13 +575,13 @@ class ShipmentExceptionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ShipmentExceptionsGet200Response';
+            $returnType = '\Arta\Client\Model\ShipmentExceptionsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -614,7 +614,7 @@ class ShipmentExceptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ShipmentExceptionsGet200Response',
+                        '\Arta\Client\Model\ShipmentExceptionsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -622,7 +622,7 @@ class ShipmentExceptionsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -668,7 +668,7 @@ class ShipmentExceptionsApi
      */
     public function shipmentExceptionsGetAsyncWithHttpInfo($authorization, $shipment_exception_id, string $contentType = self::contentTypes['shipmentExceptionsGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ShipmentExceptionsGet200Response';
+        $returnType = '\Arta\Client\Model\ShipmentExceptionsGet200Response';
         $request = $this->shipmentExceptionsGetRequest($authorization, $shipment_exception_id, $contentType);
 
         return $this->client
@@ -826,9 +826,9 @@ class ShipmentExceptionsApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentExceptionsList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ShipmentExceptionsList200Response
+     * @return \Arta\Client\Model\ShipmentExceptionsList200Response
      */
     public function shipmentExceptionsList($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['shipmentExceptionsList'][0])
     {
@@ -846,9 +846,9 @@ class ShipmentExceptionsApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentExceptionsList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ShipmentExceptionsList200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\ShipmentExceptionsList200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentExceptionsListWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['shipmentExceptionsList'][0])
     {
@@ -891,11 +891,11 @@ class ShipmentExceptionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ShipmentExceptionsList200Response' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\ShipmentExceptionsList200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ShipmentExceptionsList200Response' !== 'string') {
+                        if ('\Arta\Client\Model\ShipmentExceptionsList200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -913,13 +913,13 @@ class ShipmentExceptionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ShipmentExceptionsList200Response', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\ShipmentExceptionsList200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ShipmentExceptionsList200Response';
+            $returnType = '\Arta\Client\Model\ShipmentExceptionsList200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -952,7 +952,7 @@ class ShipmentExceptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ShipmentExceptionsList200Response',
+                        '\Arta\Client\Model\ShipmentExceptionsList200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1000,7 +1000,7 @@ class ShipmentExceptionsApi
      */
     public function shipmentExceptionsListAsyncWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['shipmentExceptionsList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ShipmentExceptionsList200Response';
+        $returnType = '\Arta\Client\Model\ShipmentExceptionsList200Response';
         $request = $this->shipmentExceptionsListRequest($authorization, $page_size, $page, $contentType);
 
         return $this->client
@@ -1161,12 +1161,12 @@ class ShipmentExceptionsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $shipment_exception_id shipment_exception_id parameter (required)
-     * @param  \OpenAPI\Client\Model\ShipmentExceptionsUpdateRequest $shipment_exceptions_update_request shipment_exceptions_update_request (optional)
+     * @param  \Arta\Client\Model\ShipmentExceptionsUpdateRequest $shipment_exceptions_update_request shipment_exceptions_update_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentExceptionsUpdate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ShipmentExceptionsUpdate200Response
+     * @return \Arta\Client\Model\ShipmentExceptionsUpdate200Response
      */
     public function shipmentExceptionsUpdate($authorization, $shipment_exception_id, $shipment_exceptions_update_request = null, string $contentType = self::contentTypes['shipmentExceptionsUpdate'][0])
     {
@@ -1181,12 +1181,12 @@ class ShipmentExceptionsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $shipment_exception_id shipment_exception_id parameter (required)
-     * @param  \OpenAPI\Client\Model\ShipmentExceptionsUpdateRequest $shipment_exceptions_update_request (optional)
+     * @param  \Arta\Client\Model\ShipmentExceptionsUpdateRequest $shipment_exceptions_update_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentExceptionsUpdate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ShipmentExceptionsUpdate200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\ShipmentExceptionsUpdate200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function shipmentExceptionsUpdateWithHttpInfo($authorization, $shipment_exception_id, $shipment_exceptions_update_request = null, string $contentType = self::contentTypes['shipmentExceptionsUpdate'][0])
     {
@@ -1229,11 +1229,11 @@ class ShipmentExceptionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ShipmentExceptionsUpdate200Response' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\ShipmentExceptionsUpdate200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ShipmentExceptionsUpdate200Response' !== 'string') {
+                        if ('\Arta\Client\Model\ShipmentExceptionsUpdate200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1251,13 +1251,13 @@ class ShipmentExceptionsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ShipmentExceptionsUpdate200Response', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\ShipmentExceptionsUpdate200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ShipmentExceptionsUpdate200Response';
+            $returnType = '\Arta\Client\Model\ShipmentExceptionsUpdate200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1290,7 +1290,7 @@ class ShipmentExceptionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ShipmentExceptionsUpdate200Response',
+                        '\Arta\Client\Model\ShipmentExceptionsUpdate200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1307,7 +1307,7 @@ class ShipmentExceptionsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $shipment_exception_id shipment_exception_id parameter (required)
-     * @param  \OpenAPI\Client\Model\ShipmentExceptionsUpdateRequest $shipment_exceptions_update_request (optional)
+     * @param  \Arta\Client\Model\ShipmentExceptionsUpdateRequest $shipment_exceptions_update_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentExceptionsUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1330,7 +1330,7 @@ class ShipmentExceptionsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $shipment_exception_id shipment_exception_id parameter (required)
-     * @param  \OpenAPI\Client\Model\ShipmentExceptionsUpdateRequest $shipment_exceptions_update_request (optional)
+     * @param  \Arta\Client\Model\ShipmentExceptionsUpdateRequest $shipment_exceptions_update_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentExceptionsUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1338,7 +1338,7 @@ class ShipmentExceptionsApi
      */
     public function shipmentExceptionsUpdateAsyncWithHttpInfo($authorization, $shipment_exception_id, $shipment_exceptions_update_request = null, string $contentType = self::contentTypes['shipmentExceptionsUpdate'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\ShipmentExceptionsUpdate200Response';
+        $returnType = '\Arta\Client\Model\ShipmentExceptionsUpdate200Response';
         $request = $this->shipmentExceptionsUpdateRequest($authorization, $shipment_exception_id, $shipment_exceptions_update_request, $contentType);
 
         return $this->client
@@ -1382,7 +1382,7 @@ class ShipmentExceptionsApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $shipment_exception_id shipment_exception_id parameter (required)
-     * @param  \OpenAPI\Client\Model\ShipmentExceptionsUpdateRequest $shipment_exceptions_update_request (optional)
+     * @param  \Arta\Client\Model\ShipmentExceptionsUpdateRequest $shipment_exceptions_update_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentExceptionsUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

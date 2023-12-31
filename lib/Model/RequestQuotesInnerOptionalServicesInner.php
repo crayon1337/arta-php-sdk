@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * RequestQuotesInnerOptionalServicesInner Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class RequestQuotesInnerOptionalServicesInner implements ModelInterface, ArrayAc
     protected static $openAPITypes = [
         'amount' => 'string',
         'amount_currency' => 'string',
-        'included_services' => '\OpenAPI\Client\Model\RequestQuotesInnerIncludedServicesInnerIncludedServicesInner[]',
+        'included_services' => '\Arta\Client\Model\RequestQuotesInnerIncludedServicesInnerIncludedServicesInner[]',
         'name' => 'string',
         'sub_subtype' => 'string',
         'subtype' => 'string',
@@ -420,7 +420,7 @@ class RequestQuotesInnerOptionalServicesInner implements ModelInterface, ArrayAc
     /**
      * Gets included_services
      *
-     * @return \OpenAPI\Client\Model\RequestQuotesInnerIncludedServicesInnerIncludedServicesInner[]|null
+     * @return \Arta\Client\Model\RequestQuotesInnerIncludedServicesInnerIncludedServicesInner[]|null
      */
     public function getIncludedServices()
     {
@@ -430,7 +430,7 @@ class RequestQuotesInnerOptionalServicesInner implements ModelInterface, ArrayAc
     /**
      * Sets included_services
      *
-     * @param \OpenAPI\Client\Model\RequestQuotesInnerIncludedServicesInnerIncludedServicesInner[]|null $included_services included_services
+     * @param \Arta\Client\Model\RequestQuotesInnerIncludedServicesInnerIncludedServicesInner[]|null $included_services included_services
      *
      * @return self
      */

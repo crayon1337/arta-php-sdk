@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **current_packing** | **string[]** | A list of packing subtype IDs describing how the item is currently packed. Options are defined in the Packing Types metadata endpoint | [optional]
 **depth** | **string** | The depth of the object | [optional]
-**details** | [**\OpenAPI\Client\Model\RequestObjectsInnerDetails**](RequestObjectsInnerDetails.md) |  | [optional]
+**details** | [**\Arta\Client\Model\RequestObjectsInnerDetails**](RequestObjectsInnerDetails.md) |  | [optional]
 **height** | **string** | The height of the object | [optional]
 **id** | **int** | The system-generated ID for this object | [optional] [readonly]
 **images** | **string[]** | A list image urls of the object | [optional]

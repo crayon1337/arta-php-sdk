@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Arta\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Arta\Client\ApiException;
+use Arta\Client\Configuration;
+use Arta\Client\HeaderSelector;
+use Arta\Client\ObjectSerializer;
 
 /**
  * WebhooksApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -150,12 +150,12 @@ class WebhooksApi
      * Create a Webhook
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\WebhooksCreateRequest $webhooks_create_request webhooks_create_request (optional)
+     * @param  \Arta\Client\Model\WebhooksCreateRequest $webhooks_create_request webhooks_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksCreate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Webhook|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\Webhook|\Arta\Client\Model\BasicError
      */
     public function webhooksCreate($authorization, $webhooks_create_request = null, string $contentType = self::contentTypes['webhooksCreate'][0])
     {
@@ -169,12 +169,12 @@ class WebhooksApi
      * Create a Webhook
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\WebhooksCreateRequest $webhooks_create_request (optional)
+     * @param  \Arta\Client\Model\WebhooksCreateRequest $webhooks_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksCreate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Webhook|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\Webhook|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhooksCreateWithHttpInfo($authorization, $webhooks_create_request = null, string $contentType = self::contentTypes['webhooksCreate'][0])
     {
@@ -217,11 +217,11 @@ class WebhooksApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\Webhook' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\Webhook' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Webhook' !== 'string') {
+                        if ('\Arta\Client\Model\Webhook' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -239,16 +239,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Webhook', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\Webhook', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -266,13 +266,13 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Webhook';
+            $returnType = '\Arta\Client\Model\Webhook';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -305,7 +305,7 @@ class WebhooksApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Webhook',
+                        '\Arta\Client\Model\Webhook',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -313,7 +313,7 @@ class WebhooksApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -329,7 +329,7 @@ class WebhooksApi
      * Create a Webhook
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\WebhooksCreateRequest $webhooks_create_request (optional)
+     * @param  \Arta\Client\Model\WebhooksCreateRequest $webhooks_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -351,7 +351,7 @@ class WebhooksApi
      * Create a Webhook
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\WebhooksCreateRequest $webhooks_create_request (optional)
+     * @param  \Arta\Client\Model\WebhooksCreateRequest $webhooks_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -359,7 +359,7 @@ class WebhooksApi
      */
     public function webhooksCreateAsyncWithHttpInfo($authorization, $webhooks_create_request = null, string $contentType = self::contentTypes['webhooksCreate'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Webhook';
+        $returnType = '\Arta\Client\Model\Webhook';
         $request = $this->webhooksCreateRequest($authorization, $webhooks_create_request, $contentType);
 
         return $this->client
@@ -402,7 +402,7 @@ class WebhooksApi
      * Create request for operation 'webhooksCreate'
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\WebhooksCreateRequest $webhooks_create_request (optional)
+     * @param  \Arta\Client\Model\WebhooksCreateRequest $webhooks_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -509,7 +509,7 @@ class WebhooksApi
      * @param  int $webhook_id webhook_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -527,7 +527,7 @@ class WebhooksApi
      * @param  int $webhook_id webhook_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -577,7 +577,7 @@ class WebhooksApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -767,9 +767,9 @@ class WebhooksApi
      * @param  int $webhook_id webhook_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Webhook|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\Webhook|\Arta\Client\Model\BasicError
      */
     public function webhooksGet($authorization, $webhook_id, string $contentType = self::contentTypes['webhooksGet'][0])
     {
@@ -786,9 +786,9 @@ class WebhooksApi
      * @param  int $webhook_id webhook_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Webhook|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\Webhook|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhooksGetWithHttpInfo($authorization, $webhook_id, string $contentType = self::contentTypes['webhooksGet'][0])
     {
@@ -831,11 +831,11 @@ class WebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Webhook' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\Webhook' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Webhook' !== 'string') {
+                        if ('\Arta\Client\Model\Webhook' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -853,16 +853,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Webhook', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\Webhook', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -880,13 +880,13 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Webhook';
+            $returnType = '\Arta\Client\Model\Webhook';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -919,7 +919,7 @@ class WebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Webhook',
+                        '\Arta\Client\Model\Webhook',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -927,7 +927,7 @@ class WebhooksApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -973,7 +973,7 @@ class WebhooksApi
      */
     public function webhooksGetAsyncWithHttpInfo($authorization, $webhook_id, string $contentType = self::contentTypes['webhooksGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Webhook';
+        $returnType = '\Arta\Client\Model\Webhook';
         $request = $this->webhooksGetRequest($authorization, $webhook_id, $contentType);
 
         return $this->client
@@ -1131,9 +1131,9 @@ class WebhooksApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebhookList
+     * @return \Arta\Client\Model\WebhookList
      */
     public function webhooksList($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['webhooksList'][0])
     {
@@ -1151,9 +1151,9 @@ class WebhooksApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebhookList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\WebhookList, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhooksListWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['webhooksList'][0])
     {
@@ -1196,11 +1196,11 @@ class WebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebhookList' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\WebhookList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebhookList' !== 'string') {
+                        if ('\Arta\Client\Model\WebhookList' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1218,13 +1218,13 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebhookList', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\WebhookList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebhookList';
+            $returnType = '\Arta\Client\Model\WebhookList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1257,7 +1257,7 @@ class WebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebhookList',
+                        '\Arta\Client\Model\WebhookList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1305,7 +1305,7 @@ class WebhooksApi
      */
     public function webhooksListAsyncWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['webhooksList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\WebhookList';
+        $returnType = '\Arta\Client\Model\WebhookList';
         $request = $this->webhooksListRequest($authorization, $page_size, $page, $contentType);
 
         return $this->client
@@ -1466,12 +1466,12 @@ class WebhooksApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  int $webhook_id webhook_id parameter (required)
-     * @param  \OpenAPI\Client\Model\WebhooksPatchRequest $webhooks_patch_request webhooks_patch_request (optional)
+     * @param  \Arta\Client\Model\WebhooksPatchRequest $webhooks_patch_request webhooks_patch_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksPatch'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Webhook|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\Webhook|\Arta\Client\Model\BasicError
      */
     public function webhooksPatch($authorization, $webhook_id, $webhooks_patch_request = null, string $contentType = self::contentTypes['webhooksPatch'][0])
     {
@@ -1486,12 +1486,12 @@ class WebhooksApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  int $webhook_id webhook_id parameter (required)
-     * @param  \OpenAPI\Client\Model\WebhooksPatchRequest $webhooks_patch_request (optional)
+     * @param  \Arta\Client\Model\WebhooksPatchRequest $webhooks_patch_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksPatch'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Webhook|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\Webhook|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhooksPatchWithHttpInfo($authorization, $webhook_id, $webhooks_patch_request = null, string $contentType = self::contentTypes['webhooksPatch'][0])
     {
@@ -1534,11 +1534,11 @@ class WebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Webhook' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\Webhook' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Webhook' !== 'string') {
+                        if ('\Arta\Client\Model\Webhook' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1556,16 +1556,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Webhook', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\Webhook', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1583,13 +1583,13 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Webhook';
+            $returnType = '\Arta\Client\Model\Webhook';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1622,7 +1622,7 @@ class WebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Webhook',
+                        '\Arta\Client\Model\Webhook',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1630,7 +1630,7 @@ class WebhooksApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1647,7 +1647,7 @@ class WebhooksApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  int $webhook_id webhook_id parameter (required)
-     * @param  \OpenAPI\Client\Model\WebhooksPatchRequest $webhooks_patch_request (optional)
+     * @param  \Arta\Client\Model\WebhooksPatchRequest $webhooks_patch_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1670,7 +1670,7 @@ class WebhooksApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  int $webhook_id webhook_id parameter (required)
-     * @param  \OpenAPI\Client\Model\WebhooksPatchRequest $webhooks_patch_request (optional)
+     * @param  \Arta\Client\Model\WebhooksPatchRequest $webhooks_patch_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1678,7 +1678,7 @@ class WebhooksApi
      */
     public function webhooksPatchAsyncWithHttpInfo($authorization, $webhook_id, $webhooks_patch_request = null, string $contentType = self::contentTypes['webhooksPatch'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Webhook';
+        $returnType = '\Arta\Client\Model\Webhook';
         $request = $this->webhooksPatchRequest($authorization, $webhook_id, $webhooks_patch_request, $contentType);
 
         return $this->client
@@ -1722,7 +1722,7 @@ class WebhooksApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  int $webhook_id webhook_id parameter (required)
-     * @param  \OpenAPI\Client\Model\WebhooksPatchRequest $webhooks_patch_request (optional)
+     * @param  \Arta\Client\Model\WebhooksPatchRequest $webhooks_patch_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksPatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1844,9 +1844,9 @@ class WebhooksApi
      * @param  int $webhook_id webhook_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Webhook|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\Webhook|\Arta\Client\Model\BasicError
      */
     public function webhooksPost($authorization, $webhook_id, string $contentType = self::contentTypes['webhooksPost'][0])
     {
@@ -1863,9 +1863,9 @@ class WebhooksApi
      * @param  int $webhook_id webhook_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksPost'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Webhook|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\Webhook|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhooksPostWithHttpInfo($authorization, $webhook_id, string $contentType = self::contentTypes['webhooksPost'][0])
     {
@@ -1908,11 +1908,11 @@ class WebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Webhook' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\Webhook' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Webhook' !== 'string') {
+                        if ('\Arta\Client\Model\Webhook' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1930,16 +1930,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Webhook', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\Webhook', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1957,13 +1957,13 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Webhook';
+            $returnType = '\Arta\Client\Model\Webhook';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1996,7 +1996,7 @@ class WebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Webhook',
+                        '\Arta\Client\Model\Webhook',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2004,7 +2004,7 @@ class WebhooksApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2050,7 +2050,7 @@ class WebhooksApi
      */
     public function webhooksPostAsyncWithHttpInfo($authorization, $webhook_id, string $contentType = self::contentTypes['webhooksPost'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\Webhook';
+        $returnType = '\Arta\Client\Model\Webhook';
         $request = $this->webhooksPostRequest($authorization, $webhook_id, $contentType);
 
         return $this->client
@@ -2207,9 +2207,9 @@ class WebhooksApi
      * @param  int $webhook_id webhook_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksSecretTokenGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebhooksSecretTokenGet200Response|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\WebhooksSecretTokenGet200Response|\Arta\Client\Model\BasicError
      */
     public function webhooksSecretTokenGet($authorization, $webhook_id, string $contentType = self::contentTypes['webhooksSecretTokenGet'][0])
     {
@@ -2226,9 +2226,9 @@ class WebhooksApi
      * @param  int $webhook_id webhook_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksSecretTokenGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebhooksSecretTokenGet200Response|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\WebhooksSecretTokenGet200Response|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhooksSecretTokenGetWithHttpInfo($authorization, $webhook_id, string $contentType = self::contentTypes['webhooksSecretTokenGet'][0])
     {
@@ -2271,11 +2271,11 @@ class WebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebhooksSecretTokenGet200Response' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\WebhooksSecretTokenGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebhooksSecretTokenGet200Response' !== 'string') {
+                        if ('\Arta\Client\Model\WebhooksSecretTokenGet200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2293,16 +2293,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebhooksSecretTokenGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\WebhooksSecretTokenGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2320,13 +2320,13 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebhooksSecretTokenGet200Response';
+            $returnType = '\Arta\Client\Model\WebhooksSecretTokenGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2359,7 +2359,7 @@ class WebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebhooksSecretTokenGet200Response',
+                        '\Arta\Client\Model\WebhooksSecretTokenGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2367,7 +2367,7 @@ class WebhooksApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2413,7 +2413,7 @@ class WebhooksApi
      */
     public function webhooksSecretTokenGetAsyncWithHttpInfo($authorization, $webhook_id, string $contentType = self::contentTypes['webhooksSecretTokenGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\WebhooksSecretTokenGet200Response';
+        $returnType = '\Arta\Client\Model\WebhooksSecretTokenGet200Response';
         $request = $this->webhooksSecretTokenGetRequest($authorization, $webhook_id, $contentType);
 
         return $this->client
@@ -2570,9 +2570,9 @@ class WebhooksApi
      * @param  int $webhook_id webhook_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksSecretTokenResetPatch'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebhooksSecretTokenResetPatch200Response|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\WebhooksSecretTokenResetPatch200Response|\Arta\Client\Model\BasicError
      */
     public function webhooksSecretTokenResetPatch($authorization, $webhook_id, string $contentType = self::contentTypes['webhooksSecretTokenResetPatch'][0])
     {
@@ -2589,9 +2589,9 @@ class WebhooksApi
      * @param  int $webhook_id webhook_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhooksSecretTokenResetPatch'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebhooksSecretTokenResetPatch200Response|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\WebhooksSecretTokenResetPatch200Response|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhooksSecretTokenResetPatchWithHttpInfo($authorization, $webhook_id, string $contentType = self::contentTypes['webhooksSecretTokenResetPatch'][0])
     {
@@ -2634,11 +2634,11 @@ class WebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebhooksSecretTokenResetPatch200Response' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\WebhooksSecretTokenResetPatch200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebhooksSecretTokenResetPatch200Response' !== 'string') {
+                        if ('\Arta\Client\Model\WebhooksSecretTokenResetPatch200Response' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2656,16 +2656,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebhooksSecretTokenResetPatch200Response', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\WebhooksSecretTokenResetPatch200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2683,13 +2683,13 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebhooksSecretTokenResetPatch200Response';
+            $returnType = '\Arta\Client\Model\WebhooksSecretTokenResetPatch200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2722,7 +2722,7 @@ class WebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebhooksSecretTokenResetPatch200Response',
+                        '\Arta\Client\Model\WebhooksSecretTokenResetPatch200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2730,7 +2730,7 @@ class WebhooksApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2776,7 +2776,7 @@ class WebhooksApi
      */
     public function webhooksSecretTokenResetPatchAsyncWithHttpInfo($authorization, $webhook_id, string $contentType = self::contentTypes['webhooksSecretTokenResetPatch'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\WebhooksSecretTokenResetPatch200Response';
+        $returnType = '\Arta\Client\Model\WebhooksSecretTokenResetPatch200Response';
         $request = $this->webhooksSecretTokenResetPatchRequest($authorization, $webhook_id, $contentType);
 
         return $this->client

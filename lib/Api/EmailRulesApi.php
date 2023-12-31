@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Arta\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Arta\Client\ApiException;
+use Arta\Client\Configuration;
+use Arta\Client\HeaderSelector;
+use Arta\Client\ObjectSerializer;
 
 /**
  * EmailRulesApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -141,12 +141,12 @@ class EmailRulesApi
      * Create an Email Rule
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\EmailRulesCreateRequest $email_rules_create_request email_rules_create_request (optional)
+     * @param  \Arta\Client\Model\EmailRulesCreateRequest $email_rules_create_request email_rules_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailRulesCreate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EmailRule|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\EmailRule|\Arta\Client\Model\BasicError
      */
     public function emailRulesCreate($authorization, $email_rules_create_request = null, string $contentType = self::contentTypes['emailRulesCreate'][0])
     {
@@ -160,12 +160,12 @@ class EmailRulesApi
      * Create an Email Rule
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\EmailRulesCreateRequest $email_rules_create_request (optional)
+     * @param  \Arta\Client\Model\EmailRulesCreateRequest $email_rules_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailRulesCreate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EmailRule|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\EmailRule|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function emailRulesCreateWithHttpInfo($authorization, $email_rules_create_request = null, string $contentType = self::contentTypes['emailRulesCreate'][0])
     {
@@ -208,11 +208,11 @@ class EmailRulesApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\EmailRule' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\EmailRule' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EmailRule' !== 'string') {
+                        if ('\Arta\Client\Model\EmailRule' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -230,16 +230,16 @@ class EmailRulesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EmailRule', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\EmailRule', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 400:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -257,13 +257,13 @@ class EmailRulesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\EmailRule';
+            $returnType = '\Arta\Client\Model\EmailRule';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -296,7 +296,7 @@ class EmailRulesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EmailRule',
+                        '\Arta\Client\Model\EmailRule',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -304,7 +304,7 @@ class EmailRulesApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -320,7 +320,7 @@ class EmailRulesApi
      * Create an Email Rule
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\EmailRulesCreateRequest $email_rules_create_request (optional)
+     * @param  \Arta\Client\Model\EmailRulesCreateRequest $email_rules_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailRulesCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -342,7 +342,7 @@ class EmailRulesApi
      * Create an Email Rule
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\EmailRulesCreateRequest $email_rules_create_request (optional)
+     * @param  \Arta\Client\Model\EmailRulesCreateRequest $email_rules_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailRulesCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -350,7 +350,7 @@ class EmailRulesApi
      */
     public function emailRulesCreateAsyncWithHttpInfo($authorization, $email_rules_create_request = null, string $contentType = self::contentTypes['emailRulesCreate'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EmailRule';
+        $returnType = '\Arta\Client\Model\EmailRule';
         $request = $this->emailRulesCreateRequest($authorization, $email_rules_create_request, $contentType);
 
         return $this->client
@@ -393,7 +393,7 @@ class EmailRulesApi
      * Create request for operation 'emailRulesCreate'
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
-     * @param  \OpenAPI\Client\Model\EmailRulesCreateRequest $email_rules_create_request (optional)
+     * @param  \Arta\Client\Model\EmailRulesCreateRequest $email_rules_create_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailRulesCreate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -500,7 +500,7 @@ class EmailRulesApi
      * @param  int $email_rule_id email_rule_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailRulesDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -518,7 +518,7 @@ class EmailRulesApi
      * @param  int $email_rule_id email_rule_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailRulesDelete'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -568,7 +568,7 @@ class EmailRulesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -758,9 +758,9 @@ class EmailRulesApi
      * @param  int $email_rule_id email_rule_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailRulesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EmailRule|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\EmailRule|\Arta\Client\Model\BasicError
      */
     public function emailRulesGet($authorization, $email_rule_id, string $contentType = self::contentTypes['emailRulesGet'][0])
     {
@@ -777,9 +777,9 @@ class EmailRulesApi
      * @param  int $email_rule_id email_rule_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailRulesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EmailRule|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\EmailRule|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function emailRulesGetWithHttpInfo($authorization, $email_rule_id, string $contentType = self::contentTypes['emailRulesGet'][0])
     {
@@ -822,11 +822,11 @@ class EmailRulesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EmailRule' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\EmailRule' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EmailRule' !== 'string') {
+                        if ('\Arta\Client\Model\EmailRule' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -844,16 +844,16 @@ class EmailRulesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EmailRule', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\EmailRule', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -871,13 +871,13 @@ class EmailRulesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\EmailRule';
+            $returnType = '\Arta\Client\Model\EmailRule';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -910,7 +910,7 @@ class EmailRulesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EmailRule',
+                        '\Arta\Client\Model\EmailRule',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -918,7 +918,7 @@ class EmailRulesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -964,7 +964,7 @@ class EmailRulesApi
      */
     public function emailRulesGetAsyncWithHttpInfo($authorization, $email_rule_id, string $contentType = self::contentTypes['emailRulesGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EmailRule';
+        $returnType = '\Arta\Client\Model\EmailRule';
         $request = $this->emailRulesGetRequest($authorization, $email_rule_id, $contentType);
 
         return $this->client
@@ -1122,9 +1122,9 @@ class EmailRulesApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailRulesList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EmailRuleList
+     * @return \Arta\Client\Model\EmailRuleList
      */
     public function emailRulesList($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['emailRulesList'][0])
     {
@@ -1142,9 +1142,9 @@ class EmailRulesApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailRulesList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EmailRuleList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\EmailRuleList, HTTP status code, HTTP response headers (array of strings)
      */
     public function emailRulesListWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['emailRulesList'][0])
     {
@@ -1187,11 +1187,11 @@ class EmailRulesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EmailRuleList' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\EmailRuleList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EmailRuleList' !== 'string') {
+                        if ('\Arta\Client\Model\EmailRuleList' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1209,13 +1209,13 @@ class EmailRulesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EmailRuleList', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\EmailRuleList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\EmailRuleList';
+            $returnType = '\Arta\Client\Model\EmailRuleList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1248,7 +1248,7 @@ class EmailRulesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EmailRuleList',
+                        '\Arta\Client\Model\EmailRuleList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1296,7 +1296,7 @@ class EmailRulesApi
      */
     public function emailRulesListAsyncWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['emailRulesList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EmailRuleList';
+        $returnType = '\Arta\Client\Model\EmailRuleList';
         $request = $this->emailRulesListRequest($authorization, $page_size, $page, $contentType);
 
         return $this->client
@@ -1457,12 +1457,12 @@ class EmailRulesApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  int $email_rule_id email_rule_id parameter (required)
-     * @param  \OpenAPI\Client\Model\EmailRulesUpdateRequest $email_rules_update_request email_rules_update_request (optional)
+     * @param  \Arta\Client\Model\EmailRulesUpdateRequest $email_rules_update_request email_rules_update_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailRulesUpdate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\EmailRule|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\EmailRule|\Arta\Client\Model\BasicError
      */
     public function emailRulesUpdate($authorization, $email_rule_id, $email_rules_update_request = null, string $contentType = self::contentTypes['emailRulesUpdate'][0])
     {
@@ -1477,12 +1477,12 @@ class EmailRulesApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  int $email_rule_id email_rule_id parameter (required)
-     * @param  \OpenAPI\Client\Model\EmailRulesUpdateRequest $email_rules_update_request (optional)
+     * @param  \Arta\Client\Model\EmailRulesUpdateRequest $email_rules_update_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailRulesUpdate'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\EmailRule|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\EmailRule|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function emailRulesUpdateWithHttpInfo($authorization, $email_rule_id, $email_rules_update_request = null, string $contentType = self::contentTypes['emailRulesUpdate'][0])
     {
@@ -1525,11 +1525,11 @@ class EmailRulesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\EmailRule' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\EmailRule' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\EmailRule' !== 'string') {
+                        if ('\Arta\Client\Model\EmailRule' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1547,16 +1547,16 @@ class EmailRulesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\EmailRule', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\EmailRule', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1574,13 +1574,13 @@ class EmailRulesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\EmailRule';
+            $returnType = '\Arta\Client\Model\EmailRule';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1613,7 +1613,7 @@ class EmailRulesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\EmailRule',
+                        '\Arta\Client\Model\EmailRule',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1621,7 +1621,7 @@ class EmailRulesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1638,7 +1638,7 @@ class EmailRulesApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  int $email_rule_id email_rule_id parameter (required)
-     * @param  \OpenAPI\Client\Model\EmailRulesUpdateRequest $email_rules_update_request (optional)
+     * @param  \Arta\Client\Model\EmailRulesUpdateRequest $email_rules_update_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailRulesUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1661,7 +1661,7 @@ class EmailRulesApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  int $email_rule_id email_rule_id parameter (required)
-     * @param  \OpenAPI\Client\Model\EmailRulesUpdateRequest $email_rules_update_request (optional)
+     * @param  \Arta\Client\Model\EmailRulesUpdateRequest $email_rules_update_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailRulesUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -1669,7 +1669,7 @@ class EmailRulesApi
      */
     public function emailRulesUpdateAsyncWithHttpInfo($authorization, $email_rule_id, $email_rules_update_request = null, string $contentType = self::contentTypes['emailRulesUpdate'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\EmailRule';
+        $returnType = '\Arta\Client\Model\EmailRule';
         $request = $this->emailRulesUpdateRequest($authorization, $email_rule_id, $email_rules_update_request, $contentType);
 
         return $this->client
@@ -1713,7 +1713,7 @@ class EmailRulesApi
      *
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  int $email_rule_id email_rule_id parameter (required)
-     * @param  \OpenAPI\Client\Model\EmailRulesUpdateRequest $email_rules_update_request (optional)
+     * @param  \Arta\Client\Model\EmailRulesUpdateRequest $email_rules_update_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['emailRulesUpdate'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

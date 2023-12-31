@@ -1,4 +1,4 @@
-# OpenAPI\Client\ShipmentsApi
+# Arta\Client\ShipmentsApi
 
 All URIs are relative to https://api.arta.io, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to https://api.arta.io, except if the operation defines an
 ## `shipmentsCreate()`
 
 ```php
-shipmentsCreate($authorization, $shipments_create_request): \OpenAPI\Client\Model\Shipment
+shipmentsCreate($authorization, $shipments_create_request): \Arta\Client\Model\Shipment
 ```
 
 Create a Shipment
@@ -27,19 +27,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentsApi(
+$apiInstance = new Arta\Client\Api\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $authorization = ARTA_APIKey s0e1t2e3c4a5s6t7r8o9n10o11m12y; // string | Authorize your API calls with an Arta API token
-$shipments_create_request = new \OpenAPI\Client\Model\ShipmentsCreateRequest(); // \OpenAPI\Client\Model\ShipmentsCreateRequest
+$shipments_create_request = new \Arta\Client\Model\ShipmentsCreateRequest(); // \Arta\Client\Model\ShipmentsCreateRequest
 
 try {
     $result = $apiInstance->shipmentsCreate($authorization, $shipments_create_request);
@@ -54,11 +54,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Authorize your API calls with an Arta API token | |
-| **shipments_create_request** | [**\OpenAPI\Client\Model\ShipmentsCreateRequest**](../Model/ShipmentsCreateRequest.md)|  | [optional] |
+| **shipments_create_request** | [**\Arta\Client\Model\ShipmentsCreateRequest**](../Model/ShipmentsCreateRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Shipment**](../Model/Shipment.md)
+[**\Arta\Client\Model\Shipment**](../Model/Shipment.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ try {
 ## `shipmentsGet()`
 
 ```php
-shipmentsGet($authorization, $shipment_id): \OpenAPI\Client\Model\Shipment
+shipmentsGet($authorization, $shipment_id): \Arta\Client\Model\Shipment
 ```
 
 Get a Shipment record
@@ -91,12 +91,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentsApi(
+$apiInstance = new Arta\Client\Api\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -122,7 +122,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Shipment**](../Model/Shipment.md)
+[**\Arta\Client\Model\Shipment**](../Model/Shipment.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ try {
 ## `shipmentsList()`
 
 ```php
-shipmentsList($authorization, $page_size, $page, $search): \OpenAPI\Client\Model\ShipmentList
+shipmentsList($authorization, $page_size, $page, $search): \Arta\Client\Model\ShipmentList
 ```
 
 List Shipment records
@@ -155,12 +155,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\ShipmentsApi(
+$apiInstance = new Arta\Client\Api\ShipmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -190,7 +190,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ShipmentList**](../Model/ShipmentList.md)
+[**\Arta\Client\Model\ShipmentList**](../Model/ShipmentList.md)
 
 ### Authorization
 

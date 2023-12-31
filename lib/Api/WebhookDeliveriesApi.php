@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Arta\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Arta\Client\ApiException;
+use Arta\Client\Configuration;
+use Arta\Client\HeaderSelector;
+use Arta\Client\ObjectSerializer;
 
 /**
  * WebhookDeliveriesApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -135,9 +135,9 @@ class WebhookDeliveriesApi
      * @param  string $webhook_delivery_id webhook_delivery_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhookDeliveriesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebhookDelivery|\OpenAPI\Client\Model\BasicError
+     * @return \Arta\Client\Model\WebhookDelivery|\Arta\Client\Model\BasicError
      */
     public function webhookDeliveriesGet($authorization, $webhook_delivery_id, string $contentType = self::contentTypes['webhookDeliveriesGet'][0])
     {
@@ -154,9 +154,9 @@ class WebhookDeliveriesApi
      * @param  string $webhook_delivery_id webhook_delivery_id parameter (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhookDeliveriesGet'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebhookDelivery|\OpenAPI\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\WebhookDelivery|\Arta\Client\Model\BasicError, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhookDeliveriesGetWithHttpInfo($authorization, $webhook_delivery_id, string $contentType = self::contentTypes['webhookDeliveriesGet'][0])
     {
@@ -199,11 +199,11 @@ class WebhookDeliveriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebhookDelivery' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\WebhookDelivery' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebhookDelivery' !== 'string') {
+                        if ('\Arta\Client\Model\WebhookDelivery' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -221,16 +221,16 @@ class WebhookDeliveriesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebhookDelivery', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\WebhookDelivery', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\OpenAPI\Client\Model\BasicError' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\BasicError' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\BasicError' !== 'string') {
+                        if ('\Arta\Client\Model\BasicError' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -248,13 +248,13 @@ class WebhookDeliveriesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\BasicError', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\BasicError', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebhookDelivery';
+            $returnType = '\Arta\Client\Model\WebhookDelivery';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -287,7 +287,7 @@ class WebhookDeliveriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebhookDelivery',
+                        '\Arta\Client\Model\WebhookDelivery',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -295,7 +295,7 @@ class WebhookDeliveriesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\BasicError',
+                        '\Arta\Client\Model\BasicError',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -341,7 +341,7 @@ class WebhookDeliveriesApi
      */
     public function webhookDeliveriesGetAsyncWithHttpInfo($authorization, $webhook_delivery_id, string $contentType = self::contentTypes['webhookDeliveriesGet'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\WebhookDelivery';
+        $returnType = '\Arta\Client\Model\WebhookDelivery';
         $request = $this->webhookDeliveriesGetRequest($authorization, $webhook_delivery_id, $contentType);
 
         return $this->client
@@ -499,9 +499,9 @@ class WebhookDeliveriesApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhookDeliveriesList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebhookDeliveryList
+     * @return \Arta\Client\Model\WebhookDeliveryList
      */
     public function webhookDeliveriesList($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['webhookDeliveriesList'][0])
     {
@@ -519,9 +519,9 @@ class WebhookDeliveriesApi
      * @param  int $page Page number of the results to fetch. (optional, default to 1)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['webhookDeliveriesList'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebhookDeliveryList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\WebhookDeliveryList, HTTP status code, HTTP response headers (array of strings)
      */
     public function webhookDeliveriesListWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['webhookDeliveriesList'][0])
     {
@@ -564,11 +564,11 @@ class WebhookDeliveriesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebhookDeliveryList' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\WebhookDeliveryList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebhookDeliveryList' !== 'string') {
+                        if ('\Arta\Client\Model\WebhookDeliveryList' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -586,13 +586,13 @@ class WebhookDeliveriesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebhookDeliveryList', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\WebhookDeliveryList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebhookDeliveryList';
+            $returnType = '\Arta\Client\Model\WebhookDeliveryList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -625,7 +625,7 @@ class WebhookDeliveriesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebhookDeliveryList',
+                        '\Arta\Client\Model\WebhookDeliveryList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -673,7 +673,7 @@ class WebhookDeliveriesApi
      */
     public function webhookDeliveriesListAsyncWithHttpInfo($authorization, $page_size = 20, $page = 1, string $contentType = self::contentTypes['webhookDeliveriesList'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\WebhookDeliveryList';
+        $returnType = '\Arta\Client\Model\WebhookDeliveryList';
         $request = $this->webhookDeliveriesListRequest($authorization, $page_size, $page, $contentType);
 
         return $this->client

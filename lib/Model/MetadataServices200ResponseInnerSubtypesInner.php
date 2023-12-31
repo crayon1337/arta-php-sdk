@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * MetadataServices200ResponseInnerSubtypesInner Class Doc Comment
  *
  * @category Class
  * @description An object subtype
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class MetadataServices200ResponseInnerSubtypesInner implements ModelInterface, A
         'description' => 'string',
         'id' => 'string',
         'name' => 'string',
-        'sub_subtypes' => '\OpenAPI\Client\Model\MetadataServices200ResponseInnerSubtypesInnerSubSubtypesInner[]'
+        'sub_subtypes' => '\Arta\Client\Model\MetadataServices200ResponseInnerSubtypesInnerSubSubtypesInner[]'
     ];
 
     /**
@@ -396,7 +396,7 @@ class MetadataServices200ResponseInnerSubtypesInner implements ModelInterface, A
     /**
      * Gets sub_subtypes
      *
-     * @return \OpenAPI\Client\Model\MetadataServices200ResponseInnerSubtypesInnerSubSubtypesInner[]|null
+     * @return \Arta\Client\Model\MetadataServices200ResponseInnerSubtypesInnerSubSubtypesInner[]|null
      */
     public function getSubSubtypes()
     {
@@ -406,7 +406,7 @@ class MetadataServices200ResponseInnerSubtypesInner implements ModelInterface, A
     /**
      * Sets sub_subtypes
      *
-     * @param \OpenAPI\Client\Model\MetadataServices200ResponseInnerSubtypesInnerSubSubtypesInner[]|null $sub_subtypes The subtypes for this resource
+     * @param \Arta\Client\Model\MetadataServices200ResponseInnerSubtypesInnerSubSubtypesInner[]|null $sub_subtypes The subtypes for this resource
      *
      * @return self
      */

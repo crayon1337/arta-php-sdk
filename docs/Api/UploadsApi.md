@@ -1,4 +1,4 @@
-# OpenAPI\Client\UploadsApi
+# Arta\Client\UploadsApi
 
 All URIs are relative to https://api.arta.io, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.arta.io, except if the operation defines an
 ## `uploadsCreate()`
 
 ```php
-uploadsCreate($authorization, $uploads_create_request): \OpenAPI\Client\Model\UploadWithPresignedUrl
+uploadsCreate($authorization, $uploads_create_request): \Arta\Client\Model\UploadWithPresignedUrl
 ```
 
 Create an Upload
@@ -28,19 +28,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\UploadsApi(
+$apiInstance = new Arta\Client\Api\UploadsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $authorization = ARTA_APIKey s0e1t2e3c4a5s6t7r8o9n10o11m12y; // string | Authorize your API calls with an Arta API token
-$uploads_create_request = new \OpenAPI\Client\Model\UploadsCreateRequest(); // \OpenAPI\Client\Model\UploadsCreateRequest
+$uploads_create_request = new \Arta\Client\Model\UploadsCreateRequest(); // \Arta\Client\Model\UploadsCreateRequest
 
 try {
     $result = $apiInstance->uploadsCreate($authorization, $uploads_create_request);
@@ -55,11 +55,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Authorize your API calls with an Arta API token | |
-| **uploads_create_request** | [**\OpenAPI\Client\Model\UploadsCreateRequest**](../Model/UploadsCreateRequest.md)|  | [optional] |
+| **uploads_create_request** | [**\Arta\Client\Model\UploadsCreateRequest**](../Model/UploadsCreateRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UploadWithPresignedUrl**](../Model/UploadWithPresignedUrl.md)
+[**\Arta\Client\Model\UploadWithPresignedUrl**](../Model/UploadWithPresignedUrl.md)
 
 ### Authorization
 
@@ -92,12 +92,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\UploadsApi(
+$apiInstance = new Arta\Client\Api\UploadsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -140,7 +140,7 @@ void (empty response body)
 ## `uploadsGet()`
 
 ```php
-uploadsGet($authorization, $upload_id): \OpenAPI\Client\Model\Upload
+uploadsGet($authorization, $upload_id): \Arta\Client\Model\Upload
 ```
 
 Get an Upload
@@ -155,12 +155,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\UploadsApi(
+$apiInstance = new Arta\Client\Api\UploadsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -186,7 +186,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Upload**](../Model/Upload.md)
+[**\Arta\Client\Model\Upload**](../Model/Upload.md)
 
 ### Authorization
 
@@ -204,7 +204,7 @@ try {
 ## `uploadsList()`
 
 ```php
-uploadsList($authorization, $page_size, $page): \OpenAPI\Client\Model\UploadList
+uploadsList($authorization, $page_size, $page): \Arta\Client\Model\UploadList
 ```
 
 List Uploads
@@ -219,12 +219,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\UploadsApi(
+$apiInstance = new Arta\Client\Api\UploadsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -252,7 +252,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UploadList**](../Model/UploadList.md)
+[**\Arta\Client\Model\UploadList**](../Model/UploadList.md)
 
 ### Authorization
 

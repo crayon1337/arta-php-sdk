@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * UploadsCreateRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class UploadsCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'upload' => '\OpenAPI\Client\Model\UploadsCreateRequestUpload'
+        'upload' => '\Arta\Client\Model\UploadsCreateRequestUpload'
     ];
 
     /**
@@ -296,7 +296,7 @@ class UploadsCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets upload
      *
-     * @return \OpenAPI\Client\Model\UploadsCreateRequestUpload
+     * @return \Arta\Client\Model\UploadsCreateRequestUpload
      */
     public function getUpload()
     {
@@ -306,7 +306,7 @@ class UploadsCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets upload
      *
-     * @param \OpenAPI\Client\Model\UploadsCreateRequestUpload $upload upload
+     * @param \Arta\Client\Model\UploadsCreateRequestUpload $upload upload
      *
      * @return self
      */

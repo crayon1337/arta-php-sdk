@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * ShipmentListItemsInner Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,12 +59,12 @@ class ShipmentListItemsInner implements ModelInterface, ArrayAccess, \JsonSerial
       */
     protected static $openAPITypes = [
         'created_at' => 'string',
-        'destination' => '\OpenAPI\Client\Model\ShipmentListItemsInnerDestination',
+        'destination' => '\Arta\Client\Model\ShipmentListItemsInnerDestination',
         'hosted_session_id' => 'int',
         'id' => 'string',
         'internal_reference' => 'string',
         'object_count' => 'int',
-        'origin' => '\OpenAPI\Client\Model\ShipmentListItemsInnerOrigin',
+        'origin' => '\Arta\Client\Model\ShipmentListItemsInnerOrigin',
         'package_count' => 'int',
         'public_reference' => 'string',
         'quote_type' => 'string',
@@ -446,7 +446,7 @@ class ShipmentListItemsInner implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets destination
      *
-     * @return \OpenAPI\Client\Model\ShipmentListItemsInnerDestination|null
+     * @return \Arta\Client\Model\ShipmentListItemsInnerDestination|null
      */
     public function getDestination()
     {
@@ -456,7 +456,7 @@ class ShipmentListItemsInner implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets destination
      *
-     * @param \OpenAPI\Client\Model\ShipmentListItemsInnerDestination|null $destination destination
+     * @param \Arta\Client\Model\ShipmentListItemsInnerDestination|null $destination destination
      *
      * @return self
      */
@@ -595,7 +595,7 @@ class ShipmentListItemsInner implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets origin
      *
-     * @return \OpenAPI\Client\Model\ShipmentListItemsInnerOrigin|null
+     * @return \Arta\Client\Model\ShipmentListItemsInnerOrigin|null
      */
     public function getOrigin()
     {
@@ -605,7 +605,7 @@ class ShipmentListItemsInner implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets origin
      *
-     * @param \OpenAPI\Client\Model\ShipmentListItemsInnerOrigin|null $origin origin
+     * @param \Arta\Client\Model\ShipmentListItemsInnerOrigin|null $origin origin
      *
      * @return self
      */

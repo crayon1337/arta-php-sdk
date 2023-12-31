@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * NullableLocation Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -68,7 +68,7 @@ class NullableLocation implements ModelInterface, ArrayAccess, \JsonSerializable
         'country' => 'string',
         'title' => 'string',
         'access_restrictions' => 'string[]',
-        'contacts' => '\OpenAPI\Client\Model\NullableLocationContactsInner[]'
+        'contacts' => '\Arta\Client\Model\NullableLocationContactsInner[]'
     ];
 
     /**
@@ -662,7 +662,7 @@ class NullableLocation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets contacts
      *
-     * @return \OpenAPI\Client\Model\NullableLocationContactsInner[]|null
+     * @return \Arta\Client\Model\NullableLocationContactsInner[]|null
      */
     public function getContacts()
     {
@@ -672,7 +672,7 @@ class NullableLocation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets contacts
      *
-     * @param \OpenAPI\Client\Model\NullableLocationContactsInner[]|null $contacts An list of contacts at the location
+     * @param \Arta\Client\Model\NullableLocationContactsInner[]|null $contacts An list of contacts at the location
      *
      * @return self
      */

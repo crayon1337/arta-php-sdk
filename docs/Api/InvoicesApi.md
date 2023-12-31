@@ -1,4 +1,4 @@
-# OpenAPI\Client\InvoicesApi
+# Arta\Client\InvoicesApi
 
 All URIs are relative to https://api.arta.io, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.arta.io, except if the operation defines an
 ## `invoicesGet()`
 
 ```php
-invoicesGet($authorization, $invoice_id): \OpenAPI\Client\Model\Invoice
+invoicesGet($authorization, $invoice_id): \Arta\Client\Model\Invoice
 ```
 
 Get an Invoice record
@@ -26,12 +26,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoicesApi(
+$apiInstance = new Arta\Client\Api\InvoicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -57,7 +57,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Invoice**](../Model/Invoice.md)
+[**\Arta\Client\Model\Invoice**](../Model/Invoice.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ try {
 ## `invoicesList()`
 
 ```php
-invoicesList($authorization, $page_size, $page): \OpenAPI\Client\Model\InvoiceList
+invoicesList($authorization, $page_size, $page): \Arta\Client\Model\InvoiceList
 ```
 
 List invoice records
@@ -90,12 +90,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\InvoicesApi(
+$apiInstance = new Arta\Client\Api\InvoicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -123,7 +123,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InvoiceList**](../Model/InvoiceList.md)
+[**\Arta\Client\Model\InvoiceList**](../Model/InvoiceList.md)
 
 ### Authorization
 

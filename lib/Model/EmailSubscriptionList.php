@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * EmailSubscriptionList Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class EmailSubscriptionList implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'items' => '\OpenAPI\Client\Model\EmailSubscription[]',
-        'metadata' => '\OpenAPI\Client\Model\PaginationMetadata'
+        'items' => '\Arta\Client\Model\EmailSubscription[]',
+        'metadata' => '\Arta\Client\Model\PaginationMetadata'
     ];
 
     /**
@@ -300,7 +300,7 @@ class EmailSubscriptionList implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets items
      *
-     * @return \OpenAPI\Client\Model\EmailSubscription[]|null
+     * @return \Arta\Client\Model\EmailSubscription[]|null
      */
     public function getItems()
     {
@@ -310,7 +310,7 @@ class EmailSubscriptionList implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets items
      *
-     * @param \OpenAPI\Client\Model\EmailSubscription[]|null $items items
+     * @param \Arta\Client\Model\EmailSubscription[]|null $items items
      *
      * @return self
      */
@@ -327,7 +327,7 @@ class EmailSubscriptionList implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets metadata
      *
-     * @return \OpenAPI\Client\Model\PaginationMetadata|null
+     * @return \Arta\Client\Model\PaginationMetadata|null
      */
     public function getMetadata()
     {
@@ -337,7 +337,7 @@ class EmailSubscriptionList implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets metadata
      *
-     * @param \OpenAPI\Client\Model\PaginationMetadata|null $metadata metadata
+     * @param \Arta\Client\Model\PaginationMetadata|null $metadata metadata
      *
      * @return self
      */

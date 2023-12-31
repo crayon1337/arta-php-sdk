@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * ApiKeysCreateRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ApiKeysCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'api_key' => '\OpenAPI\Client\Model\ApiKeysCreateRequestApiKey'
+        'api_key' => '\Arta\Client\Model\ApiKeysCreateRequestApiKey'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ApiKeysCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets api_key
      *
-     * @return \OpenAPI\Client\Model\ApiKeysCreateRequestApiKey|null
+     * @return \Arta\Client\Model\ApiKeysCreateRequestApiKey|null
      */
     public function getApiKey()
     {
@@ -303,7 +303,7 @@ class ApiKeysCreateRequest implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets api_key
      *
-     * @param \OpenAPI\Client\Model\ApiKeysCreateRequestApiKey|null $api_key api_key
+     * @param \Arta\Client\Model\ApiKeysCreateRequestApiKey|null $api_key api_key
      *
      * @return self
      */

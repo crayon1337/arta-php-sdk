@@ -1,4 +1,4 @@
-# OpenAPI\Client\AttachmentsApi
+# Arta\Client\AttachmentsApi
 
 All URIs are relative to https://api.arta.io, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.arta.io, except if the operation defines an
 ## `attachmentsCreate()`
 
 ```php
-attachmentsCreate($authorization, $attachments_create_request): \OpenAPI\Client\Model\Attachment
+attachmentsCreate($authorization, $attachments_create_request): \Arta\Client\Model\Attachment
 ```
 
 Create an Attachment
@@ -28,19 +28,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\AttachmentsApi(
+$apiInstance = new Arta\Client\Api\AttachmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $authorization = ARTA_APIKey s0e1t2e3c4a5s6t7r8o9n10o11m12y; // string | Authorize your API calls with an Arta API token
-$attachments_create_request = {"attachment":{"upload_id":4791,"request_id":"506d79b6-1e5e-4e8c-a266-74658fdaf4ee"}}; // \OpenAPI\Client\Model\AttachmentsCreateRequest
+$attachments_create_request = {"attachment":{"upload_id":4791,"request_id":"506d79b6-1e5e-4e8c-a266-74658fdaf4ee"}}; // \Arta\Client\Model\AttachmentsCreateRequest
 
 try {
     $result = $apiInstance->attachmentsCreate($authorization, $attachments_create_request);
@@ -55,11 +55,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Authorize your API calls with an Arta API token | |
-| **attachments_create_request** | [**\OpenAPI\Client\Model\AttachmentsCreateRequest**](../Model/AttachmentsCreateRequest.md)|  | [optional] |
+| **attachments_create_request** | [**\Arta\Client\Model\AttachmentsCreateRequest**](../Model/AttachmentsCreateRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Attachment**](../Model/Attachment.md)
+[**\Arta\Client\Model\Attachment**](../Model/Attachment.md)
 
 ### Authorization
 
@@ -92,12 +92,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\AttachmentsApi(
+$apiInstance = new Arta\Client\Api\AttachmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -140,7 +140,7 @@ void (empty response body)
 ## `attachmentsGet()`
 
 ```php
-attachmentsGet($authorization, $attachment_id): \OpenAPI\Client\Model\Attachment
+attachmentsGet($authorization, $attachment_id): \Arta\Client\Model\Attachment
 ```
 
 Get an Attachment
@@ -155,12 +155,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\AttachmentsApi(
+$apiInstance = new Arta\Client\Api\AttachmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -186,7 +186,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Attachment**](../Model/Attachment.md)
+[**\Arta\Client\Model\Attachment**](../Model/Attachment.md)
 
 ### Authorization
 
@@ -204,7 +204,7 @@ try {
 ## `attachmentsList()`
 
 ```php
-attachmentsList($authorization, $page_size, $page): \OpenAPI\Client\Model\AttachmentList
+attachmentsList($authorization, $page_size, $page): \Arta\Client\Model\AttachmentList
 ```
 
 List Attachments
@@ -219,12 +219,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\AttachmentsApi(
+$apiInstance = new Arta\Client\Api\AttachmentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -252,7 +252,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AttachmentList**](../Model/AttachmentList.md)
+[**\Arta\Client\Model\AttachmentList**](../Model/AttachmentList.md)
 
 ### Authorization
 

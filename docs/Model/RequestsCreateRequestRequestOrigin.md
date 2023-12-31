@@ -13,6 +13,6 @@ Name | Type | Description | Notes
 **postal_code** | **string** | The postal code for the location |
 **country** | **string** | The ISO 3166-1 alpha-2 country code of the location |
 **title** | **string** | The name for the location | [optional]
-**contacts** | [**\OpenAPI\Client\Model\RequestsCreateRequestRequestOriginContactsInner[]**](RequestsCreateRequestRequestOriginContactsInner.md) | The contact details for the location | [optional]
+**contacts** | [**\Arta\Client\Model\RequestsCreateRequestRequestOriginContactsInner[]**](RequestsCreateRequestRequestOriginContactsInner.md) | The contact details for the location | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

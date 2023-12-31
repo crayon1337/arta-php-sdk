@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **current_packing** | **string[]** | A list of packing subtype IDs describing how the item is currently packed | [optional] [readonly]
 **depth** | **string** | The depth of the object | [optional] [readonly]
-**details** | [**\OpenAPI\Client\Model\ShipmentPackagesInnerObjectsInnerDetails**](ShipmentPackagesInnerObjectsInnerDetails.md) |  | [optional]
+**details** | [**\Arta\Client\Model\ShipmentPackagesInnerObjectsInnerDetails**](ShipmentPackagesInnerObjectsInnerDetails.md) |  | [optional]
 **height** | **string** | The height of the object | [optional] [readonly]
 **id** | **int** | The system-generated ID for this object | [optional] [readonly]
 **images** | **string[]** | A list image urls of the object | [optional] [readonly]

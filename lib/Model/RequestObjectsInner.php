@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * RequestObjectsInner Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class RequestObjectsInner implements ModelInterface, ArrayAccess, \JsonSerializa
     protected static $openAPITypes = [
         'current_packing' => 'string[]',
         'depth' => 'string',
-        'details' => '\OpenAPI\Client\Model\RequestObjectsInnerDetails',
+        'details' => '\Arta\Client\Model\RequestObjectsInnerDetails',
         'height' => 'string',
         'id' => 'int',
         'images' => 'string[]',
@@ -501,7 +501,7 @@ class RequestObjectsInner implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Gets details
      *
-     * @return \OpenAPI\Client\Model\RequestObjectsInnerDetails|null
+     * @return \Arta\Client\Model\RequestObjectsInnerDetails|null
      */
     public function getDetails()
     {
@@ -511,7 +511,7 @@ class RequestObjectsInner implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets details
      *
-     * @param \OpenAPI\Client\Model\RequestObjectsInnerDetails|null $details details
+     * @param \Arta\Client\Model\RequestObjectsInnerDetails|null $details details
      *
      * @return self
      */

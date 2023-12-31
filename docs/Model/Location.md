@@ -13,6 +13,6 @@ Name | Type | Description | Notes
 **postal_code** | **string** | The postal code | [optional]
 **region** | **string** | Political region name, for US states and Canada provinces, use 2 letter abbreviations | [optional]
 **title** | **string** | The title or name of the location | [optional]
-**contacts** | [**\OpenAPI\Client\Model\LocationContactsInner[]**](LocationContactsInner.md) | A list of contacts at the location | [optional]
+**contacts** | [**\Arta\Client\Model\LocationContactsInner[]**](LocationContactsInner.md) | A list of contacts at the location | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

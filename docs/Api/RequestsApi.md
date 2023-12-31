@@ -1,4 +1,4 @@
-# OpenAPI\Client\RequestsApi
+# Arta\Client\RequestsApi
 
 All URIs are relative to https://api.arta.io, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://api.arta.io, except if the operation defines an
 ## `requestsCancel()`
 
 ```php
-requestsCancel($authorization, $request_id): \OpenAPI\Client\Model\Request
+requestsCancel($authorization, $request_id): \Arta\Client\Model\Request
 ```
 
 Cancel a Quote Request
@@ -30,12 +30,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\RequestsApi(
+$apiInstance = new Arta\Client\Api\RequestsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -61,7 +61,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Request**](../Model/Request.md)
+[**\Arta\Client\Model\Request**](../Model/Request.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ try {
 ## `requestsCreate()`
 
 ```php
-requestsCreate($authorization, $arta_quote_timeout, $requests_create_request): \OpenAPI\Client\Model\Request
+requestsCreate($authorization, $arta_quote_timeout, $requests_create_request): \Arta\Client\Model\Request
 ```
 
 Create a Quote Request
@@ -94,12 +94,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\RequestsApi(
+$apiInstance = new Arta\Client\Api\RequestsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -107,7 +107,7 @@ $apiInstance = new OpenAPI\Client\Api\RequestsApi(
 );
 $authorization = ARTA_APIKey s0e1t2e3c4a5s6t7r8o9n10o11m12y; // string | Authorize your API calls with an Arta API token
 $arta_quote_timeout = 6000; // int | Optionally set a timeout boundary in milliseconds for creating quote requests.  While Arta takes great care to return quotes quickly, several external services consumed during the process of creating quotes have varying response times. The `Arta-Quote-Timeout` header is particularly useful if your integration requires requests to return within a given time frame. When the timeout is reached, the Arta API will stop any tasks in progress and return the quotes that have already been completed. If building quotes for a particular quote type is incomplete at timeout, the API will return a disqualification message for that quote type with a `client_timeout_reached` `reason_code`.
-$requests_create_request = new \OpenAPI\Client\Model\RequestsCreateRequest(); // \OpenAPI\Client\Model\RequestsCreateRequest
+$requests_create_request = new \Arta\Client\Model\RequestsCreateRequest(); // \Arta\Client\Model\RequestsCreateRequest
 
 try {
     $result = $apiInstance->requestsCreate($authorization, $arta_quote_timeout, $requests_create_request);
@@ -123,11 +123,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Authorize your API calls with an Arta API token | |
 | **arta_quote_timeout** | **int**| Optionally set a timeout boundary in milliseconds for creating quote requests.  While Arta takes great care to return quotes quickly, several external services consumed during the process of creating quotes have varying response times. The &#x60;Arta-Quote-Timeout&#x60; header is particularly useful if your integration requires requests to return within a given time frame. When the timeout is reached, the Arta API will stop any tasks in progress and return the quotes that have already been completed. If building quotes for a particular quote type is incomplete at timeout, the API will return a disqualification message for that quote type with a &#x60;client_timeout_reached&#x60; &#x60;reason_code&#x60;. | [optional] |
-| **requests_create_request** | [**\OpenAPI\Client\Model\RequestsCreateRequest**](../Model/RequestsCreateRequest.md)|  | [optional] |
+| **requests_create_request** | [**\Arta\Client\Model\RequestsCreateRequest**](../Model/RequestsCreateRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Request**](../Model/Request.md)
+[**\Arta\Client\Model\Request**](../Model/Request.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ try {
 ## `requestsCustom()`
 
 ```php
-requestsCustom($authorization, $request_id, $requests_custom_request): \OpenAPI\Client\Model\Request
+requestsCustom($authorization, $request_id, $requests_custom_request): \Arta\Client\Model\Request
 ```
 
 Request custom quotes
@@ -160,12 +160,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\RequestsApi(
+$apiInstance = new Arta\Client\Api\RequestsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -173,7 +173,7 @@ $apiInstance = new OpenAPI\Client\Api\RequestsApi(
 );
 $authorization = ARTA_APIKey s0e1t2e3c4a5s6t7r8o9n10o11m12y; // string | Authorize your API calls with an Arta API token
 $request_id = 'request_id_example'; // string | request_id parameter
-$requests_custom_request = new \OpenAPI\Client\Model\RequestsCustomRequest(); // \OpenAPI\Client\Model\RequestsCustomRequest
+$requests_custom_request = new \Arta\Client\Model\RequestsCustomRequest(); // \Arta\Client\Model\RequestsCustomRequest
 
 try {
     $result = $apiInstance->requestsCustom($authorization, $request_id, $requests_custom_request);
@@ -189,11 +189,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Authorize your API calls with an Arta API token | |
 | **request_id** | **string**| request_id parameter | |
-| **requests_custom_request** | [**\OpenAPI\Client\Model\RequestsCustomRequest**](../Model/RequestsCustomRequest.md)|  | [optional] |
+| **requests_custom_request** | [**\Arta\Client\Model\RequestsCustomRequest**](../Model/RequestsCustomRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Request**](../Model/Request.md)
+[**\Arta\Client\Model\Request**](../Model/Request.md)
 
 ### Authorization
 
@@ -211,7 +211,7 @@ try {
 ## `requestsGet()`
 
 ```php
-requestsGet($authorization, $request_id): \OpenAPI\Client\Model\Request
+requestsGet($authorization, $request_id): \Arta\Client\Model\Request
 ```
 
 Get a Quote Request
@@ -226,12 +226,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\RequestsApi(
+$apiInstance = new Arta\Client\Api\RequestsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -257,7 +257,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Request**](../Model/Request.md)
+[**\Arta\Client\Model\Request**](../Model/Request.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ try {
 ## `requestsList()`
 
 ```php
-requestsList($authorization, $page_size, $page, $search): \OpenAPI\Client\Model\RequestList
+requestsList($authorization, $page_size, $page, $search): \Arta\Client\Model\RequestList
 ```
 
 List Request records
@@ -290,12 +290,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\RequestsApi(
+$apiInstance = new Arta\Client\Api\RequestsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -325,7 +325,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RequestList**](../Model/RequestList.md)
+[**\Arta\Client\Model\RequestList**](../Model/RequestList.md)
 
 ### Authorization
 
@@ -343,7 +343,7 @@ try {
 ## `requestsUpdateContacts()`
 
 ```php
-requestsUpdateContacts($authorization, $request_id, $requests_update_contacts_request): \OpenAPI\Client\Model\Request
+requestsUpdateContacts($authorization, $request_id, $requests_update_contacts_request): \Arta\Client\Model\Request
 ```
 
 Update the contacts for a Quote Request
@@ -358,12 +358,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\RequestsApi(
+$apiInstance = new Arta\Client\Api\RequestsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -371,7 +371,7 @@ $apiInstance = new OpenAPI\Client\Api\RequestsApi(
 );
 $authorization = ARTA_APIKey s0e1t2e3c4a5s6t7r8o9n10o11m12y; // string | Authorize your API calls with an Arta API token
 $request_id = 'request_id_example'; // string | request_id parameter
-$requests_update_contacts_request = {"destination":{"contacts":[{"email_address":"destination@example.com","name":"Destination Contact","phone_number":"(310) 123-4567"}]},"origin":{"contacts":[{"email_address":"origin@example.com","name":"Origin Contact","phone_number":"(310) 234-5678"}]}}; // \OpenAPI\Client\Model\RequestsUpdateContactsRequest
+$requests_update_contacts_request = {"destination":{"contacts":[{"email_address":"destination@example.com","name":"Destination Contact","phone_number":"(310) 123-4567"}]},"origin":{"contacts":[{"email_address":"origin@example.com","name":"Origin Contact","phone_number":"(310) 234-5678"}]}}; // \Arta\Client\Model\RequestsUpdateContactsRequest
 
 try {
     $result = $apiInstance->requestsUpdateContacts($authorization, $request_id, $requests_update_contacts_request);
@@ -387,11 +387,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **authorization** | **string**| Authorize your API calls with an Arta API token | |
 | **request_id** | **string**| request_id parameter | |
-| **requests_update_contacts_request** | [**\OpenAPI\Client\Model\RequestsUpdateContactsRequest**](../Model/RequestsUpdateContactsRequest.md)|  | [optional] |
+| **requests_update_contacts_request** | [**\Arta\Client\Model\RequestsUpdateContactsRequest**](../Model/RequestsUpdateContactsRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Request**](../Model/Request.md)
+[**\Arta\Client\Model\Request**](../Model/Request.md)
 
 ### Authorization
 

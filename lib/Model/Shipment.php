@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * Shipment Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,31 +59,31 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'created_at' => 'string',
-        'destination' => '\OpenAPI\Client\Model\Location',
+        'destination' => '\Arta\Client\Model\Location',
         'eei_form_status' => 'string',
         'emissions' => 'string',
         'emissions_unit' => 'string',
-        'exceptions' => '\OpenAPI\Client\Model\ShipmentExceptionsInner[]',
+        'exceptions' => '\Arta\Client\Model\ShipmentExceptionsInner[]',
         'hosted_session_id' => 'int',
         'id' => 'string',
-        'insurance_policy' => '\OpenAPI\Client\Model\ShipmentInsurancePolicy',
+        'insurance_policy' => '\Arta\Client\Model\ShipmentInsurancePolicy',
         'internal_reference' => 'string',
         'log_request_id' => 'string',
         'object_count' => 'float',
-        'origin' => '\OpenAPI\Client\Model\Location',
+        'origin' => '\Arta\Client\Model\Location',
         'package_count' => 'float',
-        'packages' => '\OpenAPI\Client\Model\ShipmentPackagesInner[]',
+        'packages' => '\Arta\Client\Model\ShipmentPackagesInner[]',
         'payment_process' => 'string',
         'public_reference' => 'string',
         'quote_type' => 'string',
-        'schedule' => '\OpenAPI\Client\Model\ShipmentSchedule',
-        'services' => '\OpenAPI\Client\Model\ShipmentServicesInner[]',
+        'schedule' => '\Arta\Client\Model\ShipmentSchedule',
+        'services' => '\Arta\Client\Model\ShipmentServicesInner[]',
         'shipping_notes' => 'string',
         'shortcode' => 'string',
         'status' => 'string',
         'total' => 'string',
         'total_currency' => 'string',
-        'tracking' => '\OpenAPI\Client\Model\ShipmentTrackingInner[]',
+        'tracking' => '\Arta\Client\Model\ShipmentTrackingInner[]',
         'updated_at' => 'string',
         'url' => 'string'
     ];
@@ -651,7 +651,7 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets destination
      *
-     * @return \OpenAPI\Client\Model\Location|null
+     * @return \Arta\Client\Model\Location|null
      */
     public function getDestination()
     {
@@ -661,7 +661,7 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets destination
      *
-     * @param \OpenAPI\Client\Model\Location|null $destination destination
+     * @param \Arta\Client\Model\Location|null $destination destination
      *
      * @return self
      */
@@ -790,7 +790,7 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets exceptions
      *
-     * @return \OpenAPI\Client\Model\ShipmentExceptionsInner[]|null
+     * @return \Arta\Client\Model\ShipmentExceptionsInner[]|null
      */
     public function getExceptions()
     {
@@ -800,7 +800,7 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets exceptions
      *
-     * @param \OpenAPI\Client\Model\ShipmentExceptionsInner[]|null $exceptions Shipment exceptions provide context about holds, delays, and other circumstances that may interrupt a shipment's fulfillment
+     * @param \Arta\Client\Model\ShipmentExceptionsInner[]|null $exceptions Shipment exceptions provide context about holds, delays, and other circumstances that may interrupt a shipment's fulfillment
      *
      * @return self
      */
@@ -878,7 +878,7 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets insurance_policy
      *
-     * @return \OpenAPI\Client\Model\ShipmentInsurancePolicy|null
+     * @return \Arta\Client\Model\ShipmentInsurancePolicy|null
      */
     public function getInsurancePolicy()
     {
@@ -888,7 +888,7 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets insurance_policy
      *
-     * @param \OpenAPI\Client\Model\ShipmentInsurancePolicy|null $insurance_policy insurance_policy
+     * @param \Arta\Client\Model\ShipmentInsurancePolicy|null $insurance_policy insurance_policy
      *
      * @return self
      */
@@ -1011,7 +1011,7 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets origin
      *
-     * @return \OpenAPI\Client\Model\Location|null
+     * @return \Arta\Client\Model\Location|null
      */
     public function getOrigin()
     {
@@ -1021,7 +1021,7 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets origin
      *
-     * @param \OpenAPI\Client\Model\Location|null $origin origin
+     * @param \Arta\Client\Model\Location|null $origin origin
      *
      * @return self
      */
@@ -1065,7 +1065,7 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets packages
      *
-     * @return \OpenAPI\Client\Model\ShipmentPackagesInner[]|null
+     * @return \Arta\Client\Model\ShipmentPackagesInner[]|null
      */
     public function getPackages()
     {
@@ -1075,7 +1075,7 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets packages
      *
-     * @param \OpenAPI\Client\Model\ShipmentPackagesInner[]|null $packages packages
+     * @param \Arta\Client\Model\ShipmentPackagesInner[]|null $packages packages
      *
      * @return self
      */
@@ -1204,7 +1204,7 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets schedule
      *
-     * @return \OpenAPI\Client\Model\ShipmentSchedule|null
+     * @return \Arta\Client\Model\ShipmentSchedule|null
      */
     public function getSchedule()
     {
@@ -1214,7 +1214,7 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets schedule
      *
-     * @param \OpenAPI\Client\Model\ShipmentSchedule|null $schedule schedule
+     * @param \Arta\Client\Model\ShipmentSchedule|null $schedule schedule
      *
      * @return self
      */
@@ -1231,7 +1231,7 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets services
      *
-     * @return \OpenAPI\Client\Model\ShipmentServicesInner[]|null
+     * @return \Arta\Client\Model\ShipmentServicesInner[]|null
      */
     public function getServices()
     {
@@ -1241,7 +1241,7 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets services
      *
-     * @param \OpenAPI\Client\Model\ShipmentServicesInner[]|null $services services
+     * @param \Arta\Client\Model\ShipmentServicesInner[]|null $services services
      *
      * @return self
      */
@@ -1429,7 +1429,7 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tracking
      *
-     * @return \OpenAPI\Client\Model\ShipmentTrackingInner[]|null
+     * @return \Arta\Client\Model\ShipmentTrackingInner[]|null
      */
     public function getTracking()
     {
@@ -1439,7 +1439,7 @@ class Shipment implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tracking
      *
-     * @param \OpenAPI\Client\Model\ShipmentTrackingInner[]|null $tracking A list of tracking details for the packages in a shipment
+     * @param \Arta\Client\Model\ShipmentTrackingInner[]|null $tracking A list of tracking details for the packages in a shipment
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * Tracking Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class Tracking implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'carrier' => '\OpenAPI\Client\Model\TrackingCarrier',
-        'events' => '\OpenAPI\Client\Model\TrackingCarrier[]',
+        'carrier' => '\Arta\Client\Model\TrackingCarrier',
+        'events' => '\Arta\Client\Model\TrackingCarrier[]',
         'status' => 'string',
         'tracking_number' => 'string'
     ];
@@ -314,7 +314,7 @@ class Tracking implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets carrier
      *
-     * @return \OpenAPI\Client\Model\TrackingCarrier|null
+     * @return \Arta\Client\Model\TrackingCarrier|null
      */
     public function getCarrier()
     {
@@ -324,7 +324,7 @@ class Tracking implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets carrier
      *
-     * @param \OpenAPI\Client\Model\TrackingCarrier|null $carrier carrier
+     * @param \Arta\Client\Model\TrackingCarrier|null $carrier carrier
      *
      * @return self
      */
@@ -341,7 +341,7 @@ class Tracking implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets events
      *
-     * @return \OpenAPI\Client\Model\TrackingCarrier[]|null
+     * @return \Arta\Client\Model\TrackingCarrier[]|null
      */
     public function getEvents()
     {
@@ -351,7 +351,7 @@ class Tracking implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets events
      *
-     * @param \OpenAPI\Client\Model\TrackingCarrier[]|null $events events
+     * @param \Arta\Client\Model\TrackingCarrier[]|null $events events
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * RequestsCreateRequestRequestDestination Class Doc Comment
  *
  * @category Class
  * @description The destination location for the shipment quote request
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -68,7 +68,7 @@ class RequestsCreateRequestRequestDestination implements ModelInterface, ArrayAc
         'postal_code' => 'string',
         'country' => 'string',
         'title' => 'string',
-        'contacts' => '\OpenAPI\Client\Model\RequestsCreateRequestRequestDestinationContactsInner[]'
+        'contacts' => '\Arta\Client\Model\RequestsCreateRequestRequestDestinationContactsInner[]'
     ];
 
     /**
@@ -670,7 +670,7 @@ class RequestsCreateRequestRequestDestination implements ModelInterface, ArrayAc
     /**
      * Gets contacts
      *
-     * @return \OpenAPI\Client\Model\RequestsCreateRequestRequestDestinationContactsInner[]|null
+     * @return \Arta\Client\Model\RequestsCreateRequestRequestDestinationContactsInner[]|null
      */
     public function getContacts()
     {
@@ -680,7 +680,7 @@ class RequestsCreateRequestRequestDestination implements ModelInterface, ArrayAc
     /**
      * Sets contacts
      *
-     * @param \OpenAPI\Client\Model\RequestsCreateRequestRequestDestinationContactsInner[]|null $contacts The contact details for the location
+     * @param \Arta\Client\Model\RequestsCreateRequestRequestDestinationContactsInner[]|null $contacts The contact details for the location
      *
      * @return self
      */

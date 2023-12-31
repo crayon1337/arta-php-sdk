@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * ShipmentsCreateRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class ShipmentsCreateRequest implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'shipment' => '\OpenAPI\Client\Model\ShipmentsCreateRequestShipment'
+        'shipment' => '\Arta\Client\Model\ShipmentsCreateRequestShipment'
     ];
 
     /**
@@ -293,7 +293,7 @@ class ShipmentsCreateRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets shipment
      *
-     * @return \OpenAPI\Client\Model\ShipmentsCreateRequestShipment|null
+     * @return \Arta\Client\Model\ShipmentsCreateRequestShipment|null
      */
     public function getShipment()
     {
@@ -303,7 +303,7 @@ class ShipmentsCreateRequest implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets shipment
      *
-     * @param \OpenAPI\Client\Model\ShipmentsCreateRequestShipment|null $shipment shipment
+     * @param \Arta\Client\Model\ShipmentsCreateRequestShipment|null $shipment shipment
      *
      * @return self
      */

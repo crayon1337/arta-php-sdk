@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * EmailRulesCreateRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class EmailRulesCreateRequest implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'email_rule' => '\OpenAPI\Client\Model\EmailRulesCreateRequestEmailRule'
+        'email_rule' => '\Arta\Client\Model\EmailRulesCreateRequestEmailRule'
     ];
 
     /**
@@ -293,7 +293,7 @@ class EmailRulesCreateRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets email_rule
      *
-     * @return \OpenAPI\Client\Model\EmailRulesCreateRequestEmailRule|null
+     * @return \Arta\Client\Model\EmailRulesCreateRequestEmailRule|null
      */
     public function getEmailRule()
     {
@@ -303,7 +303,7 @@ class EmailRulesCreateRequest implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets email_rule
      *
-     * @param \OpenAPI\Client\Model\EmailRulesCreateRequestEmailRule|null $email_rule email_rule
+     * @param \Arta\Client\Model\EmailRulesCreateRequestEmailRule|null $email_rule email_rule
      *
      * @return self
      */

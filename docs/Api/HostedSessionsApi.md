@@ -1,4 +1,4 @@
-# OpenAPI\Client\HostedSessionsApi
+# Arta\Client\HostedSessionsApi
 
 All URIs are relative to https://api.arta.io, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.arta.io, except if the operation defines an
 ## `hostedSessionsCancel()`
 
 ```php
-hostedSessionsCancel($authorization, $hosted_session_id): \OpenAPI\Client\Model\HostedSession
+hostedSessionsCancel($authorization, $hosted_session_id): \Arta\Client\Model\HostedSession
 ```
 
 Cancel a Hosted Session
@@ -28,12 +28,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\HostedSessionsApi(
+$apiInstance = new Arta\Client\Api\HostedSessionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -59,7 +59,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HostedSession**](../Model/HostedSession.md)
+[**\Arta\Client\Model\HostedSession**](../Model/HostedSession.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ try {
 ## `hostedSessionsCreate()`
 
 ```php
-hostedSessionsCreate($authorization, $body): \OpenAPI\Client\Model\HostedSession
+hostedSessionsCreate($authorization, $body): \Arta\Client\Model\HostedSession
 ```
 
 Create a Hosted Session
@@ -92,12 +92,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\HostedSessionsApi(
+$apiInstance = new Arta\Client\Api\HostedSessionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -123,7 +123,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HostedSession**](../Model/HostedSession.md)
+[**\Arta\Client\Model\HostedSession**](../Model/HostedSession.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ try {
 ## `hostedSessionsGet()`
 
 ```php
-hostedSessionsGet($authorization, $hosted_session_id): \OpenAPI\Client\Model\HostedSession
+hostedSessionsGet($authorization, $hosted_session_id): \Arta\Client\Model\HostedSession
 ```
 
 Get a Hosted Session
@@ -156,12 +156,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\HostedSessionsApi(
+$apiInstance = new Arta\Client\Api\HostedSessionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -187,7 +187,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HostedSession**](../Model/HostedSession.md)
+[**\Arta\Client\Model\HostedSession**](../Model/HostedSession.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ try {
 ## `hostedSessionsList()`
 
 ```php
-hostedSessionsList($authorization, $page_size, $page): \OpenAPI\Client\Model\HostedSessionList
+hostedSessionsList($authorization, $page_size, $page): \Arta\Client\Model\HostedSessionList
 ```
 
 List Hosted Sessions
@@ -220,12 +220,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: apiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Arta\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new OpenAPI\Client\Api\HostedSessionsApi(
+$apiInstance = new Arta\Client\Api\HostedSessionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -253,7 +253,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\HostedSessionList**](../Model/HostedSessionList.md)
+[**\Arta\Client\Model\HostedSessionList**](../Model/HostedSessionList.md)
 
 ### Authorization
 

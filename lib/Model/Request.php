@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * Request Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,24 +59,24 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'additional_services' => 'string[]',
-        'bookable' => '\OpenAPI\Client\Model\RequestBookable',
+        'bookable' => '\Arta\Client\Model\RequestBookable',
         'created_at' => 'string',
         'currency' => 'string',
-        'destination' => '\OpenAPI\Client\Model\Location',
-        'disqualifications' => '\OpenAPI\Client\Model\RequestDisqualificationsInner[]',
+        'destination' => '\Arta\Client\Model\Location',
+        'disqualifications' => '\Arta\Client\Model\RequestDisqualificationsInner[]',
         'hosted_session_id' => 'int',
         'id' => 'string',
         'insurance' => 'string',
         'internal_reference' => 'string',
         'log_request_id' => 'string',
         'object_count' => 'float',
-        'objects' => '\OpenAPI\Client\Model\RequestObjectsInner[]',
-        'origin' => '\OpenAPI\Client\Model\Location',
+        'objects' => '\Arta\Client\Model\RequestObjectsInner[]',
+        'origin' => '\Arta\Client\Model\Location',
         'payment_process' => 'string',
         'preferred_quote_types' => 'string[]',
         'public_reference' => 'string',
         'quote_types' => 'string[]',
-        'quotes' => '\OpenAPI\Client\Model\RequestQuotesInner[]',
+        'quotes' => '\Arta\Client\Model\RequestQuotesInner[]',
         'shipping_notes' => 'string',
         'shortcode' => 'string',
         'status' => 'string',
@@ -556,7 +556,7 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets bookable
      *
-     * @return \OpenAPI\Client\Model\RequestBookable|null
+     * @return \Arta\Client\Model\RequestBookable|null
      */
     public function getBookable()
     {
@@ -566,7 +566,7 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets bookable
      *
-     * @param \OpenAPI\Client\Model\RequestBookable|null $bookable bookable
+     * @param \Arta\Client\Model\RequestBookable|null $bookable bookable
      *
      * @return self
      */
@@ -647,7 +647,7 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets destination
      *
-     * @return \OpenAPI\Client\Model\Location|null
+     * @return \Arta\Client\Model\Location|null
      */
     public function getDestination()
     {
@@ -657,7 +657,7 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets destination
      *
-     * @param \OpenAPI\Client\Model\Location|null $destination destination
+     * @param \Arta\Client\Model\Location|null $destination destination
      *
      * @return self
      */
@@ -674,7 +674,7 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets disqualifications
      *
-     * @return \OpenAPI\Client\Model\RequestDisqualificationsInner[]|null
+     * @return \Arta\Client\Model\RequestDisqualificationsInner[]|null
      */
     public function getDisqualifications()
     {
@@ -684,7 +684,7 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets disqualifications
      *
-     * @param \OpenAPI\Client\Model\RequestDisqualificationsInner[]|null $disqualifications The list of reasons for which particular quote types were disqulified
+     * @param \Arta\Client\Model\RequestDisqualificationsInner[]|null $disqualifications The list of reasons for which particular quote types were disqulified
      *
      * @return self
      */
@@ -888,7 +888,7 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets objects
      *
-     * @return \OpenAPI\Client\Model\RequestObjectsInner[]|null
+     * @return \Arta\Client\Model\RequestObjectsInner[]|null
      */
     public function getObjects()
     {
@@ -898,7 +898,7 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets objects
      *
-     * @param \OpenAPI\Client\Model\RequestObjectsInner[]|null $objects objects
+     * @param \Arta\Client\Model\RequestObjectsInner[]|null $objects objects
      *
      * @return self
      */
@@ -915,7 +915,7 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets origin
      *
-     * @return \OpenAPI\Client\Model\Location|null
+     * @return \Arta\Client\Model\Location|null
      */
     public function getOrigin()
     {
@@ -925,7 +925,7 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets origin
      *
-     * @param \OpenAPI\Client\Model\Location|null $origin origin
+     * @param \Arta\Client\Model\Location|null $origin origin
      *
      * @return self
      */
@@ -1075,7 +1075,7 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets quotes
      *
-     * @return \OpenAPI\Client\Model\RequestQuotesInner[]|null
+     * @return \Arta\Client\Model\RequestQuotesInner[]|null
      */
     public function getQuotes()
     {
@@ -1085,7 +1085,7 @@ class Request implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets quotes
      *
-     * @param \OpenAPI\Client\Model\RequestQuotesInner[]|null $quotes The list of quotes returned for the request
+     * @param \Arta\Client\Model\RequestQuotesInner[]|null $quotes The list of quotes returned for the request
      *
      * @return self
      */

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * BasicError Class Doc Comment
  *
  * @category Class
  * @description Basic Error
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class BasicError implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'errors' => '\OpenAPI\Client\Model\BasicErrorErrors'
+        'errors' => '\Arta\Client\Model\BasicErrorErrors'
     ];
 
     /**
@@ -294,7 +294,7 @@ class BasicError implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets errors
      *
-     * @return \OpenAPI\Client\Model\BasicErrorErrors|null
+     * @return \Arta\Client\Model\BasicErrorErrors|null
      */
     public function getErrors()
     {
@@ -304,7 +304,7 @@ class BasicError implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets errors
      *
-     * @param \OpenAPI\Client\Model\BasicErrorErrors|null $errors errors
+     * @param \Arta\Client\Model\BasicErrorErrors|null $errors errors
      *
      * @return self
      */

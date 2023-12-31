@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * RequestsUpdateContactsRequestDestination Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class RequestsUpdateContactsRequestDestination implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
-        'contacts' => '\OpenAPI\Client\Model\RequestsUpdateContactsRequestDestinationContactsInner[]'
+        'contacts' => '\Arta\Client\Model\RequestsUpdateContactsRequestDestinationContactsInner[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class RequestsUpdateContactsRequestDestination implements ModelInterface, ArrayA
     /**
      * Gets contacts
      *
-     * @return \OpenAPI\Client\Model\RequestsUpdateContactsRequestDestinationContactsInner[]|null
+     * @return \Arta\Client\Model\RequestsUpdateContactsRequestDestinationContactsInner[]|null
      */
     public function getContacts()
     {
@@ -303,7 +303,7 @@ class RequestsUpdateContactsRequestDestination implements ModelInterface, ArrayA
     /**
      * Sets contacts
      *
-     * @param \OpenAPI\Client\Model\RequestsUpdateContactsRequestDestinationContactsInner[]|null $contacts contacts
+     * @param \Arta\Client\Model\RequestsUpdateContactsRequestDestinationContactsInner[]|null $contacts contacts
      *
      * @return self
      */

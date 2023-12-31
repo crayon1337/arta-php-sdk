@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * RequestsCreateRequestRequest Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,11 +60,11 @@ class RequestsCreateRequestRequest implements ModelInterface, ArrayAccess, \Json
     protected static $openAPITypes = [
         'additional_services' => 'string[]',
         'currency' => 'string',
-        'destination' => '\OpenAPI\Client\Model\RequestsCreateRequestRequestDestination',
+        'destination' => '\Arta\Client\Model\RequestsCreateRequestRequestDestination',
         'insurance' => 'string',
         'internal_reference' => 'string',
-        'objects' => '\OpenAPI\Client\Model\RequestsCreateRequestRequestObjectsInner[]',
-        'origin' => '\OpenAPI\Client\Model\RequestsCreateRequestRequestOrigin',
+        'objects' => '\Arta\Client\Model\RequestsCreateRequestRequestObjectsInner[]',
+        'origin' => '\Arta\Client\Model\RequestsCreateRequestRequestOrigin',
         'preferred_quote_types' => 'string[]',
         'public_reference' => 'string',
         'shipping_notes' => 'string'
@@ -449,7 +449,7 @@ class RequestsCreateRequestRequest implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets destination
      *
-     * @return \OpenAPI\Client\Model\RequestsCreateRequestRequestDestination
+     * @return \Arta\Client\Model\RequestsCreateRequestRequestDestination
      */
     public function getDestination()
     {
@@ -459,7 +459,7 @@ class RequestsCreateRequestRequest implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets destination
      *
-     * @param \OpenAPI\Client\Model\RequestsCreateRequestRequestDestination $destination destination
+     * @param \Arta\Client\Model\RequestsCreateRequestRequestDestination $destination destination
      *
      * @return self
      */
@@ -534,7 +534,7 @@ class RequestsCreateRequestRequest implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets objects
      *
-     * @return \OpenAPI\Client\Model\RequestsCreateRequestRequestObjectsInner[]
+     * @return \Arta\Client\Model\RequestsCreateRequestRequestObjectsInner[]
      */
     public function getObjects()
     {
@@ -544,7 +544,7 @@ class RequestsCreateRequestRequest implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets objects
      *
-     * @param \OpenAPI\Client\Model\RequestsCreateRequestRequestObjectsInner[] $objects objects
+     * @param \Arta\Client\Model\RequestsCreateRequestRequestObjectsInner[] $objects objects
      *
      * @return self
      */
@@ -561,7 +561,7 @@ class RequestsCreateRequestRequest implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets origin
      *
-     * @return \OpenAPI\Client\Model\RequestsCreateRequestRequestOrigin
+     * @return \Arta\Client\Model\RequestsCreateRequestRequestOrigin
      */
     public function getOrigin()
     {
@@ -571,7 +571,7 @@ class RequestsCreateRequestRequest implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets origin
      *
-     * @param \OpenAPI\Client\Model\RequestsCreateRequestRequestOrigin $origin origin
+     * @param \Arta\Client\Model\RequestsCreateRequestRequestOrigin $origin origin
      *
      * @return self
      */

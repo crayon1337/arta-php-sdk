@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Arta\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Arta\Client\ApiException;
+use Arta\Client\Configuration;
+use Arta\Client\HeaderSelector;
+use Arta\Client\ObjectSerializer;
 
 /**
  * MetadataApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -176,9 +176,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadalocationAccessRestrictions'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]
+     * @return \Arta\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]
      * @deprecated
      */
     public function metadalocationAccessRestrictions($authorization, string $contentType = self::contentTypes['metadalocationAccessRestrictions'][0])
@@ -195,9 +195,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadalocationAccessRestrictions'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MetadalocationAccessRestrictions200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\MetadalocationAccessRestrictions200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function metadalocationAccessRestrictionsWithHttpInfo($authorization, string $contentType = self::contentTypes['metadalocationAccessRestrictions'][0])
@@ -241,11 +241,11 @@ class MetadataApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]' !== 'string') {
+                        if ('\Arta\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -263,13 +263,13 @@ class MetadataApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]';
+            $returnType = '\Arta\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -302,7 +302,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]',
+                        '\Arta\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -348,7 +348,7 @@ class MetadataApi
      */
     public function metadalocationAccessRestrictionsAsyncWithHttpInfo($authorization, string $contentType = self::contentTypes['metadalocationAccessRestrictions'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]';
+        $returnType = '\Arta\Client\Model\MetadalocationAccessRestrictions200ResponseInner[]';
         $request = $this->metadalocationAccessRestrictionsRequest($authorization, $contentType);
 
         return $this->client
@@ -489,9 +489,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataApiVersions'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MetadataApiVersions200ResponseInner[]
+     * @return \Arta\Client\Model\MetadataApiVersions200ResponseInner[]
      */
     public function metadataApiVersions($authorization, string $contentType = self::contentTypes['metadataApiVersions'][0])
     {
@@ -507,9 +507,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataApiVersions'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MetadataApiVersions200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\MetadataApiVersions200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
      */
     public function metadataApiVersionsWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataApiVersions'][0])
     {
@@ -552,11 +552,11 @@ class MetadataApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MetadataApiVersions200ResponseInner[]' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\MetadataApiVersions200ResponseInner[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MetadataApiVersions200ResponseInner[]' !== 'string') {
+                        if ('\Arta\Client\Model\MetadataApiVersions200ResponseInner[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -574,13 +574,13 @@ class MetadataApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MetadataApiVersions200ResponseInner[]', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\MetadataApiVersions200ResponseInner[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MetadataApiVersions200ResponseInner[]';
+            $returnType = '\Arta\Client\Model\MetadataApiVersions200ResponseInner[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -613,7 +613,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MetadataApiVersions200ResponseInner[]',
+                        '\Arta\Client\Model\MetadataApiVersions200ResponseInner[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -657,7 +657,7 @@ class MetadataApi
      */
     public function metadataApiVersionsAsyncWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataApiVersions'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MetadataApiVersions200ResponseInner[]';
+        $returnType = '\Arta\Client\Model\MetadataApiVersions200ResponseInner[]';
         $request = $this->metadataApiVersionsRequest($authorization, $contentType);
 
         return $this->client
@@ -797,9 +797,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataCurrencies'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MetadataCurrencies200ResponseInner[]
+     * @return \Arta\Client\Model\MetadataCurrencies200ResponseInner[]
      */
     public function metadataCurrencies($authorization, string $contentType = self::contentTypes['metadataCurrencies'][0])
     {
@@ -815,9 +815,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataCurrencies'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MetadataCurrencies200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\MetadataCurrencies200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
      */
     public function metadataCurrenciesWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataCurrencies'][0])
     {
@@ -860,11 +860,11 @@ class MetadataApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MetadataCurrencies200ResponseInner[]' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\MetadataCurrencies200ResponseInner[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MetadataCurrencies200ResponseInner[]' !== 'string') {
+                        if ('\Arta\Client\Model\MetadataCurrencies200ResponseInner[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -882,13 +882,13 @@ class MetadataApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MetadataCurrencies200ResponseInner[]', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\MetadataCurrencies200ResponseInner[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MetadataCurrencies200ResponseInner[]';
+            $returnType = '\Arta\Client\Model\MetadataCurrencies200ResponseInner[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -921,7 +921,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MetadataCurrencies200ResponseInner[]',
+                        '\Arta\Client\Model\MetadataCurrencies200ResponseInner[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -965,7 +965,7 @@ class MetadataApi
      */
     public function metadataCurrenciesAsyncWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataCurrencies'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MetadataCurrencies200ResponseInner[]';
+        $returnType = '\Arta\Client\Model\MetadataCurrencies200ResponseInner[]';
         $request = $this->metadataCurrenciesRequest($authorization, $contentType);
 
         return $this->client
@@ -1105,9 +1105,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataEmailNotifications'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MetadataEmailNotifications200ResponseInner[]
+     * @return \Arta\Client\Model\MetadataEmailNotifications200ResponseInner[]
      */
     public function metadataEmailNotifications($authorization, string $contentType = self::contentTypes['metadataEmailNotifications'][0])
     {
@@ -1123,9 +1123,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataEmailNotifications'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MetadataEmailNotifications200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\MetadataEmailNotifications200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
      */
     public function metadataEmailNotificationsWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataEmailNotifications'][0])
     {
@@ -1168,11 +1168,11 @@ class MetadataApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MetadataEmailNotifications200ResponseInner[]' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\MetadataEmailNotifications200ResponseInner[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MetadataEmailNotifications200ResponseInner[]' !== 'string') {
+                        if ('\Arta\Client\Model\MetadataEmailNotifications200ResponseInner[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1190,13 +1190,13 @@ class MetadataApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MetadataEmailNotifications200ResponseInner[]', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\MetadataEmailNotifications200ResponseInner[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MetadataEmailNotifications200ResponseInner[]';
+            $returnType = '\Arta\Client\Model\MetadataEmailNotifications200ResponseInner[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1229,7 +1229,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MetadataEmailNotifications200ResponseInner[]',
+                        '\Arta\Client\Model\MetadataEmailNotifications200ResponseInner[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1273,7 +1273,7 @@ class MetadataApi
      */
     public function metadataEmailNotificationsAsyncWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataEmailNotifications'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MetadataEmailNotifications200ResponseInner[]';
+        $returnType = '\Arta\Client\Model\MetadataEmailNotifications200ResponseInner[]';
         $request = $this->metadataEmailNotificationsRequest($authorization, $contentType);
 
         return $this->client
@@ -1413,9 +1413,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataInsurances'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MetadataInsurances200ResponseInner[]
+     * @return \Arta\Client\Model\MetadataInsurances200ResponseInner[]
      */
     public function metadataInsurances($authorization, string $contentType = self::contentTypes['metadataInsurances'][0])
     {
@@ -1431,9 +1431,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataInsurances'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MetadataInsurances200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\MetadataInsurances200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
      */
     public function metadataInsurancesWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataInsurances'][0])
     {
@@ -1476,11 +1476,11 @@ class MetadataApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MetadataInsurances200ResponseInner[]' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\MetadataInsurances200ResponseInner[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MetadataInsurances200ResponseInner[]' !== 'string') {
+                        if ('\Arta\Client\Model\MetadataInsurances200ResponseInner[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1498,13 +1498,13 @@ class MetadataApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MetadataInsurances200ResponseInner[]', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\MetadataInsurances200ResponseInner[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MetadataInsurances200ResponseInner[]';
+            $returnType = '\Arta\Client\Model\MetadataInsurances200ResponseInner[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1537,7 +1537,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MetadataInsurances200ResponseInner[]',
+                        '\Arta\Client\Model\MetadataInsurances200ResponseInner[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1581,7 +1581,7 @@ class MetadataApi
      */
     public function metadataInsurancesAsyncWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataInsurances'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MetadataInsurances200ResponseInner[]';
+        $returnType = '\Arta\Client\Model\MetadataInsurances200ResponseInner[]';
         $request = $this->metadataInsurancesRequest($authorization, $contentType);
 
         return $this->client
@@ -1721,9 +1721,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataObjectMaterials'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MetadataObjectMaterials200ResponseInner[]
+     * @return \Arta\Client\Model\MetadataObjectMaterials200ResponseInner[]
      * @deprecated
      */
     public function metadataObjectMaterials($authorization, string $contentType = self::contentTypes['metadataObjectMaterials'][0])
@@ -1740,9 +1740,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataObjectMaterials'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MetadataObjectMaterials200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\MetadataObjectMaterials200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function metadataObjectMaterialsWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataObjectMaterials'][0])
@@ -1786,11 +1786,11 @@ class MetadataApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MetadataObjectMaterials200ResponseInner[]' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\MetadataObjectMaterials200ResponseInner[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MetadataObjectMaterials200ResponseInner[]' !== 'string') {
+                        if ('\Arta\Client\Model\MetadataObjectMaterials200ResponseInner[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1808,13 +1808,13 @@ class MetadataApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MetadataObjectMaterials200ResponseInner[]', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\MetadataObjectMaterials200ResponseInner[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MetadataObjectMaterials200ResponseInner[]';
+            $returnType = '\Arta\Client\Model\MetadataObjectMaterials200ResponseInner[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1847,7 +1847,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MetadataObjectMaterials200ResponseInner[]',
+                        '\Arta\Client\Model\MetadataObjectMaterials200ResponseInner[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1893,7 +1893,7 @@ class MetadataApi
      */
     public function metadataObjectMaterialsAsyncWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataObjectMaterials'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MetadataObjectMaterials200ResponseInner[]';
+        $returnType = '\Arta\Client\Model\MetadataObjectMaterials200ResponseInner[]';
         $request = $this->metadataObjectMaterialsRequest($authorization, $contentType);
 
         return $this->client
@@ -2034,9 +2034,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataObjects'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MetadataObjects200ResponseInner[]
+     * @return \Arta\Client\Model\MetadataObjects200ResponseInner[]
      */
     public function metadataObjects($authorization, string $contentType = self::contentTypes['metadataObjects'][0])
     {
@@ -2052,9 +2052,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataObjects'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MetadataObjects200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\MetadataObjects200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
      */
     public function metadataObjectsWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataObjects'][0])
     {
@@ -2097,11 +2097,11 @@ class MetadataApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MetadataObjects200ResponseInner[]' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\MetadataObjects200ResponseInner[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MetadataObjects200ResponseInner[]' !== 'string') {
+                        if ('\Arta\Client\Model\MetadataObjects200ResponseInner[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2119,13 +2119,13 @@ class MetadataApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MetadataObjects200ResponseInner[]', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\MetadataObjects200ResponseInner[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MetadataObjects200ResponseInner[]';
+            $returnType = '\Arta\Client\Model\MetadataObjects200ResponseInner[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2158,7 +2158,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MetadataObjects200ResponseInner[]',
+                        '\Arta\Client\Model\MetadataObjects200ResponseInner[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2202,7 +2202,7 @@ class MetadataApi
      */
     public function metadataObjectsAsyncWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataObjects'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MetadataObjects200ResponseInner[]';
+        $returnType = '\Arta\Client\Model\MetadataObjects200ResponseInner[]';
         $request = $this->metadataObjectsRequest($authorization, $contentType);
 
         return $this->client
@@ -2342,9 +2342,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataPackageStatuses'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MetadataPackageStatuses200ResponseInner[]
+     * @return \Arta\Client\Model\MetadataPackageStatuses200ResponseInner[]
      */
     public function metadataPackageStatuses($authorization, string $contentType = self::contentTypes['metadataPackageStatuses'][0])
     {
@@ -2360,9 +2360,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataPackageStatuses'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MetadataPackageStatuses200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\MetadataPackageStatuses200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
      */
     public function metadataPackageStatusesWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataPackageStatuses'][0])
     {
@@ -2405,11 +2405,11 @@ class MetadataApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MetadataPackageStatuses200ResponseInner[]' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\MetadataPackageStatuses200ResponseInner[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MetadataPackageStatuses200ResponseInner[]' !== 'string') {
+                        if ('\Arta\Client\Model\MetadataPackageStatuses200ResponseInner[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2427,13 +2427,13 @@ class MetadataApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MetadataPackageStatuses200ResponseInner[]', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\MetadataPackageStatuses200ResponseInner[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MetadataPackageStatuses200ResponseInner[]';
+            $returnType = '\Arta\Client\Model\MetadataPackageStatuses200ResponseInner[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2466,7 +2466,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MetadataPackageStatuses200ResponseInner[]',
+                        '\Arta\Client\Model\MetadataPackageStatuses200ResponseInner[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2510,7 +2510,7 @@ class MetadataApi
      */
     public function metadataPackageStatusesAsyncWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataPackageStatuses'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MetadataPackageStatuses200ResponseInner[]';
+        $returnType = '\Arta\Client\Model\MetadataPackageStatuses200ResponseInner[]';
         $request = $this->metadataPackageStatusesRequest($authorization, $contentType);
 
         return $this->client
@@ -2650,9 +2650,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataPackings'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MetadataPackings200ResponseInner[]
+     * @return \Arta\Client\Model\MetadataPackings200ResponseInner[]
      */
     public function metadataPackings($authorization, string $contentType = self::contentTypes['metadataPackings'][0])
     {
@@ -2668,9 +2668,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataPackings'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MetadataPackings200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\MetadataPackings200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
      */
     public function metadataPackingsWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataPackings'][0])
     {
@@ -2713,11 +2713,11 @@ class MetadataApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MetadataPackings200ResponseInner[]' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\MetadataPackings200ResponseInner[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MetadataPackings200ResponseInner[]' !== 'string') {
+                        if ('\Arta\Client\Model\MetadataPackings200ResponseInner[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2735,13 +2735,13 @@ class MetadataApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MetadataPackings200ResponseInner[]', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\MetadataPackings200ResponseInner[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MetadataPackings200ResponseInner[]';
+            $returnType = '\Arta\Client\Model\MetadataPackings200ResponseInner[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2774,7 +2774,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MetadataPackings200ResponseInner[]',
+                        '\Arta\Client\Model\MetadataPackings200ResponseInner[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2818,7 +2818,7 @@ class MetadataApi
      */
     public function metadataPackingsAsyncWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataPackings'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MetadataPackings200ResponseInner[]';
+        $returnType = '\Arta\Client\Model\MetadataPackings200ResponseInner[]';
         $request = $this->metadataPackingsRequest($authorization, $contentType);
 
         return $this->client
@@ -2958,9 +2958,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataParcelTransportServices'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MetadataParcelTransportServices200ResponseInner[]
+     * @return \Arta\Client\Model\MetadataParcelTransportServices200ResponseInner[]
      */
     public function metadataParcelTransportServices($authorization, string $contentType = self::contentTypes['metadataParcelTransportServices'][0])
     {
@@ -2976,9 +2976,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataParcelTransportServices'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MetadataParcelTransportServices200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\MetadataParcelTransportServices200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
      */
     public function metadataParcelTransportServicesWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataParcelTransportServices'][0])
     {
@@ -3021,11 +3021,11 @@ class MetadataApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MetadataParcelTransportServices200ResponseInner[]' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\MetadataParcelTransportServices200ResponseInner[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MetadataParcelTransportServices200ResponseInner[]' !== 'string') {
+                        if ('\Arta\Client\Model\MetadataParcelTransportServices200ResponseInner[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3043,13 +3043,13 @@ class MetadataApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MetadataParcelTransportServices200ResponseInner[]', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\MetadataParcelTransportServices200ResponseInner[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MetadataParcelTransportServices200ResponseInner[]';
+            $returnType = '\Arta\Client\Model\MetadataParcelTransportServices200ResponseInner[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3082,7 +3082,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MetadataParcelTransportServices200ResponseInner[]',
+                        '\Arta\Client\Model\MetadataParcelTransportServices200ResponseInner[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3126,7 +3126,7 @@ class MetadataApi
      */
     public function metadataParcelTransportServicesAsyncWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataParcelTransportServices'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MetadataParcelTransportServices200ResponseInner[]';
+        $returnType = '\Arta\Client\Model\MetadataParcelTransportServices200ResponseInner[]';
         $request = $this->metadataParcelTransportServicesRequest($authorization, $contentType);
 
         return $this->client
@@ -3266,9 +3266,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataPaymentProcessTypes'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]
+     * @return \Arta\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]
      */
     public function metadataPaymentProcessTypes($authorization, string $contentType = self::contentTypes['metadataPaymentProcessTypes'][0])
     {
@@ -3284,9 +3284,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataPaymentProcessTypes'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MetadataPaymentProcessTypes200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\MetadataPaymentProcessTypes200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
      */
     public function metadataPaymentProcessTypesWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataPaymentProcessTypes'][0])
     {
@@ -3329,11 +3329,11 @@ class MetadataApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]' !== 'string') {
+                        if ('\Arta\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3351,13 +3351,13 @@ class MetadataApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]';
+            $returnType = '\Arta\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3390,7 +3390,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]',
+                        '\Arta\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3434,7 +3434,7 @@ class MetadataApi
      */
     public function metadataPaymentProcessTypesAsyncWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataPaymentProcessTypes'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]';
+        $returnType = '\Arta\Client\Model\MetadataPaymentProcessTypes200ResponseInner[]';
         $request = $this->metadataPaymentProcessTypesRequest($authorization, $contentType);
 
         return $this->client
@@ -3574,9 +3574,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataQuotes'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MetadataQuotes200ResponseInner[]
+     * @return \Arta\Client\Model\MetadataQuotes200ResponseInner[]
      */
     public function metadataQuotes($authorization, string $contentType = self::contentTypes['metadataQuotes'][0])
     {
@@ -3592,9 +3592,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataQuotes'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MetadataQuotes200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\MetadataQuotes200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
      */
     public function metadataQuotesWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataQuotes'][0])
     {
@@ -3637,11 +3637,11 @@ class MetadataApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MetadataQuotes200ResponseInner[]' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\MetadataQuotes200ResponseInner[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MetadataQuotes200ResponseInner[]' !== 'string') {
+                        if ('\Arta\Client\Model\MetadataQuotes200ResponseInner[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3659,13 +3659,13 @@ class MetadataApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MetadataQuotes200ResponseInner[]', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\MetadataQuotes200ResponseInner[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MetadataQuotes200ResponseInner[]';
+            $returnType = '\Arta\Client\Model\MetadataQuotes200ResponseInner[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3698,7 +3698,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MetadataQuotes200ResponseInner[]',
+                        '\Arta\Client\Model\MetadataQuotes200ResponseInner[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3742,7 +3742,7 @@ class MetadataApi
      */
     public function metadataQuotesAsyncWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataQuotes'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MetadataQuotes200ResponseInner[]';
+        $returnType = '\Arta\Client\Model\MetadataQuotes200ResponseInner[]';
         $request = $this->metadataQuotesRequest($authorization, $contentType);
 
         return $this->client
@@ -3882,9 +3882,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataRequestStatuses'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MetadataRequestStatuses200ResponseInner[]
+     * @return \Arta\Client\Model\MetadataRequestStatuses200ResponseInner[]
      */
     public function metadataRequestStatuses($authorization, string $contentType = self::contentTypes['metadataRequestStatuses'][0])
     {
@@ -3900,9 +3900,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataRequestStatuses'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MetadataRequestStatuses200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\MetadataRequestStatuses200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
      */
     public function metadataRequestStatusesWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataRequestStatuses'][0])
     {
@@ -3945,11 +3945,11 @@ class MetadataApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MetadataRequestStatuses200ResponseInner[]' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\MetadataRequestStatuses200ResponseInner[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MetadataRequestStatuses200ResponseInner[]' !== 'string') {
+                        if ('\Arta\Client\Model\MetadataRequestStatuses200ResponseInner[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -3967,13 +3967,13 @@ class MetadataApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MetadataRequestStatuses200ResponseInner[]', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\MetadataRequestStatuses200ResponseInner[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MetadataRequestStatuses200ResponseInner[]';
+            $returnType = '\Arta\Client\Model\MetadataRequestStatuses200ResponseInner[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4006,7 +4006,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MetadataRequestStatuses200ResponseInner[]',
+                        '\Arta\Client\Model\MetadataRequestStatuses200ResponseInner[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4050,7 +4050,7 @@ class MetadataApi
      */
     public function metadataRequestStatusesAsyncWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataRequestStatuses'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MetadataRequestStatuses200ResponseInner[]';
+        $returnType = '\Arta\Client\Model\MetadataRequestStatuses200ResponseInner[]';
         $request = $this->metadataRequestStatusesRequest($authorization, $contentType);
 
         return $this->client
@@ -4190,9 +4190,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataServices'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MetadataServices200ResponseInner[]
+     * @return \Arta\Client\Model\MetadataServices200ResponseInner[]
      */
     public function metadataServices($authorization, string $contentType = self::contentTypes['metadataServices'][0])
     {
@@ -4208,9 +4208,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataServices'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MetadataServices200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\MetadataServices200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
      */
     public function metadataServicesWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataServices'][0])
     {
@@ -4253,11 +4253,11 @@ class MetadataApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MetadataServices200ResponseInner[]' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\MetadataServices200ResponseInner[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MetadataServices200ResponseInner[]' !== 'string') {
+                        if ('\Arta\Client\Model\MetadataServices200ResponseInner[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4275,13 +4275,13 @@ class MetadataApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MetadataServices200ResponseInner[]', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\MetadataServices200ResponseInner[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MetadataServices200ResponseInner[]';
+            $returnType = '\Arta\Client\Model\MetadataServices200ResponseInner[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4314,7 +4314,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MetadataServices200ResponseInner[]',
+                        '\Arta\Client\Model\MetadataServices200ResponseInner[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4358,7 +4358,7 @@ class MetadataApi
      */
     public function metadataServicesAsyncWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataServices'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MetadataServices200ResponseInner[]';
+        $returnType = '\Arta\Client\Model\MetadataServices200ResponseInner[]';
         $request = $this->metadataServicesRequest($authorization, $contentType);
 
         return $this->client
@@ -4498,9 +4498,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataShipmentExceptionTypes'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]
+     * @return \Arta\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]
      */
     public function metadataShipmentExceptionTypes($authorization, string $contentType = self::contentTypes['metadataShipmentExceptionTypes'][0])
     {
@@ -4516,9 +4516,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataShipmentExceptionTypes'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
      */
     public function metadataShipmentExceptionTypesWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataShipmentExceptionTypes'][0])
     {
@@ -4561,11 +4561,11 @@ class MetadataApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]' !== 'string') {
+                        if ('\Arta\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4583,13 +4583,13 @@ class MetadataApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]';
+            $returnType = '\Arta\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4622,7 +4622,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]',
+                        '\Arta\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4666,7 +4666,7 @@ class MetadataApi
      */
     public function metadataShipmentExceptionTypesAsyncWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataShipmentExceptionTypes'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]';
+        $returnType = '\Arta\Client\Model\MetadataShipmentExceptionTypes200ResponseInner[]';
         $request = $this->metadataShipmentExceptionTypesRequest($authorization, $contentType);
 
         return $this->client
@@ -4806,9 +4806,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataShipmentStatuses'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MetadataShipmentStatuses200ResponseInner[]
+     * @return \Arta\Client\Model\MetadataShipmentStatuses200ResponseInner[]
      */
     public function metadataShipmentStatuses($authorization, string $contentType = self::contentTypes['metadataShipmentStatuses'][0])
     {
@@ -4824,9 +4824,9 @@ class MetadataApi
      * @param  string $authorization Authorize your API calls with an Arta API token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['metadataShipmentStatuses'] to see the possible values for this operation
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \Arta\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MetadataShipmentStatuses200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Arta\Client\Model\MetadataShipmentStatuses200ResponseInner[], HTTP status code, HTTP response headers (array of strings)
      */
     public function metadataShipmentStatusesWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataShipmentStatuses'][0])
     {
@@ -4869,11 +4869,11 @@ class MetadataApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MetadataShipmentStatuses200ResponseInner[]' === '\SplFileObject') {
+                    if ('\Arta\Client\Model\MetadataShipmentStatuses200ResponseInner[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MetadataShipmentStatuses200ResponseInner[]' !== 'string') {
+                        if ('\Arta\Client\Model\MetadataShipmentStatuses200ResponseInner[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -4891,13 +4891,13 @@ class MetadataApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MetadataShipmentStatuses200ResponseInner[]', []),
+                        ObjectSerializer::deserialize($content, '\Arta\Client\Model\MetadataShipmentStatuses200ResponseInner[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MetadataShipmentStatuses200ResponseInner[]';
+            $returnType = '\Arta\Client\Model\MetadataShipmentStatuses200ResponseInner[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4930,7 +4930,7 @@ class MetadataApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MetadataShipmentStatuses200ResponseInner[]',
+                        '\Arta\Client\Model\MetadataShipmentStatuses200ResponseInner[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4974,7 +4974,7 @@ class MetadataApi
      */
     public function metadataShipmentStatusesAsyncWithHttpInfo($authorization, string $contentType = self::contentTypes['metadataShipmentStatuses'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\MetadataShipmentStatuses200ResponseInner[]';
+        $returnType = '\Arta\Client\Model\MetadataShipmentStatuses200ResponseInner[]';
         $request = $this->metadataShipmentStatusesRequest($authorization, $contentType);
 
         return $this->client

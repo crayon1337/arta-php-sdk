@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * ShipmentPackagesInnerObjectsInner Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class ShipmentPackagesInnerObjectsInner implements ModelInterface, ArrayAccess, 
     protected static $openAPITypes = [
         'current_packing' => 'string[]',
         'depth' => 'string',
-        'details' => '\OpenAPI\Client\Model\ShipmentPackagesInnerObjectsInnerDetails',
+        'details' => '\Arta\Client\Model\ShipmentPackagesInnerObjectsInnerDetails',
         'height' => 'string',
         'id' => 'int',
         'images' => 'string[]',
@@ -532,7 +532,7 @@ class ShipmentPackagesInnerObjectsInner implements ModelInterface, ArrayAccess, 
     /**
      * Gets details
      *
-     * @return \OpenAPI\Client\Model\ShipmentPackagesInnerObjectsInnerDetails|null
+     * @return \Arta\Client\Model\ShipmentPackagesInnerObjectsInnerDetails|null
      */
     public function getDetails()
     {
@@ -542,7 +542,7 @@ class ShipmentPackagesInnerObjectsInner implements ModelInterface, ArrayAccess, 
     /**
      * Sets details
      *
-     * @param \OpenAPI\Client\Model\ShipmentPackagesInnerObjectsInnerDetails|null $details details
+     * @param \Arta\Client\Model\ShipmentPackagesInnerObjectsInnerDetails|null $details details
      *
      * @return self
      */

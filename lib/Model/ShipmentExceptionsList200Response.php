@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Arta\Client\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Arta\Client\ObjectSerializer;
 
 /**
  * ShipmentExceptionsList200Response Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Arta\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class ShipmentExceptionsList200Response implements ModelInterface, ArrayAccess, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'items' => '\OpenAPI\Client\Model\ShipmentExceptionsList200ResponseItemsInner[]',
-        'metadata' => '\OpenAPI\Client\Model\ShipmentExceptionsList200ResponseMetadata'
+        'items' => '\Arta\Client\Model\ShipmentExceptionsList200ResponseItemsInner[]',
+        'metadata' => '\Arta\Client\Model\ShipmentExceptionsList200ResponseMetadata'
     ];
 
     /**
@@ -300,7 +300,7 @@ class ShipmentExceptionsList200Response implements ModelInterface, ArrayAccess, 
     /**
      * Gets items
      *
-     * @return \OpenAPI\Client\Model\ShipmentExceptionsList200ResponseItemsInner[]|null
+     * @return \Arta\Client\Model\ShipmentExceptionsList200ResponseItemsInner[]|null
      */
     public function getItems()
     {
@@ -310,7 +310,7 @@ class ShipmentExceptionsList200Response implements ModelInterface, ArrayAccess, 
     /**
      * Sets items
      *
-     * @param \OpenAPI\Client\Model\ShipmentExceptionsList200ResponseItemsInner[]|null $items items
+     * @param \Arta\Client\Model\ShipmentExceptionsList200ResponseItemsInner[]|null $items items
      *
      * @return self
      */
@@ -327,7 +327,7 @@ class ShipmentExceptionsList200Response implements ModelInterface, ArrayAccess, 
     /**
      * Gets metadata
      *
-     * @return \OpenAPI\Client\Model\ShipmentExceptionsList200ResponseMetadata|null
+     * @return \Arta\Client\Model\ShipmentExceptionsList200ResponseMetadata|null
      */
     public function getMetadata()
     {
@@ -337,7 +337,7 @@ class ShipmentExceptionsList200Response implements ModelInterface, ArrayAccess, 
     /**
      * Sets metadata
      *
-     * @param \OpenAPI\Client\Model\ShipmentExceptionsList200ResponseMetadata|null $metadata metadata
+     * @param \Arta\Client\Model\ShipmentExceptionsList200ResponseMetadata|null $metadata metadata
      *
      * @return self
      */
