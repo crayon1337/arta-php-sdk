@@ -1,4 +1,5 @@
 {
+    "name": "crayon/artta-php-sdk",
     "description": "The Arta Public API provides quote generation, transport booking, and tracking capabilities. Additionally the API enables Arta partner organizations to configure email and webhook notifications for their accounts.",
     "keywords": [
         "openapitools",
